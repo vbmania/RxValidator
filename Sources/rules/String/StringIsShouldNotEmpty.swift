@@ -14,7 +14,7 @@ public final class StringIsShouldNotEmpty: StringValidatorType {
     
     public func validate(_ value: String) throws {
         if value.isEmpty || value.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            throw RxValidatorErrorType.stringIsEmpty
+            throw RxValidatorResult.stringIsEmpty
         }
     }
 }

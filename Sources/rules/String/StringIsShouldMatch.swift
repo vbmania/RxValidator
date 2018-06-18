@@ -19,7 +19,7 @@ public final class StringIsShouldMatch: StringValidatorType {
             return 
         }
         
-        throw RxValidatorErrorType.stringIsNotMatch
+        throw RxValidatorResult.stringIsNotMatch
     }
     
 }

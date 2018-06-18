@@ -25,7 +25,7 @@ class DateValidateTests: XCTestCase {
         let sameTargetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
         
         var resultDate: Date?
-        var resultError: RxValidatorErrorType = .valid 
+        var resultError: RxValidatorResult = .valid 
         let underTest = DateValidationTarget(targetDate)
         
         
@@ -41,7 +41,7 @@ class DateValidateTests: XCTestCase {
             .subscribe(onNext: { (date) in
                 resultDate = date
             }, onError: { (error) in
-                resultError = RxValidatorErrorType.determine(error: error)
+                resultError = RxValidatorResult.determine(error: error)
             }).disposed(by: disposeBag)
         
         expect(resultError).toEventually(equal(.valid))
@@ -126,7 +126,7 @@ class DateValidateTests: XCTestCase {
             .asObservable().subscribe(onNext: { (date) in
                 resultDate = date
             }, onError: { (error) in
-                if RxValidatorErrorType.determine(error: error) == RxValidatorErrorType.invalidateDateTerm {
+                if RxValidatorResult.determine(error: error) == RxValidatorResult.invalidateDateTerm {
                     raisedError = true
                 } 
                 
