@@ -48,10 +48,9 @@ Validate.to("vbmania@me.com")
 		print(value) //print("vbmania@me.com")
 	}, onError: { error in
 		let validError = RxValidatorErrorType.determine(error: error)
-		
 		// (1) validError -> RxValidatorErrorType.stringIsEmpty
-	    // (2) validError -> RxValidatorErrorType.stringIsOverflow
-	    // (3) validError -> RxValidatorErrorType.stringIsNotMatch
+		// (2) validError -> RxValidatorErrorType.stringIsOverflow
+		// (3) validError -> RxValidatorErrorType.stringIsNotMatch
 	})
 	.disposed(by: disposeBag)
 		
