@@ -64,14 +64,16 @@ Validate.to("vbmania@me.com")
 	
 Validate.to("word is not empty")
     .validate(StringIsShouldNotEmpty())
-    .check() -> RxValidatorErrorType.valid
+    .check()
+// result -> RxValidatorErrorType.valid
 
 //multiple condition
 Validate.to("vbmania@me.com")
     .validate(StringIsShouldNotEmpty())
     .validate(StringIsNotOverflowThen(maxLength: 50))
     .validate(StringIsShouldMatch("[a-z]+@[a-z]+\\.[a-z]+"))
-    .check() -> RxValidatorErrorType.valid
+    .check()
+// result -> RxValidatorErrorType.valid
 
 ```
 
