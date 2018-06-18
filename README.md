@@ -20,7 +20,7 @@ pod 'RxValidator'
 
 ### String
 #### Use RxSwift
-```javascript {.line-numbers}
+```swift {.line-numbers}
 	
 Validate.to("word is not empty")
     .validate(StringIsShouldNotEmpty())
