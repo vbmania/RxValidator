@@ -23,12 +23,12 @@ pod 'RxValidator'
 ```swift
 	
 Validate.to("word is not empty")
-	.validate(StringIsShouldNotEmpty())
-	.asObservable()
-	.subscribe(onNext: { value in
-		print(value) //print("word is not empty")
-	})
-	.disposed(by: disposeBag)
+    .validate(StringIsShouldNotEmpty())
+    .asObservable()
+    .subscribe(onNext: { value in
+        print(value) //print("word is not empty")
+    })
+    .disposed(by: disposeBag)
 
 Validate.to("word is not empty")
 	.validate(StringIsShouldNotEmpty())
