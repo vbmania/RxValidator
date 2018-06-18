@@ -40,7 +40,7 @@ class StringValidateTests: XCTestCase {
         Validate.to(targetValue)
             .validate(StringIsShouldNotEmpty())
             .asObservable().catchError({ (error) -> Observable<String> in
-                if let validationError = error as? RxValidatorErrorType, validationError == RxValidatorErrorType.stringIsEmpty {
+                if let validationError = error as? RxValidatorResult, validationError == RxValidatorResult.stringIsEmpty {
                     return Observable.just(expectErrorMsg)
                 }
                 return Observable.just("notExpectString")
@@ -63,7 +63,7 @@ class StringValidateTests: XCTestCase {
         Validate.to(targetValue)
             .validate(StringIsShouldNotEmpty())
             .asObservable().catchError({ (error) -> Observable<String> in
-                if let validationError = error as? RxValidatorErrorType, validationError == RxValidatorErrorType.stringIsEmpty {
+                if let validationError = error as? RxValidatorResult, validationError == RxValidatorResult.stringIsEmpty {
                     return Observable.just(expectErrorMsg)
                 }
                 return Observable.just("notExpectString")

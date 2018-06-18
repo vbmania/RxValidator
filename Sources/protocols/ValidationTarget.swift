@@ -17,7 +17,7 @@ public protocol ValidationTarget {
     
     func validate(_ validator: ValidatorType) -> Self
     func asObservable() -> Observable<TargetType>
-    func check() -> RxValidatorErrorType
+    func check() -> RxValidatorResult
 }
 
 extension ValidationTarget {
@@ -29,12 +29,12 @@ extension ValidationTarget {
         return Observable.just(value)
     }
     
-    public func check() -> RxValidatorErrorType {
+    public func check() -> RxValidatorResult {
         if let result = self.result {
-            var validationError: RxValidatorErrorType?
+            var validationError: RxValidatorResult?
             
             _ = result.asSingle().subscribe(onError: { (error) in
-                validationError = RxValidatorErrorType.determine(error: error)
+                validationError = RxValidatorResult.determine(error: error)
             })
             
             return validationError ?? .valid

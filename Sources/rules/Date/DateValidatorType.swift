@@ -26,27 +26,27 @@ public enum DateValidatorType {
         case let .shouldEqualTo(comparison):
             let result = calendar.compare(value, to: comparison, toGranularity: granularity)
             if result != .orderedSame {
-                throw RxValidatorErrorType.notEqualDate
+                throw RxValidatorResult.notEqualDate
             }
         case let .shouldBeforeThen(comparison):
             let result = calendar.compare(value, to: comparison, toGranularity: granularity)
             if result == .orderedDescending {
-                throw RxValidatorErrorType.notBeforeDate
+                throw RxValidatorResult.notBeforeDate
             }
         case let .shouldBeforeOrSameThen(comparison):
             let result = calendar.compare(value, to: comparison, toGranularity: granularity)
             if result == .orderedAscending {
-                throw RxValidatorErrorType.notBeforeDate
+                throw RxValidatorResult.notBeforeDate
             }
         case let .shouldAfterThen(comparison):
             let result = calendar.compare(value, to: comparison, toGranularity: granularity)
             if result == .orderedAscending {
-                throw RxValidatorErrorType.notAfterDate
+                throw RxValidatorResult.notAfterDate
             }
         case let .shouldAfterOrSameThen(comparison):
             let result = calendar.compare(value, to: comparison, toGranularity: granularity)
             if !(result != .orderedAscending) {
-                throw RxValidatorErrorType.notAfterDate
+                throw RxValidatorResult.notAfterDate
             }
         case let .shouldBeCloseDates(comparison, termOfDays):            
             let beforeDate = value < comparison ? value : comparison
@@ -56,7 +56,7 @@ public enum DateValidatorType {
             let targetDate = beforeDate.addingTimeInterval(TimeInterval(oneDay * termOfDays))
             
             if targetDate < afterDate {
-                throw RxValidatorErrorType.invalidateDateTerm
+                throw RxValidatorResult.invalidateDateTerm
             }
         }
     }

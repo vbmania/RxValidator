@@ -16,7 +16,7 @@ public final class StringIsNotOverflowThen: StringValidatorType {
     
     public func validate(_ value: String) throws {
         if value.count > maxLength {
-            throw RxValidatorErrorType.stringIsOverflow
+            throw RxValidatorResult.stringIsOverflow
         }
     }
 }
