@@ -125,7 +125,7 @@ not Implementation
 ```swift
 enum RxValidatorErrorType
 
-	case valid
+    case valid
     case undefinedError
     case stringIsOverflow
     case stringIsEmpty
