@@ -69,3 +69,4 @@ fastlane/test_output
 /Example/SwiftValidationCheckerExample/Podfile.lock
 Pods
 *.xcworkspace
+Podfile.lock
