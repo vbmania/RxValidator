@@ -63,15 +63,15 @@ Validate.to("vbmania@me.com")
 ```swift
 	
 Validate.to("word is not empty")
-	.validate(StringIsShouldNotEmpty())
-	.check() -> RxValidatorErrorType.valid
+    .validate(StringIsShouldNotEmpty())
+    .check() -> RxValidatorErrorType.valid
 
 //multiple condition
 Validate.to("vbmania@me.com")
-	.validate(StringIsShouldNotEmpty())
-	.validate(StringIsNotOverflowThen(maxLength: 50))
-	.validate(StringIsShouldMatch("[a-z]+@[a-z]+\\.[a-z]+"))
-	.check() -> RxValidatorErrorType.valid
+    .validate(StringIsShouldNotEmpty())
+    .validate(StringIsNotOverflowThen(maxLength: 50))
+    .validate(StringIsShouldMatch("[a-z]+@[a-z]+\\.[a-z]+"))
+    .check() -> RxValidatorErrorType.valid
 
 ```
 
