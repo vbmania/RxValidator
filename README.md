@@ -40,9 +40,9 @@ Validate.to("word is not empty")
 
 //Multiple condition
 Validate.to("vbmania@me.com")
-	.validate(StringIsShouldNotEmpty())							//(1)
-	.validate(StringIsNotOverflowThen(maxLength: 50))			//(2)
-	.validate(StringIsShouldMatch("[a-z]+@[a-z]+\\.[a-z]+"))	//(3)
+	.validate(StringIsShouldNotEmpty())                         //(1)
+	.validate(StringIsNotOverflowThen(maxLength: 50))           //(2)
+	.validate(StringIsShouldMatch("[a-z]+@[a-z]+\\.[a-z]+"))    //(3)
 	.asObservable()
 	.subscribe(onNext: { value in
 		print(value) //print("vbmania@me.com")
@@ -82,13 +82,13 @@ let afterTargetDate: Date
 let beforeTargetDate: Date
 
 Validate.to(Date())
-	.validate(.shouldEqualTo(date: sameTargetDate))				//(1)
-	.validate(.shouldAfterOrSameThen(date: sameTargetDate))		//(2)
-	.validate(.shouldBeforeOrSameThen(date: sameTargetDate))	//(3)
-	.validate(.shouldBeforeOrSameThen(date: afterTargetDate))	//(4)
-	.validate(.shouldBeforeThen(date: afterTargetDate))			//(5)
-	.validate(.shouldAfterOrSameThen(date: beforeTargetDate))	//(6)
-	.validate(.shouldAfterThen(date: beforeTargetDate))			//(7)
+	.validate(.shouldEqualTo(date: sameTargetDate))             //(1)
+	.validate(.shouldAfterOrSameThen(date: sameTargetDate))     //(2)
+	.validate(.shouldBeforeOrSameThen(date: sameTargetDate))    //(3)
+	.validate(.shouldBeforeOrSameThen(date: afterTargetDate))   //(4)
+	.validate(.shouldBeforeThen(date: afterTargetDate))         //(5)
+	.validate(.shouldAfterOrSameThen(date: beforeTargetDate))   //(6)
+	.validate(.shouldAfterThen(date: beforeTargetDate))         //(7)
 	.asObservable()
 	.subscribe(onNext: { value in
         print(value) //print("2018-05-05")
@@ -116,13 +116,13 @@ let afterTargetDate: Date
 let beforeTargetDate: Date
 
 Validate.to(Date())
-	.validate(.shouldEqualTo(date: sameTargetDate)) 			//(1)
-	.validate(.shouldAfterOrSameThen(date: sameTargetDate)) 	//(2)
-	.validate(.shouldBeforeOrSameThen(date: sameTargetDate)) 	//(3)
-	.validate(.shouldBeforeOrSameThen(date: afterTargetDate)) 	//(4)
-	.validate(.shouldBeforeThen(date: afterTargetDate)) 		//(5)
-	.validate(.shouldAfterOrSameThen(date: beforeTargetDate)) 	//(6)
-	.validate(.shouldAfterThen(date: beforeTargetDate)) 		//(7)
+	.validate(.shouldEqualTo(date: sameTargetDate))             //(1)
+	.validate(.shouldAfterOrSameThen(date: sameTargetDate))     //(2)
+	.validate(.shouldBeforeOrSameThen(date: sameTargetDate))    //(3)
+	.validate(.shouldBeforeOrSameThen(date: afterTargetDate))   //(4)
+	.validate(.shouldBeforeThen(date: afterTargetDate))         //(5)
+	.validate(.shouldAfterOrSameThen(date: beforeTargetDate))   //(6)
+	.validate(.shouldAfterThen(date: beforeTargetDate))         //(7)
 	.check()
 	
 	// checke() result
