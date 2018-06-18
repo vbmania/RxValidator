@@ -20,7 +20,7 @@ pod 'RxValidator'
 
 ### String
 #### Use RxSwift
-```swift
+```swift{.line-numbers}
 	
 Validate.to("word is not empty")
     .validate(StringIsShouldNotEmpty())
@@ -60,7 +60,7 @@ Validate.to("vbmania@me.com")
 ```
 
 #### Pure Swift
-```swift
+```swift {.line-numbers}
 	
 Validate.to("word is not empty")
     .validate(StringIsShouldNotEmpty())
@@ -79,7 +79,7 @@ Validate.to("vbmania@me.com")
 
 ### Date
 #### Use RxSwift
-```swift
+```swift {.line-numbers}
 
 let targetDate: Date //2018-05-05
 let sameTargetDate: Date
@@ -113,7 +113,7 @@ Validate.to(Date())
 ```
 
 #### Pure RxSwift
-```swift
+```swift {.line-numbers}
 
 let targetDate: Date //2018-05-05
 let sameTargetDate: Date
@@ -151,7 +151,7 @@ not Implementation
 
 
 ### ResultType
-```swift
+```swift {.line-numbers}
 enum RxValidatorResult
 
     case valid
@@ -171,7 +171,7 @@ enum RxValidatorResult
 ```
 
 ### Use with ReactorKit (http://reactorkit.io)
-```swift
+```swift {.line-numbers}
 func mutate(action: Action) -> Observable<Mutation> {
 ....
 
