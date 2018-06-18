@@ -5,12 +5,11 @@ Pod::Spec.new do |spec|
   spec.homepage         = 'https://github.com/vbmania/RxValidator'
   spec.license          = { :type => 'MIT', :file => 'LICENSE' }
   spec.author           = { 'GeumSang Yoo' => 'vbmania@me.com' }
-  spec.source           = { :git => 'https://github.com/vbmania/RxValidator.git',
-                         :tag => 'v0.0.0' }
+  spec.source           = { :git => 'https://github.com/vbmania/RxValidator.git', :tag => 'v0.0.1' }
   spec.source_files     = 'Sources/**/*.swift'
   spec.frameworks       = 'UIKit', 'Foundation'
   spec.requires_arc     = true
-  spec.swift_version 	= '3.2'
+  spec.swift_version 	= '4.1'
 
   spec.dependency 'RxSwift', '>= 4.1.0'
   spec.dependency 'RxCocoa', '>= 4.1.0'
