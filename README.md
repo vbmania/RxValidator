@@ -123,10 +123,12 @@ not Implementation
 
 ### ResultType
 ```swift
-enum RxValidatorErrorType
+enum RxValidatorResult
 
     case valid
+    
     case undefinedError
+    
     case stringIsOverflow
     case stringIsEmpty
     case stringIsNotMatch
