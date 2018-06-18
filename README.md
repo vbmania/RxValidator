@@ -19,99 +19,124 @@ pod 'RxValidator'
 ## Usage
 
 ### String
-#### using RxSwift
+#### Use RxSwift
 ```swift
-
 	
-	
-	Validate.to("word is not empty")
-		.validate(StringIsShouldNotEmpty())
-		.asObservable()
-		.subscribe(onNext: { value in
-        	print(value) //print("word is not empty")
-		})
-		.disposed(by: disposeBag)
+Validate.to("word is not empty")
+	.validate(StringIsShouldNotEmpty())
+	.asObservable()
+	.subscribe(onNext: { value in
+        print(value) //print("word is not empty")
+	})
+	.disposed(by: disposeBag)
 
-	Validate.to("word is not empty")
-		.validate(StringIsShouldNotEmpty())
-		.asObservable()
-		.map { $0 + "!!" }
-		.bind(to: anotherObservableBinder)
-		.disposed(by: disposeBag)
+Validate.to("word is not empty")
+	.validate(StringIsShouldNotEmpty())
+	.asObservable()
+	.map { $0 + "!!" }
+	.bind(to: anotherObservableBinder)
+	.disposed(by: disposeBag)
+	
+
+//Multiple condition
+Validate.to("vbmania@me.com")
+	.validate(StringIsShouldNotEmpty())							//(1)
+	.validate(StringIsNotOverflowThen(maxLength: 50))			//(2)
+	.validate(StringIsShouldMatch("[a-z]+@[a-z]+\\.[a-z]+"))	//(3)
+	.asObservable()
+	.subscribe(onNext: { value in
+        print(value) //print("vbmania@me.com")
+	}, onError: { error in
+		let validError = RxValidatorErrorType.determine(error: error)
 		
-
-	//multiple condition
-	Validate.to("vbmania@me.com")
-		.validate(StringIsShouldNotEmpty())
-		.validate(StringIsNotOverflowThen(maxLength: 50))
-		.validate(StringIsShouldMatch("[a-z]+@[a-z]+\\.[a-z]+"))
-		.asObservable()
-		.subscribe(onNext: { value in
-        	print(value) //print("vbmania@me.com")
-		})
-		.disposed(by: disposeBag)
+		// (1) validError -> RxValidatorErrorType.stringIsEmpty
+	    // (2) validError -> RxValidatorErrorType.stringIsOverflow
+	    // (3) validError -> RxValidatorErrorType.stringIsNotMatch
+	})
+	.disposed(by: disposeBag)
 		
 ```
 
-#### not using RxSwift
+#### Pure Swift
 ```swift
-	not use RxSwift
 	
-	Validate.to("word is not empty")
-		.validate(StringIsShouldNotEmpty())
-		.check() -> RxValidatorErrorType.valid
+Validate.to("word is not empty")
+	.validate(StringIsShouldNotEmpty())
+	.check() -> RxValidatorErrorType.valid
 
-	//multiple condition
-	Validate.to("vbmania@me.com")
-		.validate(StringIsShouldNotEmpty())
-		.validate(StringIsNotOverflowThen(maxLength: 50))
-		.validate(StringIsShouldMatch("[a-z]+@[a-z]+\\.[a-z]+"))
-		.check() -> RxValidatorErrorType.valid
+//multiple condition
+Validate.to("vbmania@me.com")
+	.validate(StringIsShouldNotEmpty())
+	.validate(StringIsNotOverflowThen(maxLength: 50))
+	.validate(StringIsShouldMatch("[a-z]+@[a-z]+\\.[a-z]+"))
+	.check() -> RxValidatorErrorType.valid
 
 ```
 
 ### Date
-#### using RxSwift
+#### Use RxSwift
 ```swift
 
-	let targetDate: Date //2018-05-05
-	let sameTargetDate: Date
-	let afterTargetDate: Date
-	let beforeTargetDate: Date
+let targetDate: Date //2018-05-05
+let sameTargetDate: Date
+let afterTargetDate: Date
+let beforeTargetDate: Date
 
-	Validate.to(Date())
-		.validate(.shouldEqualTo(date: sameTargetDate))
-		.validate(.shouldAfterOrSameThen(date: sameTargetDate))
-		.validate(.shouldBeforeOrSameThen(date: sameTargetDate))
-		.validate(.shouldBeforeOrSameThen(date: afterTargetDate))
-		.validate(.shouldBeforeThen(date: afterTargetDate))
-		.validate(.shouldAfterOrSameThen(date: beforeTargetDate))
-		.validate(.shouldAfterThen(date: beforeTargetDate))
-		.asObservable()
-		.subscribe(onNext: { value in
-        	print(value) //print("2018-05-05")
-		})
-		.disposed(by: disposeBag)
+Validate.to(Date())
+	.validate(.shouldEqualTo(date: sameTargetDate))				//(1)
+	.validate(.shouldAfterOrSameThen(date: sameTargetDate))		//(2)
+	.validate(.shouldBeforeOrSameThen(date: sameTargetDate))	//(3)
+	.validate(.shouldBeforeOrSameThen(date: afterTargetDate))	//(4)
+	.validate(.shouldBeforeThen(date: afterTargetDate))			//(5)
+	.validate(.shouldAfterOrSameThen(date: beforeTargetDate))	//(6)
+	.validate(.shouldAfterThen(date: beforeTargetDate))			//(7)
+	.asObservable()
+	.subscribe(onNext: { value in
+        print(value) //print("2018-05-05")
+	}, onError: { error in
+		let validError = RxValidatorErrorType.determine(error: error)
+		
+		// (1) validError -> RxValidatorErrorType.notEqualDate
+	    // (2) validError -> RxValidatorErrorType.notAfterDate
+	    // (3) validError -> RxValidatorErrorType.notBeforeDate
+	    // (4) validError -> RxValidatorErrorType.notBeforeDate
+	    // (5) validError -> RxValidatorErrorType.notBeforeDate
+	    // (6) validError -> RxValidatorErrorType.notAfterDate
+	    // (7) validError -> RxValidatorErrorType.notAfterDate
+	})
+	.disposed(by: disposeBag)
 
 ```
 
-#### not using RxSwift
+#### Pure RxSwift
 ```swift
 
-	let targetDate: Date //2018-05-05
-	let sameTargetDate: Date
-	let afterTargetDate: Date
-	let beforeTargetDate: Date
+let targetDate: Date //2018-05-05
+let sameTargetDate: Date
+let afterTargetDate: Date
+let beforeTargetDate: Date
 
-	Validate.to(Date())
-		.validate(.shouldEqualTo(date: sameTargetDate))
-		.validate(.shouldAfterOrSameThen(date: sameTargetDate))
-		.validate(.shouldBeforeOrSameThen(date: sameTargetDate))
-		.validate(.shouldBeforeOrSameThen(date: afterTargetDate))
-		.validate(.shouldBeforeThen(date: afterTargetDate))
-		.validate(.shouldAfterOrSameThen(date: beforeTargetDate))
-		.validate(.shouldAfterThen(date: beforeTargetDate))
-		.check() -> RxValidatorErrorType.valid
+Validate.to(Date())
+	.validate(.shouldEqualTo(date: sameTargetDate)) 			//(1)
+	.validate(.shouldAfterOrSameThen(date: sameTargetDate)) 	//(2)
+	.validate(.shouldBeforeOrSameThen(date: sameTargetDate)) 	//(3)
+	.validate(.shouldBeforeOrSameThen(date: afterTargetDate)) 	//(4)
+	.validate(.shouldBeforeThen(date: afterTargetDate)) 		//(5)
+	.validate(.shouldAfterOrSameThen(date: beforeTargetDate)) 	//(6)
+	.validate(.shouldAfterThen(date: beforeTargetDate)) 		//(7)
+	.check()
+	
+	// checke() result
+	
+	// valid result  -> RxValidatorErrorType.valid
+	
+	// (1) not valid -> RxValidatorErrorType.notEqualDate
+	// (2) not valid -> RxValidatorErrorType.notAfterDate
+	// (3) not valid -> RxValidatorErrorType.notBeforeDate
+	// (4) not valid -> RxValidatorErrorType.notBeforeDate
+	// (5) not valid -> RxValidatorErrorType.notBeforeDate
+	// (6) not valid -> RxValidatorErrorType.notAfterDate
+	// (7) not valid -> RxValidatorErrorType.notAfterDate
 
 ```
 
