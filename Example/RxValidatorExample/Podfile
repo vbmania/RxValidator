@@ -1,0 +1,26 @@
+#source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '11.0'
+use_frameworks!
+
+target 'RxValidatorExample' do
+  pod 'RxValidator', :path => '../../'
+  pod 'RxSwift', '>= 4.1.0'
+  pod 'RxCocoa', '>= 4.1.0'
+  pod 'SwiftDate', '4.5.1'
+  # Pods for RxValidatorExample
+
+  target 'RxValidatorExampleTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'Quick', '1.2.0'
+    pod 'Nimble', '7.0.3'
+#    pod 'SwiftDate', '4.5.1'
+
+  end
+
+  target 'RxValidatorExampleUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
