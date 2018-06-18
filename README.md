@@ -26,33 +26,36 @@ Validate.to("word is not empty")
     .validate(StringIsShouldNotEmpty())
     .asObservable()
     .subscribe(onNext: { value in
-        print(value) //print("word is not empty")
+        print(value)
+	//print("word is not empty")
     })
     .disposed(by: disposeBag)
 
 Validate.to("word is not empty")
-	.validate(StringIsShouldNotEmpty())
-	.asObservable()
-	.map { $0 + "!!" }
-	.bind(to: anotherObservableBinder)
-	.disposed(by: disposeBag)
+    .validate(StringIsShouldNotEmpty())
+    .asObservable()
+    .map { $0 + "!!" }
+    .bind(to: anotherObservableBinder)
+    .disposed(by: disposeBag)
 	
 
 //Multiple condition
 Validate.to("vbmania@me.com")
-	.validate(StringIsShouldNotEmpty())                         //(1)
-	.validate(StringIsNotOverflowThen(maxLength: 50))           //(2)
-	.validate(StringIsShouldMatch("[a-z]+@[a-z]+\\.[a-z]+"))    //(3)
-	.asObservable()
-	.subscribe(onNext: { value in
-		print(value) //print("vbmania@me.com")
-	}, onError: { error in
-		let validError = RxValidatorErrorType.determine(error: error)
-		// (1) validError -> RxValidatorErrorType.stringIsEmpty
-		// (2) validError -> RxValidatorErrorType.stringIsOverflow
-		// (3) validError -> RxValidatorErrorType.stringIsNotMatch
-	})
-	.disposed(by: disposeBag)
+    .validate(StringIsShouldNotEmpty())                         //(1)
+    .validate(StringIsNotOverflowThen(maxLength: 50))           //(2)
+    .validate(StringIsShouldMatch("[a-z]+@[a-z]+\\.[a-z]+"))    //(3)
+    .asObservable()
+    .subscribe(onNext: { value in
+        print(value)
+        //print("vbmania@me.com")
+    },
+    onError: { error in
+        let validError = RxValidatorErrorType.determine(error: error)
+        // (1) validError -> RxValidatorErrorType.stringIsEmpty
+        // (2) validError -> RxValidatorErrorType.stringIsOverflow
+        // (3) validError -> RxValidatorErrorType.stringIsNotMatch
+    })
+    .disposed(by: disposeBag)
 		
 ```
 
