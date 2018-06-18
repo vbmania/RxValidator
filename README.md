@@ -141,6 +141,26 @@ enum RxValidatorResult
     case notEqualDate
 ```
 
+### Use with ReactorKit (http://reactorkit.io)
+```swift
+func mutate(action: Action) -> Observable<Mutation> {
+....
+
+case let .changeTitle(title):
+   return Validate.to(title)
+	.validate(StringIsNotOverflowThen(maxLength: TITLE_MAX_LENGTH))
+	.asObservable()
+	.flatMap { Observable<Mutation>.just(.updateTitle(title: $0)) }
+	.catchError({ (error) -> Observable<Mutation> in
+		let validError = ValidationTargetErrorType.determine(error: error)
+		return Observable<Mutation>.just(.setTitleValidateError(validError, title))
+	})
+
+....
+
+```
+
+
 
 ## What's next...
 
