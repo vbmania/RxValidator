@@ -7,10 +7,9 @@
 
 import Foundation
 
-// 아래 에러 케이스들 중 파라메터를 지원하는 녀석이 생기면 아래 주석을 풀어주세요.
-
-public enum RxValidatorResult: Error/*, Equatable*/ {
+public enum RxValidatorResult: Error,  Equatable {
     case valid
+    case notValid(code: Int)
     
     case undefinedError
     
@@ -18,26 +17,38 @@ public enum RxValidatorResult: Error/*, Equatable*/ {
     case stringIsEmpty
     case stringIsNotMatch
     
-    case notSelected
     case invalidateDateTerm
-    case invalidateDate
     case notBeforeDate
     case notAfterDate
     case notEqualDate
     
-//    static func ==(lhs: RxValidatorErrorType, rhs: RxValidatorErrorType) -> Bool {
-//        switch (lhs, rhs){
-//        case (.valid, .valid):
-//            return true
-//        case (.undefinedError, .undefinedError):
-//            return true
-//        case (.stringIsOverflow, .stringIsOverflow):
-//            return true
-//        case (.stringIsEmpty, .stringIsEmpty):
-//            return true
-//        }  
-//        return false
-//    }
+    public static func ==(lhs: RxValidatorResult, rhs: RxValidatorResult) -> Bool {
+        switch (lhs, rhs){
+        case (.valid, .valid):
+            return true
+        case (.notValid(let lvalue), .notValid(let rvalue)):
+            return lvalue == rvalue
+        case (.undefinedError, .undefinedError):
+            return true
+        case (.stringIsOverflow, .stringIsOverflow):
+            return true
+        case (.stringIsEmpty, .stringIsEmpty):
+            return true
+        case (.stringIsNotMatch, .stringIsNotMatch):
+            return true
+        case (.invalidateDateTerm, .invalidateDateTerm):
+            return true
+        case (.notBeforeDate, .notBeforeDate):
+            return true
+        case (.notAfterDate, .notAfterDate):
+            return true
+        case (.notEqualDate, .notEqualDate):
+            return true
+        default:
+            break
+        }  
+        return false
+    }
     
     public static func determine(error: Error) -> RxValidatorResult {
         if let validateError = error as? RxValidatorResult {
@@ -47,5 +58,12 @@ public enum RxValidatorResult: Error/*, Equatable*/ {
         return .undefinedError
     }
     
-    
+    public func getCode() -> Int {
+        switch self {
+        case .notValid(let code):
+            return code
+        default:
+            return 0
+        }
+    }
 }

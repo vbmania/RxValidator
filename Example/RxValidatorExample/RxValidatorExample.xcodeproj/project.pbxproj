@@ -10,6 +10,7 @@
 		1E4C1066B182E9D91A8EF9BC /* Pods_RxValidatorExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16AA0F1E7CBC9336F7DAFF6 /* Pods_RxValidatorExample.framework */; };
 		676C850CBD19AA38C42BAAE5 /* Pods_RxValidatorExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2227B6786F6FBC384FD4FA /* Pods_RxValidatorExampleUITests.framework */; };
 		9E1293B32686A6414DD77A00 /* Pods_RxValidatorExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C2EB43C8FE5B68FC28C048 /* Pods_RxValidatorExampleTests.framework */; };
+		A51E5B7420D8D4CA001DFB54 /* RxValidatorResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E5B7320D8D4CA001DFB54 /* RxValidatorResultTests.swift */; };
 		A5466E7020D746E100468D7D /* StringValidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5466E6F20D746E100468D7D /* StringValidateTests.swift */; };
 		A5466E7220D7471D00468D7D /* DateValidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5466E7120D7471D00468D7D /* DateValidateTests.swift */; };
 		A58644BE20D77F0300B20C3B /* StringValidateRegexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58644BD20D77F0300B20C3B /* StringValidateRegexTests.swift */; };
@@ -43,6 +44,7 @@
 		23C0F9BFACA488585ADF1009 /* Pods-RxValidatorExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxValidatorExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxValidatorExampleTests/Pods-RxValidatorExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		48C2EB43C8FE5B68FC28C048 /* Pods_RxValidatorExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxValidatorExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D702AEE9C4A0A9CF13F600 /* Pods-RxValidatorExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxValidatorExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxValidatorExampleTests/Pods-RxValidatorExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		A51E5B7320D8D4CA001DFB54 /* RxValidatorResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxValidatorResultTests.swift; sourceTree = "<group>"; };
 		A5466E6F20D746E100468D7D /* StringValidateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidateTests.swift; sourceTree = "<group>"; };
 		A5466E7120D7471D00468D7D /* DateValidateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValidateTests.swift; sourceTree = "<group>"; };
 		A58644BD20D77F0300B20C3B /* StringValidateRegexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidateRegexTests.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				A5466E6F20D746E100468D7D /* StringValidateTests.swift */,
 				A5466E7120D7471D00468D7D /* DateValidateTests.swift */,
 				A58644BD20D77F0300B20C3B /* StringValidateRegexTests.swift */,
+				A51E5B7320D8D4CA001DFB54 /* RxValidatorResultTests.swift */,
 			);
 			path = RxValidatorExampleTests;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A58644BE20D77F0300B20C3B /* StringValidateRegexTests.swift in Sources */,
+				A51E5B7420D8D4CA001DFB54 /* RxValidatorResultTests.swift in Sources */,
 				A5466E7020D746E100468D7D /* StringValidateTests.swift in Sources */,
 				A5466E7220D7471D00468D7D /* DateValidateTests.swift in Sources */,
 			);
