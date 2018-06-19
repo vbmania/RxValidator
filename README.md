@@ -143,7 +143,7 @@ Validate.to(Date())
 	.validate(.shouldAfterThen(date: beforeTargetDate))         //(7)
 	.check()
 	
-	// checke() result
+	// check() result
 	
 	// valid result  -> RxValidatorErrorType.valid
 	
