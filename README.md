@@ -168,6 +168,7 @@ not Implementation
 enum RxValidatorResult
 
     case valid
+    case notValid(code: Int)
     
     case undefinedError
     
@@ -175,9 +176,7 @@ enum RxValidatorResult
     case stringIsEmpty
     case stringIsNotMatch
     
-    case notSelected
     case invalidateDateTerm
-    case invalidateDate
     case notBeforeDate
     case notAfterDate
     case notEqualDate
