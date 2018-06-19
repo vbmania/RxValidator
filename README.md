@@ -202,6 +202,33 @@ case let .changeTitle(title):
 ```
 
 
+## If you want make custom ValidationRule write code like below:
+```swift
+//String Type
+
+class MyCustomStringValidationRule: StringValidatorType {
+    func validate(_ value: String) throws {
+        if {notValidCondition} {
+            throw RxValidatorResult.notValidate(code: 999) //'code' must be defined your self.  
+        }
+    }
+}
+
+
+//Int Type
+
+class MyCustomIntValidationRule: IntValidatorType {
+    func validate(_ value: Int) throws {
+        if {notValidCondition} {
+            throw RxValidatorResult.notValidate(code: 999) //'code' must be defined your self.  
+        }
+    }
+}
+
+
+```
+
+
 
 ## What's next...
 
