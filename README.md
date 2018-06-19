@@ -18,6 +18,19 @@ pod 'RxValidator'
 
 ## Usage
 
+You just use like this:
+```swift
+
+Validate.to(TargetValue)
+    .validate(condition)
+    .validate(condition)
+    .validate(condition)
+        ...
+    .validate(condition)
+    .asObservable() or .check()
+    
+```
+
 ### String
 #### Use RxSwift
 ```swift {.line-numbers}
