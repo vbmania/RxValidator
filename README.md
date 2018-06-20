@@ -1,5 +1,5 @@
 # RxValidator
-Simple, Extensable, Flexable Validation Checker
+Simple, Extensible, Flexible Validation Checker
 
 ## Requirements
 
