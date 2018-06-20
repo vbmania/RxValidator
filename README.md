@@ -31,7 +31,6 @@ Validate.to(TargetValue)
     
 ```
 
-### Pure Swift
 #### String
 ```swift {.line-numbers}
 	
@@ -82,7 +81,6 @@ Validate.to(Date())
 
 ```
 
-
 #### Int
 ```swift {.line-numbers}
 Validate.to(2)
@@ -97,8 +95,7 @@ Validate.to(1)
 ```
 
 
-
-### Working with RxSwift
+## Working with RxSwift
 #### String
 ```swift {.line-numbers}
 	
