@@ -1,3 +1,7 @@
+[![Platform](https://img.shields.io/cocoapods/p/RxValidator.svg?style=flat)](http://cocoapods.org/pods/RxValidator)
+[![Version](https://img.shields.io/cocoapods/v/RxValidator.svg?style=flat)](http://cocoapods.org/pods/RxValidator)
+[![License](https://img.shields.io/cocoapods/l/RxValidator.svg?style=flat)](http://cocoapods.org/pods/RxValidator)
+
 # RxValidator
 Simple, Extensible, Flexible Validation Checker
 
