@@ -32,7 +32,6 @@ Validate.to(TargetValue)
 ```
 
 ### Pure Swift
----
 #### String
 ```swift {.line-numbers}
 	
@@ -97,27 +96,6 @@ Validate.to(1)
     //.notEvenNumber
 ```
 
-
-#### ResultType
-```swift {.line-numbers}
-enum RxValidatorResult
-
-    case valid
-    case notValid(code: Int)
-    
-    case undefinedError
-    
-    case stringIsOverflow
-    case stringIsEmpty
-    case stringIsNotMatch
-    
-    case notEvenNumber
-    
-    case invalidateDateTerm
-    case notBeforeDate
-    case notAfterDate
-    case notEqualDate
-```
 
 
 ### Working with RxSwift
@@ -221,6 +199,26 @@ Validate.to(Date())
 
 ```
 
+#### ResultType
+```swift {.line-numbers}
+enum RxValidatorResult
+
+    case valid
+    case notValid(code: Int)
+    
+    case undefinedError
+    
+    case stringIsOverflow
+    case stringIsEmpty
+    case stringIsNotMatch
+    
+    case notEvenNumber
+    
+    case invalidateDateTerm
+    case notBeforeDate
+    case notAfterDate
+    case notEqualDate
+```
 
 
 ### Working with ReactorKit (http://reactorkit.io)
@@ -266,11 +264,3 @@ class MyCustomIntValidationRule: IntValidatorType {
 
 
 ```
-
-
-
-## What's next...
-
-* Int Valdation Rules
-* validate begin from Observable
-
