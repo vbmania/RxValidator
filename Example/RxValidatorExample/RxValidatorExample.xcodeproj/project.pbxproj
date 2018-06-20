@@ -13,6 +13,8 @@
 		A51E5B7420D8D4CA001DFB54 /* RxValidatorResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E5B7320D8D4CA001DFB54 /* RxValidatorResultTests.swift */; };
 		A5466E7020D746E100468D7D /* StringValidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5466E6F20D746E100468D7D /* StringValidateTests.swift */; };
 		A5466E7220D7471D00468D7D /* DateValidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5466E7120D7471D00468D7D /* DateValidateTests.swift */; };
+		A56E79BF20DA143200D33EDC /* IntValidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56E79BE20DA143200D33EDC /* IntValidateTests.swift */; };
+		A585C83020D9EA37001E80B3 /* ValidationWithRxSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585C82F20D9EA37001E80B3 /* ValidationWithRxSwiftTests.swift */; };
 		A58644BE20D77F0300B20C3B /* StringValidateRegexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58644BD20D77F0300B20C3B /* StringValidateRegexTests.swift */; };
 		A5BC7D5920D2344F00BD839C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BC7D5820D2344F00BD839C /* AppDelegate.swift */; };
 		A5BC7D5B20D2344F00BD839C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BC7D5A20D2344F00BD839C /* ViewController.swift */; };
@@ -47,6 +49,8 @@
 		A51E5B7320D8D4CA001DFB54 /* RxValidatorResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxValidatorResultTests.swift; sourceTree = "<group>"; };
 		A5466E6F20D746E100468D7D /* StringValidateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidateTests.swift; sourceTree = "<group>"; };
 		A5466E7120D7471D00468D7D /* DateValidateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValidateTests.swift; sourceTree = "<group>"; };
+		A56E79BE20DA143200D33EDC /* IntValidateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntValidateTests.swift; sourceTree = "<group>"; };
+		A585C82F20D9EA37001E80B3 /* ValidationWithRxSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationWithRxSwiftTests.swift; sourceTree = "<group>"; };
 		A58644BD20D77F0300B20C3B /* StringValidateRegexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidateRegexTests.swift; sourceTree = "<group>"; };
 		A5BC7D5520D2344F00BD839C /* RxValidatorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxValidatorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5BC7D5820D2344F00BD839C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				A5466E7120D7471D00468D7D /* DateValidateTests.swift */,
 				A58644BD20D77F0300B20C3B /* StringValidateRegexTests.swift */,
 				A51E5B7320D8D4CA001DFB54 /* RxValidatorResultTests.swift */,
+				A585C82F20D9EA37001E80B3 /* ValidationWithRxSwiftTests.swift */,
+				A56E79BE20DA143200D33EDC /* IntValidateTests.swift */,
 			);
 			path = RxValidatorExampleTests;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RxValidatorExample/Pods-RxValidatorExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxValidator/RxValidator.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
@@ -321,6 +328,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxValidator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
@@ -422,8 +430,10 @@
 			files = (
 				A58644BE20D77F0300B20C3B /* StringValidateRegexTests.swift in Sources */,
 				A51E5B7420D8D4CA001DFB54 /* RxValidatorResultTests.swift in Sources */,
+				A585C83020D9EA37001E80B3 /* ValidationWithRxSwiftTests.swift in Sources */,
 				A5466E7020D746E100468D7D /* StringValidateTests.swift in Sources */,
 				A5466E7220D7471D00468D7D /* DateValidateTests.swift in Sources */,
+				A56E79BF20DA143200D33EDC /* IntValidateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 # RxValidator
-Simple, Extensable, Flexable Validation Checker
+Simple, Extensible, Flexible Validation Checker
 
 ## Requirements
 
@@ -143,7 +143,7 @@ Validate.to(Date())
 	.validate(.shouldAfterThen(date: beforeTargetDate))         //(7)
 	.check()
 	
-	// checke() result
+	// check() result
 	
 	// valid result  -> RxValidatorErrorType.valid
 	
@@ -168,6 +168,7 @@ not Implementation
 enum RxValidatorResult
 
     case valid
+    case notValid(code: Int)
     
     case undefinedError
     
@@ -175,9 +176,7 @@ enum RxValidatorResult
     case stringIsEmpty
     case stringIsNotMatch
     
-    case notSelected
     case invalidateDateTerm
-    case invalidateDate
     case notBeforeDate
     case notAfterDate
     case notEqualDate
@@ -199,6 +198,33 @@ case let .changeTitle(title):
     })
 
 ....
+
+```
+
+
+## If you want make custom ValidationRule write code like below:
+```swift
+//String Type
+
+class MyCustomStringValidationRule: StringValidatorType {
+    func validate(_ value: String) throws {
+        if {notValidCondition} {
+            throw RxValidatorResult.notValidate(code: 999) //'code' must be defined your self.  
+        }
+    }
+}
+
+
+//Int Type
+
+class MyCustomIntValidationRule: IntValidatorType {
+    func validate(_ value: Int) throws {
+        if {notValidCondition} {
+            throw RxValidatorResult.notValidate(code: 999) //'code' must be defined your self.  
+        }
+    }
+}
+
 
 ```
 

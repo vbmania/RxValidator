@@ -17,6 +17,8 @@ public enum RxValidatorResult: Error,  Equatable {
     case stringIsEmpty
     case stringIsNotMatch
     
+    case notEvenNumber
+    
     case invalidateDateTerm
     case notBeforeDate
     case notAfterDate
@@ -35,6 +37,8 @@ public enum RxValidatorResult: Error,  Equatable {
         case (.stringIsEmpty, .stringIsEmpty):
             return true
         case (.stringIsNotMatch, .stringIsNotMatch):
+            return true
+        case (.notEvenNumber, .notEvenNumber):
             return true
         case (.invalidateDateTerm, .invalidateDateTerm):
             return true
