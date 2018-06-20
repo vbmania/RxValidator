@@ -35,7 +35,7 @@ Validate.to(TargetValue)
     
 ```
 
-#### String
+### String
 ```swift {.line-numbers}
 	
 Validate.to("word is not empty")
@@ -53,7 +53,7 @@ Validate.to("vbmania@me.com")
 
 ```
 
-#### Date
+### Date
 ```swift {.line-numbers}
 
 let targetDate: Date //2018-05-05
@@ -85,7 +85,7 @@ Validate.to(Date())
 
 ```
 
-#### Int
+### Int
 ```swift {.line-numbers}
 Validate.to(2)
     .validate(NumberIsShouldBeEven())
@@ -100,7 +100,7 @@ Validate.to(1)
 
 
 ## Working with RxSwift
-#### String
+### String
 ```swift {.line-numbers}
 	
 Validate.to("word is not empty")
@@ -140,7 +140,7 @@ Validate.to("vbmania@me.com")
 		
 ```
 
-#### Int
+### Int
 ```swift {.line-numbers}
 Validate.to(2)
     .validate(NumberIsShouldBeEven())
@@ -166,7 +166,7 @@ Validate.to(1)
 
 ```
 
-#### Date
+### Date
 ```swift {.line-numbers}
 
 let targetDate: Date //2018-05-05
@@ -200,7 +200,7 @@ Validate.to(Date())
 
 ```
 
-#### Chaining from Observable
+### Chaining from Observable
 
 ```swift {.line-numbers}
 
@@ -223,7 +223,7 @@ text
 ```
 
 
-#### ResultType
+## ResultType
 ```swift {.line-numbers}
 enum RxValidatorResult
 
@@ -245,7 +245,7 @@ enum RxValidatorResult
 ```
 
 
-### Working with ReactorKit (http://reactorkit.io)
+## Working with ReactorKit (http://reactorkit.io)
 ```swift {.line-numbers}
 func mutate(action: Action) -> Observable<Mutation> {
 ....
