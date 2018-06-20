@@ -199,6 +199,37 @@ Validate.to(Date())
 
 ```
 
+#### Chaining from Observable
+```swift {.line-numbers}
+
+textField.rx.text
+    .filterNil()
+    .flatMap {
+        Validate.to($0)
+        	.validate(StringIsAlwaysPass())
+        	.asObservable() 
+    }
+    .subscribe(onNext: { (text) in
+    	print(text)
+    })
+    .disposed(by: disposeBag)
+    
+    
+let text = PublishSubject<String>()
+text
+.flatMap { 
+    Validate.to($0)
+        .validate(StringIsAlwaysPass())
+        .asObservable() 
+}
+.subscribe(onNext: { (text) in
+    print(text)
+})
+.disposed(by: disposeBag)
+
+```
+
+
 #### ResultType
 ```swift {.line-numbers}
 enum RxValidatorResult
