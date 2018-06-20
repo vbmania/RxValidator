@@ -202,19 +202,19 @@ Validate.to(Date())
 
 textField.rx.text
     .filterNil()
-	.validate(StringIsAlwaysPass())
+    .validate(StringIsAlwaysPass())
     .subscribe(onNext: { (text) in
-    	print(text)
+        print(text)
     })
     .disposed(by: disposeBag)
         
 let text = PublishSubject<String>()
 text
-.validate(StringIsAlwaysPass())
-.subscribe(onNext: { (text) in
-    print(text)
-})
-.disposed(by: disposeBag)
+    .validate(StringIsAlwaysPass())
+    .subscribe(onNext: { (text) in
+        print(text)
+    })
+    .disposed(by: disposeBag)
 
 ```
 
