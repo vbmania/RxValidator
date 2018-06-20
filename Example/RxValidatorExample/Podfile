@@ -6,6 +6,7 @@ target 'RxValidatorExample' do
   pod 'RxValidator', :path => '../../'
   pod 'RxSwift', '>= 4.1.0'
   pod 'RxCocoa', '>= 4.1.0'
+  pod 'RxOptional'
   pod 'SwiftDate', '4.5.1'
   # Pods for RxValidatorExample
 
