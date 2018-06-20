@@ -28,9 +28,7 @@ class ValidationWithRxSwiftTests: XCTestCase {
         
         textField.rx.text
             .filterNil()
-            .flatMap { Validate.to($0)
-                .validate(StringIsAlwaysPass())
-                .asObservable() }
+            .validate(StringIsAlwaysPass())
             .subscribe(onNext: { (text) in
                 print(text)
                 result = text
@@ -74,9 +72,7 @@ class ValidationWithRxSwiftTests: XCTestCase {
         
         let text = PublishSubject<String>()
         text
-            .flatMap { Validate.to($0)
-                .validate(StringIsAlwaysPass())
-                .asObservable() }
+            .validate(StringIsAlwaysPass())
             .subscribe(onNext: { (text) in
                 print(text)
                 result = text
