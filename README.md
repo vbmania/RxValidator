@@ -7,7 +7,7 @@ Simple, Extensible, Flexible Validation Checker
 
 ## Installation
 
-### Cocoapods
+### CocoaPods
 
 RxValidator is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -31,8 +31,72 @@ Validate.to(TargetValue)
     
 ```
 
-### String
-#### Use RxSwift
+#### String
+```swift {.line-numbers}
+	
+Validate.to("word is not empty")
+    .validate(StringIsShouldNotEmpty())
+    .check()
+// result -> RxValidatorErrorType.valid
+
+//multiple condition
+Validate.to("vbmania@me.com")
+    .validate(StringIsShouldNotEmpty())
+    .validate(StringIsNotOverflowThen(maxLength: 50))
+    .validate(StringIsShouldMatch("[a-z]+@[a-z]+\\.[a-z]+"))
+    .check()
+// result -> RxValidatorErrorType.valid
+
+```
+
+#### Date
+```swift {.line-numbers}
+
+let targetDate: Date //2018-05-05
+let sameTargetDate: Date
+let afterTargetDate: Date
+let beforeTargetDate: Date
+
+Validate.to(Date())
+	.validate(.shouldEqualTo(date: sameTargetDate))             //(1)
+	.validate(.shouldAfterOrSameThen(date: sameTargetDate))     //(2)
+	.validate(.shouldBeforeOrSameThen(date: sameTargetDate))    //(3)
+	.validate(.shouldBeforeOrSameThen(date: afterTargetDate))   //(4)
+	.validate(.shouldBeforeThen(date: afterTargetDate))         //(5)
+	.validate(.shouldAfterOrSameThen(date: beforeTargetDate))   //(6)
+	.validate(.shouldAfterThen(date: beforeTargetDate))         //(7)
+	.check()
+	
+	// check() result
+	
+	// valid result  -> RxValidatorErrorType.valid
+	
+	// (1) not valid -> RxValidatorErrorType.notEqualDate
+	// (2) not valid -> RxValidatorErrorType.notAfterDate
+	// (3) not valid -> RxValidatorErrorType.notBeforeDate
+	// (4) not valid -> RxValidatorErrorType.notBeforeDate
+	// (5) not valid -> RxValidatorErrorType.notBeforeDate
+	// (6) not valid -> RxValidatorErrorType.notAfterDate
+	// (7) not valid -> RxValidatorErrorType.notAfterDate
+
+```
+
+#### Int
+```swift {.line-numbers}
+Validate.to(2)
+    .validate(NumberIsShouldBeEven())
+    .check()
+    //.valid
+    
+Validate.to(1)
+    .validate(NumberIsShouldBeEven())
+    .check()
+    //.notEvenNumber
+```
+
+
+## Working with RxSwift
+#### String
 ```swift {.line-numbers}
 	
 Validate.to("word is not empty")
@@ -72,26 +136,33 @@ Validate.to("vbmania@me.com")
 		
 ```
 
-#### Pure Swift
+#### Int
 ```swift {.line-numbers}
-	
-Validate.to("word is not empty")
-    .validate(StringIsShouldNotEmpty())
-    .check()
-// result -> RxValidatorErrorType.valid
-
-//multiple condition
-Validate.to("vbmania@me.com")
-    .validate(StringIsShouldNotEmpty())
-    .validate(StringIsNotOverflowThen(maxLength: 50))
-    .validate(StringIsShouldMatch("[a-z]+@[a-z]+\\.[a-z]+"))
-    .check()
-// result -> RxValidatorErrorType.valid
+Validate.to(2)
+    .validate(NumberIsShouldBeEven())
+    .asObservable()
+    .subscribe(onNext: { value in
+        print(value)
+        //print(2)
+    })
+    .disposed(by: disposeBag)
+    
+Validate.to(1)
+    .validate(NumberIsShouldBeEven())
+    .asObservable()
+    .subscribe(onNext: { value in
+        print(value)
+        //print(1)
+    },
+    onError: { error in
+        let validError = RxValidatorErrorType.determine(error: error)
+        //validError -> RxValidatorErrorType.notEvenNumber
+    })
+    .disposed(by: disposeBag)
 
 ```
 
-### Date
-#### Use RxSwift
+#### Date
 ```swift {.line-numbers}
 
 let targetDate: Date //2018-05-05
@@ -125,45 +196,30 @@ Validate.to(Date())
 
 ```
 
-#### Pure RxSwift
+#### Chaining from Observable
+
 ```swift {.line-numbers}
 
-let targetDate: Date //2018-05-05
-let sameTargetDate: Date
-let afterTargetDate: Date
-let beforeTargetDate: Date
-
-Validate.to(Date())
-	.validate(.shouldEqualTo(date: sameTargetDate))             //(1)
-	.validate(.shouldAfterOrSameThen(date: sameTargetDate))     //(2)
-	.validate(.shouldBeforeOrSameThen(date: sameTargetDate))    //(3)
-	.validate(.shouldBeforeOrSameThen(date: afterTargetDate))   //(4)
-	.validate(.shouldBeforeThen(date: afterTargetDate))         //(5)
-	.validate(.shouldAfterOrSameThen(date: beforeTargetDate))   //(6)
-	.validate(.shouldAfterThen(date: beforeTargetDate))         //(7)
-	.check()
-	
-	// check() result
-	
-	// valid result  -> RxValidatorErrorType.valid
-	
-	// (1) not valid -> RxValidatorErrorType.notEqualDate
-	// (2) not valid -> RxValidatorErrorType.notAfterDate
-	// (3) not valid -> RxValidatorErrorType.notBeforeDate
-	// (4) not valid -> RxValidatorErrorType.notBeforeDate
-	// (5) not valid -> RxValidatorErrorType.notBeforeDate
-	// (6) not valid -> RxValidatorErrorType.notAfterDate
-	// (7) not valid -> RxValidatorErrorType.notAfterDate
+textField.rx.text
+    .filterNil()
+    .validate(StringIsAlwaysPass())
+    .subscribe(onNext: { (text) in
+        print(text)
+    })
+    .disposed(by: disposeBag)
+        
+let text = PublishSubject<String>()
+text
+    .validate(StringIsAlwaysPass())
+    .subscribe(onNext: { (text) in
+        print(text)
+    })
+    .disposed(by: disposeBag)
 
 ```
 
 
-### Int
-
-not Implementation
-
-
-### ResultType
+#### ResultType
 ```swift {.line-numbers}
 enum RxValidatorResult
 
@@ -176,13 +232,16 @@ enum RxValidatorResult
     case stringIsEmpty
     case stringIsNotMatch
     
+    case notEvenNumber
+    
     case invalidateDateTerm
     case notBeforeDate
     case notAfterDate
     case notEqualDate
 ```
 
-### Use with ReactorKit (http://reactorkit.io)
+
+### Working with ReactorKit (http://reactorkit.io)
 ```swift {.line-numbers}
 func mutate(action: Action) -> Observable<Mutation> {
 ....
@@ -202,10 +261,9 @@ case let .changeTitle(title):
 ```
 
 
-## If you want make custom ValidationRule write code like below:
+## Make custom ValidationRule like this:
 ```swift
 //String Type
-
 class MyCustomStringValidationRule: StringValidatorType {
     func validate(_ value: String) throws {
         if {notValidCondition} {
@@ -216,7 +274,6 @@ class MyCustomStringValidationRule: StringValidatorType {
 
 
 //Int Type
-
 class MyCustomIntValidationRule: IntValidatorType {
     func validate(_ value: Int) throws {
         if {notValidCondition} {
@@ -227,11 +284,3 @@ class MyCustomIntValidationRule: IntValidatorType {
 
 
 ```
-
-
-
-## What's next...
-
-* Int Valdation Rules
-* validate begin from Observable
-
