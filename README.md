@@ -284,7 +284,7 @@ DateValidatorType.shouldBeforeThen(Date)
 DateValidatorType.shouldBeforeOrSameThen(Date)
 DateValidatorType.shouldAfterThen(Date)
 DateValidatorType.shouldAfterOrSameThen(Date)
-DateValidatorType.shouldBeCloseDates(Date)
+DateValidatorType.shouldBeCloseDates(date: Date, termOfDays: Int)
 ```
 
 ## Make custom ValidationRule like this:
