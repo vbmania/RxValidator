@@ -1,3 +1,5 @@
+
+[![Swift](https://img.shields.io/badge/Swift-4.1-orange.svg)](https://swift.org/blog/swift-4-1-released/)
 [![Platform](https://img.shields.io/cocoapods/p/RxValidator.svg?style=flat)](http://cocoapods.org/pods/RxValidator)
 [![Version](https://img.shields.io/cocoapods/v/RxValidator.svg?style=flat)](http://cocoapods.org/pods/RxValidator)
 [![License](https://img.shields.io/cocoapods/l/RxValidator.svg?style=flat)](http://cocoapods.org/pods/RxValidator)
