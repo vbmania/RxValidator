@@ -268,6 +268,24 @@ case let .changeTitle(title):
 
 ```
 
+## Supported Validation Rules
+```swift
+String
+StringIsShouldNotEmpty()
+StringIsNotOverflowThen(maxLength: Int)
+StringIsShouldMatch("regex string")
+
+Int
+NumberIsShouldBeEven()
+
+Date
+DateValidatorType.shouldEqualTo(Date)
+DateValidatorType.shouldBeforeThen(Date)
+DateValidatorType.shouldBeforeOrSameThen(Date)
+DateValidatorType.shouldAfterThen(Date)
+DateValidatorType.shouldAfterOrSameThen(Date)
+DateValidatorType.shouldBeCloseDates(Date)
+```
 
 ## Make custom ValidationRule like this:
 ```swift
