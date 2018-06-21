@@ -55,18 +55,44 @@ class ObservableExtensionTests: XCTestCase {
         observable.onNext(expectedString)
         expect(result).toEventually(equal(RxValidatorResult.stringIsEmpty))
     }
+    
+    
+    
+    func testObservableIntSuccess() {
+        var result:Int?
+        
+        let observable = PublishSubject<Int>()
+        
+        observable
+            .asObservable()
+            .validate(NumberIsShouldBeEven())
+            .asObservable()
+            .subscribe(onNext: { number in
+                result = number
+            })
+            .disposed(by: disposeBag)
+        
+        let expectedString = 2
+        observable.onNext(expectedString)
+        expect(result).toEventually(equal(expectedString))
+    }
+    
+    func testObservableDateSuccess() {
+        var result:Date?
+        let date = Date()
+        
+        let observable = PublishSubject<Date>()
+        
+        observable
+            .asObservable()
+            .validate(.shouldEqualTo(date: date))
+            .asObservable()
+            .subscribe(onNext: { number in
+                result = number
+            })
+            .disposed(by: disposeBag)
+        
+        observable.onNext(date)
+        expect(result).toEventually(equal(date))
+    }
 }
-
-
-
-
-//extension Observable where Element == Date {
-//    func validate(_ validator: DateValidatorType) -> Observable<Element> {
-//        do {
-//            try validator.validate(Date(), granularity: Calendar.Component.nanosecond)
-//        } catch {
-//            return Observable.error(error)            
-//        }
-//        return self
-//    }
-//}
