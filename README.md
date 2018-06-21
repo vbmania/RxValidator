@@ -270,15 +270,15 @@ case let .changeTitle(title):
 
 ## Supported Validation Rules
 ```swift
-String
+//String
 StringIsShouldNotEmpty()
 StringIsNotOverflowThen(maxLength: Int)
 StringIsShouldMatch("regex string")
 
-Int
+//Int
 NumberIsShouldBeEven()
 
-Date
+//Date
 DateValidatorType.shouldEqualTo(Date)
 DateValidatorType.shouldBeforeThen(Date)
 DateValidatorType.shouldBeforeOrSameThen(Date)
