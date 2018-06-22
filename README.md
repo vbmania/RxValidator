@@ -22,8 +22,7 @@ it, simply add the following line to your Podfile:
 pod 'RxValidator'
 ```
 
-## Usage
-
+## At a Glance
 You just use like this:
 ```swift
 
@@ -35,7 +34,18 @@ Validate.to(TargetValue)
     .validate(condition)
     .asObservable() or .check()
     
+
+observable
+    .validate(condition)
+    .validate(condition)
+    .validate(condition)
+        ...
+    .validate(condition)
+    .subscribe(...)
+    
 ```
+
+## Usage
 
 ### String
 ```swift {.line-numbers}
@@ -226,13 +236,46 @@ text
 
 ```
 
+## Instant Condition Validation
+```swift
+
+
+Validate.to("swift")
+    .validate({ $0 == "objc" })
+    .check()
+
+Validate.to(7)
+    .validate({ $0 > 10 })
+    .check()
+
+Validate.to(Date())
+    .validate({ !$0.isToday })
+    .check()
+    
+
+Validate.to("swift")
+    .validate({ $0 == "objc" }, message: "This is not swift")
+    .check()
+
+Validate.to(7)
+    .validate({ $0 > 10 }, message: "Number is too small.")
+    .check()
+
+Validate.to(Date())
+    .validate({ !$0.isToday }, message: "It is today!!")
+    .check()
+
+
+```
+
 
 ## ResultType
 ```swift {.line-numbers}
 enum RxValidatorResult
 
-    case valid
-    case notValid(code: Int)
+    case notValid
+    case notValidWithMessage(message: String)
+    case notValidWithCode(code: Int)
     
     case undefinedError
     
