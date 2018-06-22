@@ -28,16 +28,12 @@ You just use like this:
 
 Validate.to(TargetValue)
     .validate(condition)
-    .validate(condition)
-    .validate(condition)
         ...
     .validate(condition)
     .asObservable() or .check()
     
 
 observable
-    .validate(condition)
-    .validate(condition)
     .validate(condition)
         ...
     .validate(condition)
