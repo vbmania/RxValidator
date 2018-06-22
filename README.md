@@ -49,7 +49,7 @@ observable
 Validate.to("word is not empty")
     .validate(StringIsShouldNotEmpty())
     .check()
-// result -> RxValidatorErrorType.valid
+// result -> RxValidatorResult.valid
 
 //multiple condition
 Validate.to("vbmania@me.com")
@@ -57,7 +57,7 @@ Validate.to("vbmania@me.com")
     .validate(StringIsNotOverflowThen(maxLength: 50))
     .validate(StringIsShouldMatch("[a-z]+@[a-z]+\\.[a-z]+"))
     .check()
-// result -> RxValidatorErrorType.valid
+// result -> RxValidatorResult.valid
 
 ```
 
@@ -81,15 +81,15 @@ Validate.to(Date())
 	
 	// check() result
 	
-	// valid result  -> RxValidatorErrorType.valid
+	// valid result  -> RxValidatorResult.valid
 	
-	// (1) not valid -> RxValidatorErrorType.notEqualDate
-	// (2) not valid -> RxValidatorErrorType.notAfterDate
-	// (3) not valid -> RxValidatorErrorType.notBeforeDate
-	// (4) not valid -> RxValidatorErrorType.notBeforeDate
-	// (5) not valid -> RxValidatorErrorType.notBeforeDate
-	// (6) not valid -> RxValidatorErrorType.notAfterDate
-	// (7) not valid -> RxValidatorErrorType.notAfterDate
+	// (1) not valid -> RxValidatorResult.notEqualDate
+	// (2) not valid -> RxValidatorResult.notAfterDate
+	// (3) not valid -> RxValidatorResult.notBeforeDate
+	// (4) not valid -> RxValidatorResult.notBeforeDate
+	// (5) not valid -> RxValidatorResult.notBeforeDate
+	// (6) not valid -> RxValidatorResult.notAfterDate
+	// (7) not valid -> RxValidatorResult.notAfterDate
 
 ```
 
@@ -141,10 +141,10 @@ Validate.to("vbmania@me.com")
         //print("vbmania@me.com")
     },
     onError: { error in
-        let validError = RxValidatorErrorType.determine(error: error)
-        // (1) validError -> RxValidatorErrorType.stringIsEmpty
-        // (2) validError -> RxValidatorErrorType.stringIsOverflow
-        // (3) validError -> RxValidatorErrorType.stringIsNotMatch
+        let validError = RxValidatorResult.determine(error: error)
+        // (1) validError -> RxValidatorResult.stringIsEmpty
+        // (2) validError -> RxValidatorResult.stringIsOverflow
+        // (3) validError -> RxValidatorResult.stringIsNotMatch
     })
     .disposed(by: disposeBag)
 		
@@ -169,8 +169,8 @@ Validate.to(1)
         //print(1)
     },
     onError: { error in
-        let validError = RxValidatorErrorType.determine(error: error)
-        //validError -> RxValidatorErrorType.notEvenNumber
+        let validError = RxValidatorResult.determine(error: error)
+        //validError -> RxValidatorResult.notEvenNumber
     })
     .disposed(by: disposeBag)
 
@@ -196,15 +196,15 @@ Validate.to(Date())
 	.subscribe(onNext: { value in
         print(value) //print("2018-05-05")
 	}, onError: { error in
-		let validError = RxValidatorErrorType.determine(error: error)
+		let validError = RxValidatorResult.determine(error: error)
 		
-        // (1) validError -> RxValidatorErrorType.notEqualDate
-        // (2) validError -> RxValidatorErrorType.notAfterDate
-        // (3) validError -> RxValidatorErrorType.notBeforeDate
-        // (4) validError -> RxValidatorErrorType.notBeforeDate
-        // (5) validError -> RxValidatorErrorType.notBeforeDate
-        // (6) validError -> RxValidatorErrorType.notAfterDate
-        // (7) validError -> RxValidatorErrorType.notAfterDate
+        // (1) validError -> RxValidatorResult.notEqualDate
+        // (2) validError -> RxValidatorResult.notAfterDate
+        // (3) validError -> RxValidatorResult.notBeforeDate
+        // (4) validError -> RxValidatorResult.notBeforeDate
+        // (5) validError -> RxValidatorResult.notBeforeDate
+        // (6) validError -> RxValidatorResult.notAfterDate
+        // (7) validError -> RxValidatorResult.notAfterDate
 	})
 	.disposed(by: disposeBag)
 
