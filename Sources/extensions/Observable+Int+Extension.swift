@@ -19,4 +19,18 @@ extension Observable where Element == Int {
             return $0
         }
     }
+    
+    public func validate(_ condition: @escaping (Int) -> Bool, message: String? = nil) -> Observable<Element> {
+        
+        return self.map {
+            if !condition($0) {
+                if let msg = message {
+                    throw RxValidatorResult.notValidWithMessage(message: msg)
+                } else {
+                    throw RxValidatorResult.notValid
+                }
+            }
+            return $0
+        }
+    }
 }
