@@ -25,10 +25,10 @@ class RxValidatorResultTests: XCTestCase {
     }
     
     func testCustomNotValid() {
-        let expectedResult = RxValidatorResult.notValid(code: 777)
+        let expectedResult = RxValidatorResult.notValidWithCode(code: 777)
 
         let error: Error = expectedResult
-        let otherError: Error = RxValidatorResult.notValid(code: 666) 
+        let otherError: Error = RxValidatorResult.notValidWithCode(code: 666) 
 
         let result = RxValidatorResult.determine(error: error) 
         expect(result).to(equal(expectedResult))

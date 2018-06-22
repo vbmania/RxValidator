@@ -12,10 +12,13 @@ public protocol ValidationTarget {
     associatedtype TargetType
     associatedtype ValidatorType
     
+    typealias ValidatorInstanceCondition = (TargetType) -> Bool
+    
     var value: TargetType { get }
     var result: Observable<TargetType>? { get }
     
     func validate(_ validator: ValidatorType) -> Self
+    func validate(_ condition: ValidatorInstanceCondition, message: String?) -> Self
     func asObservable() -> Observable<TargetType>
     func check() -> RxValidatorResult
 }

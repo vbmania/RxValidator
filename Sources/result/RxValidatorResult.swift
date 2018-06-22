@@ -9,7 +9,9 @@ import Foundation
 
 public enum RxValidatorResult: Error,  Equatable {
     case valid
-    case notValid(code: Int)
+    case notValid
+    case notValidWithMessage(message: String)
+    case notValidWithCode(code: Int)
     
     case undefinedError
     
@@ -28,7 +30,11 @@ public enum RxValidatorResult: Error,  Equatable {
         switch (lhs, rhs){
         case (.valid, .valid):
             return true
-        case (.notValid(let lvalue), .notValid(let rvalue)):
+        case (.notValid, .notValid):
+            return true
+        case (.notValidWithMessage(let lvalue), .notValidWithMessage(let rvalue)):
+            return lvalue == rvalue
+        case (.notValidWithCode(let lvalue), .notValidWithCode(let rvalue)):
             return lvalue == rvalue
         case (.undefinedError, .undefinedError):
             return true
@@ -62,12 +68,21 @@ public enum RxValidatorResult: Error,  Equatable {
         return .undefinedError
     }
     
-    public func getCode() -> Int {
+    public func getCode() -> Int? {
         switch self {
-        case .notValid(let code):
+        case .notValidWithCode(let code):
             return code
         default:
-            return 0
+            return nil
+        }
+    }
+    
+    public func getMessage() -> String? {
+        switch self {
+        case .notValidWithMessage(let msg):
+            return msg
+        default:
+            return nil
         }
     }
 }

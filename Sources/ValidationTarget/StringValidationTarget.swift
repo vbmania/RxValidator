@@ -33,4 +33,21 @@ public final class StringValidationTarget: ValidationTarget {
         
         return self
     }
+    
+    public func validate(_ condition: ValidatorInstanceCondition, message: String? = nil) -> Self {
+        guard self.result == nil else {
+            return self
+        }
+        
+        if !condition(value) {
+            if let msg = message {
+                self.result = Observable.error(RxValidatorResult.notValidWithMessage(message: msg))
+            } else {
+                self.result = Observable.error(RxValidatorResult.notValid)
+            }
+        }
+        
+        return self
+    }
+    
 }
