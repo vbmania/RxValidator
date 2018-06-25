@@ -92,7 +92,7 @@ class ValidationWithRxSwiftTests: XCTestCase {
 class TextFieldDelegate: NSObject, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return Validate.to(string)
-            .validate(StringIsShouldMatch("[a-z1-9]"))
+            .validate(StringShouldBeMatch("[a-z1-9]"))
             .check() == .valid
     }    
 }

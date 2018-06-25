@@ -1,5 +1,5 @@
 //
-//  StringIsShouldNotEmpty.swift
+//  StringShouldNotBeEmpty.swift
 //  RxValidator
 //
 //  Created by 유금상 on 2018. 5. 30..
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public final class StringIsShouldNotEmpty: StringValidatorType {
+public final class StringShouldNotBeEmpty: StringValidatorType {
     
     public init() {
     }
