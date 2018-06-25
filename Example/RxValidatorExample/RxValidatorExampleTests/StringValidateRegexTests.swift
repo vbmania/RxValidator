@@ -20,7 +20,7 @@ class StringValidateRegexTests: XCTestCase {
         var resultValue: String?
         
         Validate.to(targetValue)
-            .validate(StringIsShouldMatch("[a-z]+@[a-z]+\\.[a-z]+"))
+            .validate(StringShouldBeMatch("[a-z]+@[a-z]+\\.[a-z]+"))
             .asObservable()
             .subscribe(onNext: { value in
                 resultValue = value

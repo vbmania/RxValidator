@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/RxValidator.svg?style=flat)](http://cocoapods.org/pods/RxValidator)
 
 # RxValidator
-Simple, Extensible, Flexible Validation Checker
+Easy to Use, Read, Extensible, Flexible Validation Checker
 
 ## Requirements
 
@@ -28,16 +28,12 @@ You just use like this:
 
 Validate.to(TargetValue)
     .validate(condition)
-    .validate(condition)
-    .validate(condition)
         ...
     .validate(condition)
     .asObservable() or .check()
     
 
 observable
-    .validate(condition)
-    .validate(condition)
     .validate(condition)
         ...
     .validate(condition)
@@ -51,17 +47,17 @@ observable
 ```swift {.line-numbers}
 	
 Validate.to("word is not empty")
-    .validate(StringIsShouldNotEmpty())
+    .validate(StringShouldNotBeEmpty())
     .check()
-// result -> RxValidatorErrorType.valid
+// result -> RxValidatorResult.valid
 
 //multiple condition
 Validate.to("vbmania@me.com")
-    .validate(StringIsShouldNotEmpty())
+    .validate(StringShouldNotBeEmpty())
     .validate(StringIsNotOverflowThen(maxLength: 50))
-    .validate(StringIsShouldMatch("[a-z]+@[a-z]+\\.[a-z]+"))
+    .validate(StringShouldBeMatch("[a-z]+@[a-z]+\\.[a-z]+"))
     .check()
-// result -> RxValidatorErrorType.valid
+// result -> RxValidatorResult.valid
 
 ```
 
@@ -85,15 +81,15 @@ Validate.to(Date())
 	
 	// check() result
 	
-	// valid result  -> RxValidatorErrorType.valid
+	// valid result  -> RxValidatorResult.valid
 	
-	// (1) not valid -> RxValidatorErrorType.notEqualDate
-	// (2) not valid -> RxValidatorErrorType.notAfterDate
-	// (3) not valid -> RxValidatorErrorType.notBeforeDate
-	// (4) not valid -> RxValidatorErrorType.notBeforeDate
-	// (5) not valid -> RxValidatorErrorType.notBeforeDate
-	// (6) not valid -> RxValidatorErrorType.notAfterDate
-	// (7) not valid -> RxValidatorErrorType.notAfterDate
+	// (1) not valid -> RxValidatorResult.notEqualDate
+	// (2) not valid -> RxValidatorResult.notAfterDate
+	// (3) not valid -> RxValidatorResult.notBeforeDate
+	// (4) not valid -> RxValidatorResult.notBeforeDate
+	// (5) not valid -> RxValidatorResult.notBeforeDate
+	// (6) not valid -> RxValidatorResult.notAfterDate
+	// (7) not valid -> RxValidatorResult.notAfterDate
 
 ```
 
@@ -118,7 +114,7 @@ Validate.to(1)
 ```swift {.line-numbers}
 	
 Validate.to("word is not empty")
-    .validate(StringIsShouldNotEmpty())
+    .validate(StringShouldNotBeEmpty())
     .asObservable()
     .subscribe(onNext: { value in
         print(value)
@@ -127,7 +123,7 @@ Validate.to("word is not empty")
     .disposed(by: disposeBag)
 
 Validate.to("word is not empty")
-    .validate(StringIsShouldNotEmpty())
+    .validate(StringShouldNotBeEmpty())
     .asObservable()
     .map { $0 + "!!" }
     .bind(to: anotherObservableBinder)
@@ -136,19 +132,19 @@ Validate.to("word is not empty")
 
 //Multiple condition
 Validate.to("vbmania@me.com")
-    .validate(StringIsShouldNotEmpty())                         //(1)
+    .validate(StringShouldNotBeEmpty())                         //(1)
     .validate(StringIsNotOverflowThen(maxLength: 50))           //(2)
-    .validate(StringIsShouldMatch("[a-z]+@[a-z]+\\.[a-z]+"))    //(3)
+    .validate(StringShouldBeMatch("[a-z]+@[a-z]+\\.[a-z]+"))    //(3)
     .asObservable()
     .subscribe(onNext: { value in
         print(value)
         //print("vbmania@me.com")
     },
     onError: { error in
-        let validError = RxValidatorErrorType.determine(error: error)
-        // (1) validError -> RxValidatorErrorType.stringIsEmpty
-        // (2) validError -> RxValidatorErrorType.stringIsOverflow
-        // (3) validError -> RxValidatorErrorType.stringIsNotMatch
+        let validError = RxValidatorResult.determine(error: error)
+        // (1) validError -> RxValidatorResult.stringIsEmpty
+        // (2) validError -> RxValidatorResult.stringIsOverflow
+        // (3) validError -> RxValidatorResult.stringIsNotMatch
     })
     .disposed(by: disposeBag)
 		
@@ -173,8 +169,8 @@ Validate.to(1)
         //print(1)
     },
     onError: { error in
-        let validError = RxValidatorErrorType.determine(error: error)
-        //validError -> RxValidatorErrorType.notEvenNumber
+        let validError = RxValidatorResult.determine(error: error)
+        //validError -> RxValidatorResult.notEvenNumber
     })
     .disposed(by: disposeBag)
 
@@ -200,15 +196,15 @@ Validate.to(Date())
 	.subscribe(onNext: { value in
         print(value) //print("2018-05-05")
 	}, onError: { error in
-		let validError = RxValidatorErrorType.determine(error: error)
+		let validError = RxValidatorResult.determine(error: error)
 		
-        // (1) validError -> RxValidatorErrorType.notEqualDate
-        // (2) validError -> RxValidatorErrorType.notAfterDate
-        // (3) validError -> RxValidatorErrorType.notBeforeDate
-        // (4) validError -> RxValidatorErrorType.notBeforeDate
-        // (5) validError -> RxValidatorErrorType.notBeforeDate
-        // (6) validError -> RxValidatorErrorType.notAfterDate
-        // (7) validError -> RxValidatorErrorType.notAfterDate
+        // (1) validError -> RxValidatorResult.notEqualDate
+        // (2) validError -> RxValidatorResult.notAfterDate
+        // (3) validError -> RxValidatorResult.notBeforeDate
+        // (4) validError -> RxValidatorResult.notBeforeDate
+        // (5) validError -> RxValidatorResult.notBeforeDate
+        // (6) validError -> RxValidatorResult.notAfterDate
+        // (7) validError -> RxValidatorResult.notAfterDate
 	})
 	.disposed(by: disposeBag)
 
@@ -314,9 +310,9 @@ case let .changeTitle(title):
 ## Supported Validation Rules
 ```swift
 //String
-StringIsShouldNotEmpty()
+StringShouldNotBeEmpty()
 StringIsNotOverflowThen(maxLength: Int)
-StringIsShouldMatch("regex string")
+StringShouldBeMatch("regex string")
 
 //Int
 NumberIsShouldBeEven()

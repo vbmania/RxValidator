@@ -1,5 +1,5 @@
 //
-//  StringIsShouldMatch.swift
+//  StringShouldBeMatch.swift
 //  RxValidator
 //
 //  Created by 유금상 on 2018. 6. 18..
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public final class StringIsShouldMatch: StringValidatorType {
+public final class StringShouldBeMatch: StringValidatorType {
     let regex: NSRegularExpression?
     
     public required init(_ regex: String) {

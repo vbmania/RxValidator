@@ -22,7 +22,7 @@ class StringValidateTests: XCTestCase {
         var resultValue: String?
         
         Validate.to(targetValue)
-            .validate(StringIsShouldNotEmpty())
+            .validate(StringShouldNotBeEmpty())
             .asObservable().subscribe(onNext: { value in
                 resultValue = value
             }).disposed(by: disposeBag)
@@ -38,7 +38,7 @@ class StringValidateTests: XCTestCase {
         let expectErrorMsg = "EMPTY"
         
         Validate.to(targetValue)
-            .validate(StringIsShouldNotEmpty())
+            .validate(StringShouldNotBeEmpty())
             .asObservable().catchError({ (error) -> Observable<String> in
                 if let validationError = error as? RxValidatorResult, validationError == RxValidatorResult.stringIsEmpty {
                     return Observable.just(expectErrorMsg)
@@ -61,7 +61,7 @@ class StringValidateTests: XCTestCase {
         let expectErrorMsg = "EMPTY"
         
         Validate.to(targetValue)
-            .validate(StringIsShouldNotEmpty())
+            .validate(StringShouldNotBeEmpty())
             .asObservable().catchError({ (error) -> Observable<String> in
                 if let validationError = error as? RxValidatorResult, validationError == RxValidatorResult.stringIsEmpty {
                     return Observable.just(expectErrorMsg)
@@ -83,7 +83,7 @@ class StringValidateTests: XCTestCase {
         var resultValue: String?
         
         Validate.to(targetValue)
-            .validate(StringIsShouldNotEmpty())
+            .validate(StringShouldNotBeEmpty())
             .validate(StringIsNotOverflowThen(maxLength: 2))
             .asObservable()
             .catchErrorJustReturn(errorValue)
@@ -100,7 +100,7 @@ class StringValidateTests: XCTestCase {
         var resultValue: String?
         
         Validate.to(targetValue)
-            .validate(StringIsShouldNotEmpty())
+            .validate(StringShouldNotBeEmpty())
             .validate(StringIsNotOverflowThen(maxLength: 2))
             .asObservable()
             .catchErrorJustReturn(errorValue)

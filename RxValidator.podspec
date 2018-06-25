@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'RxValidator'
-  spec.version          = '0.0.7'
+  spec.version          = '0.0.8'
   spec.summary          = 'Simple, Extensable, Flexable Validation Checker'
   spec.homepage         = 'https://github.com/vbmania/RxValidator'
   spec.license          = { :type => 'MIT', :file => 'LICENSE' }
