@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/RxValidator.svg?style=flat)](http://cocoapods.org/pods/RxValidator)
 
 # RxValidator
-Easy to Use, Read, Extensible, Flexible Validation Checker
+Easy to Use, Read, Extensible, Flexible Validation Checker.
 
 ## Requirements
 
