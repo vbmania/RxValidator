@@ -1,15 +1,20 @@
+os: osx
 osx_image: xcode9.4
 language: swift
 cache: cocoapods
+podfile: Example/RxValidatorExample/Podfile
+xcode_project: Example/RxValidatorExample/RxValidatorExample.xcodeproj
+xcode_scheme: RxValidatorExampleTests
+
 branches:
   only:
       - develop
   except:
       - screenshot
 env:
-  global:
-  - PROJECT="Example/RxValidatorExample/RxValidatorExample.xcworkspace"
-  - SCHEME="RxValidatorExample"
+  # global:
+  # - PROJECT="Example/RxValidatorExample/RxValidatorExample.xcworkspace"
+  # - SCHEME="RxValidatorExample"
   matrix:
   - TEST=1 DESTINATION="platform=iOS Simulator,name=iPhone 8,OS=11.4"
   # - TEST=1 DESTINATION="arch=x86_64"
@@ -18,8 +23,6 @@ env:
 
 before_install:
   - set -o pipefail
-  - brew update
-  - brew outdated xctool || brew upgrade xctool
   - gem install cocoapods
   - pod --version
 
@@ -27,11 +30,11 @@ install:
   - swift --version
   
 script:
-  - pod repo update && pod update --project-directory=Example/RxValidatorExample/
-  - xcodebuild clean build test
-      -workspace "$PROJECT"
-      -scheme "$SCHEME"
-      -sdk "$SDK"
-      -destination "$DESTINATION"
-      CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
+  # - pod repo update && pod update --project-directory=Example/RxValidatorExample/
+  # - xcodebuild clean build test
+  #     -workspace "$PROJECT"
+  #     -scheme "$SCHEME"
+  #     -sdk "$SDK"
+  #     -destination "$DESTINATION"
+  #     CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
   - travis_wait 30 pod lib lint RxValidator.podspec
