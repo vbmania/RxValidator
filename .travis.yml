@@ -9,7 +9,7 @@ env:
   global:
   - PROJECT="Example/RxValidatorExample/RxValidatorExample.xcworkspace"
   - SCHEME="RxValidatorExampleTests"
-  - podfile="Example/RxValidatorExample/Podfile"
+  - PODFILE="Example/RxValidatorExample/Podfile"
   matrix:
   - TEST=1 DESTINATION="platform=iOS Simulator,name=iPhone 8,OS=11.3"
   - TEST=1 DESTINATION="arch=x86_64"
@@ -23,7 +23,7 @@ before_install:
 install: true
   
 script:
-  - pod repo update && pod update
+  - pod repo update && pod update "$PODFILE"
   - set -o pipefail
   - xcodebuild clean build test
       -workspace "$PROJECT"
