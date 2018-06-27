@@ -1,6 +1,7 @@
 os: osx
 osx_image: xcode9.4
 language: swift
+sudo: required
 # cache: cocoapods
 
 branches:
@@ -19,18 +20,21 @@ env:
   # - TEST=0 DESTINATION="OS=4.3,name=Apple Watch - 38mm"
 
 before_install:
-  - swift --version
   - set -o pipefail
   
   
 
-install: true
+install: 
+  - swift --version
+  - bundle install
   - gem install cocoapods
   - pod --version
   
 script:
   # - pod lib lint RxValidator.podspec
   - cd Example/RxValidatorExample/
+  - pod repo update
+  - pod lib lint --verbose --allow-warnings --fail-fast
   - pod update
   - xcodebuild clean build test
       -workspace "$PROJECT"
