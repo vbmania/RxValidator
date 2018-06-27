@@ -19,6 +19,9 @@ env:
 before_script:
   - set -o pipefail
 
+before_install:
+  - brew update
+
 install:
   - swift --version
   - bundle install
