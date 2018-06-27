@@ -12,7 +12,7 @@ branches:
   except:
       - screenshot
 env:
-  # global:
+  global:
   - PROJECT="Example/RxValidatorExample/RxValidatorExample.xcworkspace"
   - SCHEME="RxValidatorExample"
   matrix:
