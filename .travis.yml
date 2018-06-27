@@ -1,0 +1,20 @@
+osx_image: xcode9.4
+language: swift
+sudo: required
+branches:
+  only:
+      - develop
+  except:
+      - screenshot
+env:
+  global:
+  - PROJECT="Exam/RxValidatorExam/RxValidatorExam.xcodeproj"
+  - SCHEME="RxValidatorExamTests"
+  matrix:
+  - TEST=1 DESTINATION="platform=iOS Simulator,name=iPhone 8,OS=11.3"
+  - TEST=1 DESTINATION="arch=x86_64"
+  - TEST=1 DESTINATION="OS=11.3,name=Apple TV"
+  - TEST=0 DESTINATION="OS=4.3,name=Apple Watch - 38mm"
+
+before_script:
+  - set -o pipefail
