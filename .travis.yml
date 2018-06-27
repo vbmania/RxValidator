@@ -13,7 +13,7 @@ branches:
       - screenshot
 env:
   global:
-  - PROJECT="Example/RxValidatorExample/RxValidatorExample.xcworkspace"
+  - PROJECT="./Example/RxValidatorExample/RxValidatorExample.xcworkspace"
   - SCHEME="RxValidatorExample"
   matrix:
   - TEST=1 DESTINATION="platform=iOS Simulator,name=iPhone X,OS=11.3"
