@@ -2,7 +2,7 @@ os: osx
 osx_image: xcode9.4
 language: swift
 cache: cocoapods
-podfile: Example/RxValidatorExample/Podfile
+# podfile: Example/RxValidatorExample/Podfile
 # xcode_project: Example/RxValidatorExample/RxValidatorExample.xcodeproj
 # xcode_scheme: RxValidatorExample
 
@@ -13,7 +13,7 @@ branches:
       - screenshot
 env:
   global:
-  - PROJECT="./Example/RxValidatorExample/RxValidatorExample.xcworkspace"
+  - PROJECT="RxValidatorExample.xcworkspace"
   - SCHEME="RxValidatorExample"
   matrix:
   - TEST=1 DESTINATION="platform=iOS Simulator,name=iPhone X,OS=11.3"
@@ -30,6 +30,8 @@ install:
   - swift --version
   
 script:
+  - cd Example/RxValidatorExample/
+  - pod install
   - xcodebuild test
       -workspace "$PROJECT"
       -scheme "$SCHEME"
