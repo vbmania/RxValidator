@@ -1,5 +1,5 @@
 //
-//  NumberIsShouldBeEven.swift
+//  NumberShouldBeEven.swift
 //  RxValidator
 //
 //  Created by 유금상 on 2018. 6. 20..
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public final class NumberIsShouldBeEven: IntValidatorType {
+public final class NumberShouldBeEven: IntValidatorType {
     
     public init() {}
     

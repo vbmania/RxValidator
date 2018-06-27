@@ -16,12 +16,12 @@ class IntValidateTests: XCTestCase {
     func testEvenNumber() {
         
         let resultNotValid = Validate.to(1)
-            .validate(NumberIsShouldBeEven())
+            .validate(NumberShouldBeEven())
             .check()
         expect(resultNotValid).to(equal(RxValidatorResult.notEvenNumber))
         
         let resultValid = Validate.to(2)
-            .validate(NumberIsShouldBeEven())
+            .validate(NumberShouldBeEven())
             .check()
         expect(resultValid).to(equal(RxValidatorResult.valid))
     }

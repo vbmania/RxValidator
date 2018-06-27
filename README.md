@@ -96,12 +96,12 @@ Validate.to(Date())
 ### Int
 ```swift {.line-numbers}
 Validate.to(2)
-    .validate(NumberIsShouldBeEven())
+    .validate(NumberShouldBeEven())
     .check()
     //.valid
     
 Validate.to(1)
-    .validate(NumberIsShouldBeEven())
+    .validate(NumberShouldBeEven())
     .check()
     //.notEvenNumber
 ```
@@ -153,7 +153,7 @@ Validate.to("vbmania@me.com")
 ### Int
 ```swift {.line-numbers}
 Validate.to(2)
-    .validate(NumberIsShouldBeEven())
+    .validate(NumberShouldBeEven())
     .asObservable()
     .subscribe(onNext: { value in
         print(value)
@@ -162,7 +162,7 @@ Validate.to(2)
     .disposed(by: disposeBag)
     
 Validate.to(1)
-    .validate(NumberIsShouldBeEven())
+    .validate(NumberShouldBeEven())
     .asObservable()
     .subscribe(onNext: { value in
         print(value)
@@ -315,7 +315,7 @@ StringIsNotOverflowThen(maxLength: Int)
 StringShouldBeMatch("regex string")
 
 //Int
-NumberIsShouldBeEven()
+NumberShouldBeEven()
 
 //Date
 DateValidatorType.shouldEqualTo(Date)
