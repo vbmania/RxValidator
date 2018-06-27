@@ -7,9 +7,9 @@ branches:
       - screenshot
 env:
   global:
-  - PROJECT="Example/RxValidatorExample/RxValidatorExample.xcworkspace"
+  - PROJECT="./Example/RxValidatorExample/RxValidatorExample.xcworkspace"
   - SCHEME="RxValidatorExampleTests"
-  - PODFILE="Example/RxValidatorExample/Podfile"
+  - PODFILE="./Example/RxValidatorExample/Podfile"
   matrix:
   - TEST=1 DESTINATION="platform=iOS Simulator,name=iPhone 8,OS=11.3"
   - TEST=1 DESTINATION="arch=x86_64"
