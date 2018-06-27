@@ -27,12 +27,12 @@ install:
   - swift --version
   
 script:
-  - cd Example/RxValidatorExample/
+  - pod lib lint RxValidator.podspec
+  - travis_wait 60 cd Example/RxValidatorExample/
   - pod install
   - xcodebuild test
       -workspace "$PROJECT"
       -scheme "$SCHEME"
       -destination "$DESTINATION"
       CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
-
-  - travis_wait 30 pod lib lint RxValidator.podspec
+  
