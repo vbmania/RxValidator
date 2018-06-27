@@ -27,7 +27,7 @@ install:
   
 script:
   - pod repo update && pod update --project-directory=Example/RxValidatorExample/
-  - xcodebuild test
+  - xcodebuild clean build test
       -workspace "$PROJECT"
       -scheme "$SCHEME"
       -sdk "$SDK"
