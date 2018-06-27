@@ -22,3 +22,13 @@ before_script:
 install:
   - swift --version
   - bundle install
+
+script:
+  - xcodebuild clean build test
+      -project "$PROJECT"
+      -scheme "$SCHEME"
+      -sdk "$SDK"
+      -destination "$DESTINATION"
+      -configuration Debug
+      -enableCodeCoverage YES
+      CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
