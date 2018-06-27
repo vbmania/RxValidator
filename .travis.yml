@@ -30,7 +30,7 @@ script:
   - pod lib lint RxValidator.podspec
   - cd Example/RxValidatorExample/
   - pod install
-  - xcodebuild test
+  - xcodebuild clean build test
       -workspace "$PROJECT"
       -scheme "$SCHEME"
       -destination "$DESTINATION"
