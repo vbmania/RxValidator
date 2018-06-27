@@ -19,7 +19,8 @@ before_install:
   - gem install cocoapods
   - pod --version
 
-install: true
+install: 
+  - swift --version
   
 script:
   - pod repo update && pod update --project-directory=Example/RxValidatorExample/
