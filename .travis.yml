@@ -23,8 +23,8 @@ before_install:
   - gem install cocoapods
   - pod --version
 
-install: 
-  - swift --version
+install: true
+  # - swift --version
   
 script:
   - pod lib lint RxValidator.podspec
@@ -34,5 +34,5 @@ script:
       -workspace "$PROJECT"
       -scheme "$SCHEME"
       -destination "$DESTINATION"
-      CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
+      CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c --test --color
   
