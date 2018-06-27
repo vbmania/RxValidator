@@ -2,6 +2,8 @@
 osx_image: xcode9.4
 language: swift
 sudo: required
+xcode_scheme: RxValidatorExample
+xcode_workspace: Example/RxValidatorExample/RxValidatorExample.xcworkspace
 # cache: cocoapods
 
 branches:
@@ -29,16 +31,20 @@ install:
   - bundle install
   - gem install cocoapods
   - pod --version
+
+before_script:
+  - pod repo update
+  - pod update --project-directory=Example/RxValidatorExample
   
 script:
   # - pod lib lint RxValidator.podspec
-  - cd Example/RxValidatorExample/
-  - pod repo update
-  - pod lib lint --verbose --allow-warnings --fail-fast
-  - pod update
-  - xcodebuild clean build test
-      -workspace "$PROJECT"
-      -scheme "$SCHEME"
-      -destination "$DESTINATION"
-      CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c --test --color
+  # - cd Example/RxValidatorExample/
+  # - pod repo update
+  - travis_wait 30 pod lib lint --verbose --allow-warnings --fail-fast
+  # - pod update
+  # - xcodebuild clean build test
+  #     -workspace "$PROJECT"
+  #     -scheme "$SCHEME"
+  #     -destination "$DESTINATION"
+  #     CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c --test --color
   
