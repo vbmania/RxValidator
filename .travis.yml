@@ -1,6 +1,5 @@
 osx_image: xcode9.4
 language: swift
-sudo: required
 branches:
   only:
       - develop
@@ -8,7 +7,7 @@ branches:
       - screenshot
 env:
   global:
-  - PROJECT="Exam/RxValidatorExam/RxValidatorExam.xcodeproj"
+  - PROJECT="Exam/RxValidatorExam/RxValidatorExample.xcworkspace"
   - SCHEME="RxValidatorExamTests"
   matrix:
   - TEST=1 DESTINATION="platform=iOS Simulator,name=iPhone 8,OS=11.3"
@@ -16,19 +15,19 @@ env:
   - TEST=1 DESTINATION="OS=11.3,name=Apple TV"
   - TEST=0 DESTINATION="OS=4.3,name=Apple Watch - 38mm"
 
-before_script:
-  - set -o pipefail
-
 before_install:
-  - brew update
+  - gem install cocoapods
+  - pod --version
 
 install:
   - swift --version
   - bundle install
 
 script:
+  - pod repo update && pod update
+  - set -o pipefail
   - xcodebuild clean build test
-      -project "$PROJECT"
+      -workspace "$PROJECT"
       -scheme "$SCHEME"
       -sdk "$SDK"
       -destination "$DESTINATION"
