@@ -28,7 +28,7 @@ install:
   
 script:
   - pod lib lint RxValidator.podspec
-  - travis_wait 60 cd Example/RxValidatorExample/
+  - cd Example/RxValidatorExample/
   - pod install
   - xcodebuild test
       -workspace "$PROJECT"
