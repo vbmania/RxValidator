@@ -30,6 +30,6 @@ script:
       -sdk "$SDK"
       -destination "$DESTINATION"
       -configuration Debug
-      -travis_wait 30 pod lib lint RxValidator.podspec
       -enableCodeCoverage YES
       CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
+  - travis_wait 30 pod lib lint RxValidator.podspec
