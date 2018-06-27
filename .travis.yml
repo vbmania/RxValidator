@@ -4,7 +4,7 @@ language: swift
 cache: cocoapods
 podfile: Example/RxValidatorExample/Podfile
 xcode_project: Example/RxValidatorExample/RxValidatorExample.xcodeproj
-xcode_scheme: RxValidatorExampleTests
+xcode_scheme: RxValidatorExample
 
 branches:
   only:
