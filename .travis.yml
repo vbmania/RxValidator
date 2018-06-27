@@ -1,4 +1,4 @@
-osx_image: xcode9.4
+osx_image: xcode9.3
 language: swift
 cache: cocoapods
 branches:
@@ -32,7 +32,5 @@ script:
       -scheme "$SCHEME"
       -sdk "$SDK"
       -destination "$DESTINATION"
-      -configuration Debug
-      -enableCodeCoverage YES
       CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
   - travis_wait 30 pod lib lint RxValidator.podspec
