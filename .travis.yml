@@ -24,9 +24,6 @@ env:
 
 before_install:
   - set -o pipefail
-  - swift --version
-  - pod --version
-  
 
 # install: 
 #   - gem install cocoapods
