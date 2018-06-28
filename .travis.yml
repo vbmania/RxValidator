@@ -29,4 +29,4 @@ script:
       -scheme "$SCHEME"
       -destination "$DESTINATION" | xcpretty -c
 
-  - travis_wait 30 pod lib lint --verbose --allow-warnings --fail-fast
+  - pod lib lint RxValidatorExample.
