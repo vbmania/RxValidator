@@ -14,7 +14,7 @@ branches:
       - screenshot
 env:
   global:
-    - PROJECT="RxValidatorExample.xcworkspace"
+    - PROJECT="Example/RxValidatorExample/RxValidatorExample.xcworkspace"
     - SCHEME="RxValidatorExample"
   matrix: 
     - TEST=1 DESTINATION="platform=iOS Simulator,name=iPhone X,OS=11.4"
@@ -33,7 +33,7 @@ before_install:
 #   - pod --version
 
 before_script:
-  - cd Example/RxValidatorExample/
+  # - cd Example/RxValidatorExample/
 #   - pod repo update
   # - pod update
   
@@ -43,5 +43,5 @@ script:
       -scheme "$SCHEME"
       -destination "$DESTINATION"
       CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c --test --color
-  - cd ../../
+  # - cd ../../
   - travis_wait 30 pod lib lint --verbose --allow-warnings --fail-fast
