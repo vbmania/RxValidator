@@ -1,10 +1,10 @@
 # os: osx
 osx_image: xcode9.4
-language: objective-c
+language: swift
 sudo: required
-xcode_scheme: RxValidatorExample
-xcode_workspace: Example/RxValidatorExample/RxValidatorExample.xcworkspace
-podfile: Example/RxValidatorExample/Podfile
+# xcode_scheme: RxValidatorExample
+# xcode_workspace: Example/RxValidatorExample/RxValidatorExample.xcworkspace
+# podfile: Example/RxValidatorExample/Podfile
 cache: cocoapods
 
 branches:
@@ -13,9 +13,9 @@ branches:
   except:
       - screenshot
 env:
-#   global:
-#   - PROJECT="RxValidatorExample.xcworkspace"
-#   - SCHEME="RxValidatorExample"
+  global:
+  - PROJECT="RxValidatorExample.xcworkspace"
+  - SCHEME="RxValidatorExample"
   matrix:
   - TEST=1 DESTINATION="platform=iOS Simulator,name=iPhone X,OS=11.3"
   # - TEST=1 DESTINATION="arch=x86_64"
@@ -24,28 +24,24 @@ env:
 
 before_install:
   - set -o pipefail
-  
+  - swift --version
+  - pod --version
   
 
-# install: 
-#   - swift --version
-#   # - bundle install
-#   - gem install cocoapods
-#   - pod --version
+install: 
+  - gem install cocoapods
+  - pod --version
 
-# before_script:
-#   - pod repo update
-#   - pod update --project-directory=Example/RxValidatorExample
+before_script:
+  - cd Example/RxValidatorExample/
+  - pod repo update
+  - pod update
   
 script:
-  # - pod lib lint RxValidator.podspec
-  # - cd Example/RxValidatorExample/
-  # - pod repo update
-  - travis_wait 30 pod lib lint --verbose --allow-warnings --fail-fast
-  # - pod update
-  # - xcodebuild clean build test
-  #     -workspace "$PROJECT"
-  #     -scheme "$SCHEME"
-  #     -destination "$DESTINATION"
-  #     CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c --test --color
-  
+  - xcodebuild clean build test
+      -workspace "$PROJECT"
+      -scheme "$SCHEME"
+      -destination "$DESTINATION"
+      CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c --test --color
+    - cd ../../
+    - travis_wait 30 pod lib lint --verbose --allow-warnings --fail-fast
