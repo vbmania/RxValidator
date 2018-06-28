@@ -5,7 +5,7 @@ sudo: required
 # xcode_scheme: RxValidatorExampleTests
 # xcode_workspace: Example/RxValidatorExample/RxValidatorExample.xcworkspace
 podfile: Example/RxValidatorExample/Podfile
-cache: cocoapods
+# cache: cocoapods
 
 branches:
   only:
