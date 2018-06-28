@@ -36,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		12AD43436D7F95AE6A2B8B2A /* Pods-RxValidatorExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxValidatorExampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxValidatorExampleUITests/Pods-RxValidatorExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		23C0F9BFACA488585ADF1009 /* Pods-RxValidatorExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxValidatorExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxValidatorExampleTests/Pods-RxValidatorExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		48C2EB43C8FE5B68FC28C048 /* Pods_RxValidatorExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxValidatorExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D702AEE9C4A0A9CF13F600 /* Pods-RxValidatorExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxValidatorExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxValidatorExampleTests/Pods-RxValidatorExampleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,7 +61,6 @@
 		B65D1B8AD60C4BBD9C38689D /* Pods-RxValidatorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxValidatorExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxValidatorExample/Pods-RxValidatorExample.release.xcconfig"; sourceTree = "<group>"; };
 		CD0669F8E571E2D7DD891DD8 /* Pods-RxValidatorExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxValidatorExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxValidatorExample/Pods-RxValidatorExample.debug.xcconfig"; sourceTree = "<group>"; };
 		DE2227B6786F6FBC384FD4FA /* Pods_RxValidatorExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxValidatorExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3D80D89C1159EDD41951F8C /* Pods-RxValidatorExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxValidatorExampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxValidatorExampleUITests/Pods-RxValidatorExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +150,6 @@
 				B65D1B8AD60C4BBD9C38689D /* Pods-RxValidatorExample.release.xcconfig */,
 				23C0F9BFACA488585ADF1009 /* Pods-RxValidatorExampleTests.debug.xcconfig */,
 				A4D702AEE9C4A0A9CF13F600 /* Pods-RxValidatorExampleTests.release.xcconfig */,
-				F3D80D89C1159EDD41951F8C /* Pods-RxValidatorExampleUITests.debug.xcconfig */,
-				12AD43436D7F95AE6A2B8B2A /* Pods-RxValidatorExampleUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
