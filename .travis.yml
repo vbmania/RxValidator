@@ -43,5 +43,5 @@ script:
       -scheme "$SCHEME"
       -destination "$DESTINATION"
       CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c --test --color
-    - cd ../../
-    - travis_wait 30 pod lib lint --verbose --allow-warnings --fail-fast
+  - cd ../../
+  - travis_wait 30 pod lib lint --verbose --allow-warnings --fail-fast
