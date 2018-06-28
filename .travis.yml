@@ -32,7 +32,7 @@ env:
 #   - gem install cocoapods
 #   - pod --version
 
-# before_script:
+before_script:
   - cd Example/RxValidatorExample/
 #   - pod repo update
   # - pod update
