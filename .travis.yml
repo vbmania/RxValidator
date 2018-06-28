@@ -6,7 +6,7 @@ podfile: Example/RxValidatorExample/Podfile
 cache: cocoapods
 
 notifications:
-    slack: $SLACK_KEY
+    slack: '$SLACK_KEY'
 
 branches:
   only:
