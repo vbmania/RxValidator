@@ -1,6 +1,6 @@
 # os: osx
 osx_image: xcode9.4
-language: swift
+language: objective-c
 sudo: required
 xcode_scheme: RxValidatorExample
 xcode_workspace: Example/RxValidatorExample/RxValidatorExample.xcworkspace
