@@ -11,7 +11,7 @@ import XCTest
 class AlwaysFailingTests: XCTestCase {
     
     func testExample() {
-        //XCTFail()
+        XCTFail()
     }
 }
  
