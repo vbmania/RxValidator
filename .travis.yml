@@ -38,7 +38,7 @@ before_script:
   # - pod update
   
 script:
-  - xcodebuild build test
+  - xcodebuild clean build test
       -workspace "$PROJECT"
       -scheme "$SCHEME"
       -destination "$DESTINATION"
