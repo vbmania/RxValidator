@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1E4C1066B182E9D91A8EF9BC /* Pods_RxValidatorExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16AA0F1E7CBC9336F7DAFF6 /* Pods_RxValidatorExample.framework */; };
-		676C850CBD19AA38C42BAAE5 /* Pods_RxValidatorExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2227B6786F6FBC384FD4FA /* Pods_RxValidatorExampleUITests.framework */; };
 		9E1293B32686A6414DD77A00 /* Pods_RxValidatorExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C2EB43C8FE5B68FC28C048 /* Pods_RxValidatorExampleTests.framework */; };
 		A51E5B7420D8D4CA001DFB54 /* RxValidatorResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E5B7320D8D4CA001DFB54 /* RxValidatorResultTests.swift */; };
 		A52F227B20E460CC00D41784 /* AlwaysFailingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F227A20E460CC00D41784 /* AlwaysFailingTests.swift */; };
@@ -23,19 +22,11 @@
 		A5BC7D5E20D2344F00BD839C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5BC7D5C20D2344F00BD839C /* Main.storyboard */; };
 		A5BC7D6020D2345100BD839C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5BC7D5F20D2345100BD839C /* Assets.xcassets */; };
 		A5BC7D6320D2345100BD839C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5BC7D6120D2345100BD839C /* LaunchScreen.storyboard */; };
-		A5BC7D7920D2345100BD839C /* RxValidatorExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BC7D7820D2345100BD839C /* RxValidatorExampleUITests.swift */; };
 		A5F5F98320DC8271005B47C1 /* InstantValidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F5F98220DC8271005B47C1 /* InstantValidateTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		A5BC7D6A20D2345100BD839C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A5BC7D4D20D2344F00BD839C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A5BC7D5420D2344F00BD839C;
-			remoteInfo = SwiftValidationCheckerExample;
-		};
-		A5BC7D7520D2345100BD839C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A5BC7D4D20D2344F00BD839C /* Project object */;
 			proxyType = 1;
@@ -66,9 +57,6 @@
 		A5BC7D6420D2345100BD839C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5BC7D6920D2345100BD839C /* RxValidatorExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxValidatorExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5BC7D6F20D2345100BD839C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5BC7D7420D2345100BD839C /* RxValidatorExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxValidatorExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5BC7D7820D2345100BD839C /* RxValidatorExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxValidatorExampleUITests.swift; sourceTree = "<group>"; };
-		A5BC7D7A20D2345100BD839C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5F5F98220DC8271005B47C1 /* InstantValidateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantValidateTests.swift; sourceTree = "<group>"; };
 		B16AA0F1E7CBC9336F7DAFF6 /* Pods_RxValidatorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxValidatorExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65D1B8AD60C4BBD9C38689D /* Pods-RxValidatorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxValidatorExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxValidatorExample/Pods-RxValidatorExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,14 +82,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5BC7D7120D2345100BD839C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				676C850CBD19AA38C42BAAE5 /* Pods_RxValidatorExampleUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -120,7 +100,6 @@
 			children = (
 				A5BC7D5720D2344F00BD839C /* RxValidatorExample */,
 				A5BC7D6C20D2345100BD839C /* RxValidatorExampleTests */,
-				A5BC7D7720D2345100BD839C /* RxValidatorExampleUITests */,
 				A5BC7D5620D2344F00BD839C /* Products */,
 				B3C94452FE98164A31CD1B2E /* Pods */,
 				31E77CE5F57DCDA6D6D6DE5E /* Frameworks */,
@@ -132,7 +111,6 @@
 			children = (
 				A5BC7D5520D2344F00BD839C /* RxValidatorExample.app */,
 				A5BC7D6920D2345100BD839C /* RxValidatorExampleTests.xctest */,
-				A5BC7D7420D2345100BD839C /* RxValidatorExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,15 +143,6 @@
 				A52F227A20E460CC00D41784 /* AlwaysFailingTests.swift */,
 			);
 			path = RxValidatorExampleTests;
-			sourceTree = "<group>";
-		};
-		A5BC7D7720D2345100BD839C /* RxValidatorExampleUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A5BC7D7820D2345100BD839C /* RxValidatorExampleUITests.swift */,
-				A5BC7D7A20D2345100BD839C /* Info.plist */,
-			);
-			path = RxValidatorExampleUITests;
 			sourceTree = "<group>";
 		};
 		B3C94452FE98164A31CD1B2E /* Pods */ = {
@@ -231,25 +200,6 @@
 			productReference = A5BC7D6920D2345100BD839C /* RxValidatorExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A5BC7D7320D2345100BD839C /* RxValidatorExampleUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A5BC7D8320D2345100BD839C /* Build configuration list for PBXNativeTarget "RxValidatorExampleUITests" */;
-			buildPhases = (
-				B5094D1466AFD1FF30463626 /* [CP] Check Pods Manifest.lock */,
-				A5BC7D7020D2345100BD839C /* Sources */,
-				A5BC7D7120D2345100BD839C /* Frameworks */,
-				A5BC7D7220D2345100BD839C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A5BC7D7620D2345100BD839C /* PBXTargetDependency */,
-			);
-			name = RxValidatorExampleUITests;
-			productName = SwiftValidationCheckerExampleUITests;
-			productReference = A5BC7D7420D2345100BD839C /* RxValidatorExampleUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -264,10 +214,6 @@
 						CreatedOnToolsVersion = 9.3;
 					};
 					A5BC7D6820D2345100BD839C = {
-						CreatedOnToolsVersion = 9.3;
-						TestTargetID = A5BC7D5420D2344F00BD839C;
-					};
-					A5BC7D7320D2345100BD839C = {
 						CreatedOnToolsVersion = 9.3;
 						TestTargetID = A5BC7D5420D2344F00BD839C;
 					};
@@ -288,7 +234,6 @@
 			targets = (
 				A5BC7D5420D2344F00BD839C /* RxValidatorExample */,
 				A5BC7D6820D2345100BD839C /* RxValidatorExampleTests */,
-				A5BC7D7320D2345100BD839C /* RxValidatorExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,13 +250,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A5BC7D6720D2345100BD839C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A5BC7D7220D2345100BD839C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -403,24 +341,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B5094D1466AFD1FF30463626 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RxValidatorExampleUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -449,14 +369,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5BC7D7020D2345100BD839C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A5BC7D7920D2345100BD839C /* RxValidatorExampleUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -464,11 +376,6 @@
 			isa = PBXTargetDependency;
 			target = A5BC7D5420D2344F00BD839C /* RxValidatorExample */;
 			targetProxy = A5BC7D6A20D2345100BD839C /* PBXContainerItemProxy */;
-		};
-		A5BC7D7620D2345100BD839C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A5BC7D5420D2344F00BD839C /* RxValidatorExample */;
-			targetProxy = A5BC7D7520D2345100BD839C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -686,46 +593,6 @@
 			};
 			name = Release;
 		};
-		A5BC7D8420D2345100BD839C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3D80D89C1159EDD41951F8C /* Pods-RxValidatorExampleUITests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J4Z73MTKEX;
-				INFOPLIST_FILE = RxValidatorExampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.vbmania.RxValidator.Exam.RxValidatorExampleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RxValidatorExample;
-			};
-			name = Debug;
-		};
-		A5BC7D8520D2345100BD839C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12AD43436D7F95AE6A2B8B2A /* Pods-RxValidatorExampleUITests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J4Z73MTKEX;
-				INFOPLIST_FILE = RxValidatorExampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.vbmania.RxValidator.Exam.RxValidatorExampleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RxValidatorExample;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -752,15 +619,6 @@
 			buildConfigurations = (
 				A5BC7D8120D2345100BD839C /* Debug */,
 				A5BC7D8220D2345100BD839C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A5BC7D8320D2345100BD839C /* Build configuration list for PBXNativeTarget "RxValidatorExampleUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A5BC7D8420D2345100BD839C /* Debug */,
-				A5BC7D8520D2345100BD839C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
