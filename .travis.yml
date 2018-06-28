@@ -13,11 +13,11 @@ branches:
   except:
       - screenshot
 env:
-  # global:
-  # - PROJECT="RxValidatorExample.xcworkspace"
-  # - SCHEME="RxValidatorExample"
-  matrix:
-  - TEST=1 DESTINATION="platform=iOS Simulator,name=iPhone X,OS=11.4"
+  global:
+    - PROJECT="RxValidatorExample.xcworkspace"
+    - SCHEME="RxValidatorExample"
+  matrix: 
+    - TEST=1 DESTINATION="platform=iOS Simulator,name=iPhone X,OS=11.4"
   # - TEST=1 DESTINATION="arch=x86_64"
   # - TEST=1 DESTINATION="OS=11.4,name=Apple TV"
   # - TEST=0 DESTINATION="OS=4.3,name=Apple Watch - 38mm"
