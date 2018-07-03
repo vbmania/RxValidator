@@ -29,13 +29,14 @@ pod 'RxValidator'
 You just use like this:
 ```swift
 
+//without Rx
 Validate.to(TargetValue)
     .validate(condition)
         ...
     .validate(condition)
     .asObservable() or .check()
     
-
+//with Rx
 observable
     .validate(condition)
         ...
