@@ -20,7 +20,11 @@ import RxValidator
 //[] Array Count Check
 //[V] Array Empty Check
 
-class ArrayShouldNotBeEmpty {
+protocol ArrayValidatorType {
+    func validate(_ array: Array<Any>) -> RxValidatorResult
+}
+
+class ArrayShouldNotBeEmpty: ArrayValidatorType {
     
     public func validate(_ array: Array<Any>) -> RxValidatorResult {
         if array.isEmpty {
@@ -30,7 +34,7 @@ class ArrayShouldNotBeEmpty {
     }
 }
 
-class ArrayCountShouldBe {
+class ArrayCountShouldBe: ArrayValidatorType {
     let expectCount: Int
     
     init(exact: Int) {
@@ -47,11 +51,7 @@ class ArrayCountShouldBe {
 
 
 extension Array {
-    func validate(_ validator: ArrayShouldNotBeEmpty) -> RxValidatorResult {
-        return validator.validate(self)
-    }
-    
-    func validate(_ validator: ArrayCountShouldBe) -> RxValidatorResult {
+    func validate(_ validator: ArrayValidatorType) -> RxValidatorResult {
         return validator.validate(self)
     }
 }
