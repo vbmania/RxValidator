@@ -17,6 +17,7 @@
 		A56E79C420DA419500D33EDC /* ObservableExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56E79C320DA419500D33EDC /* ObservableExtensionTests.swift */; };
 		A585C83020D9EA37001E80B3 /* ValidationWithRxSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585C82F20D9EA37001E80B3 /* ValidationWithRxSwiftTests.swift */; };
 		A58644BE20D77F0300B20C3B /* StringValidateRegexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58644BD20D77F0300B20C3B /* StringValidateRegexTests.swift */; };
+		A58AD4E120F2F242005A667D /* ArrayValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58AD4E020F2F242005A667D /* ArrayValidationTests.swift */; };
 		A5BC7D5920D2344F00BD839C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BC7D5820D2344F00BD839C /* AppDelegate.swift */; };
 		A5BC7D5B20D2344F00BD839C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BC7D5A20D2344F00BD839C /* ViewController.swift */; };
 		A5BC7D5E20D2344F00BD839C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5BC7D5C20D2344F00BD839C /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		A56E79C320DA419500D33EDC /* ObservableExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableExtensionTests.swift; sourceTree = "<group>"; };
 		A585C82F20D9EA37001E80B3 /* ValidationWithRxSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationWithRxSwiftTests.swift; sourceTree = "<group>"; };
 		A58644BD20D77F0300B20C3B /* StringValidateRegexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidateRegexTests.swift; sourceTree = "<group>"; };
+		A58AD4E020F2F242005A667D /* ArrayValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayValidationTests.swift; sourceTree = "<group>"; };
 		A5BC7D5520D2344F00BD839C /* RxValidatorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxValidatorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5BC7D5820D2344F00BD839C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5BC7D5A20D2344F00BD839C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				A56E79C320DA419500D33EDC /* ObservableExtensionTests.swift */,
 				A5F5F98220DC8271005B47C1 /* InstantValidateTests.swift */,
 				A52F227A20E460CC00D41784 /* AlwaysFailingTests.swift */,
+				A58AD4E020F2F242005A667D /* ArrayValidationTests.swift */,
 			);
 			path = RxValidatorExampleTests;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				A585C83020D9EA37001E80B3 /* ValidationWithRxSwiftTests.swift in Sources */,
 				A5466E7020D746E100468D7D /* StringValidateTests.swift in Sources */,
 				A5466E7220D7471D00468D7D /* DateValidateTests.swift in Sources */,
+				A58AD4E120F2F242005A667D /* ArrayValidationTests.swift in Sources */,
 				A56E79BF20DA143200D33EDC /* IntValidateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

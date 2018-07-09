@@ -26,6 +26,8 @@ public enum RxValidatorResult: Error,  Equatable {
     case notAfterDate
     case notEqualDate
     
+    case arrayIsEmpty
+    
     public static func ==(lhs: RxValidatorResult, rhs: RxValidatorResult) -> Bool {
         switch (lhs, rhs){
         case (.valid, .valid):
@@ -53,6 +55,8 @@ public enum RxValidatorResult: Error,  Equatable {
         case (.notAfterDate, .notAfterDate):
             return true
         case (.notEqualDate, .notEqualDate):
+            return true
+        case (.arrayIsEmpty, .arrayIsEmpty):
             return true
         default:
             break
