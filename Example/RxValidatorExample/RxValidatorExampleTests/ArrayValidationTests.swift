@@ -21,6 +21,7 @@ import RxValidator
 //[V] Array Empty Check
 
 class ArrayShouldNotBeEmpty {
+    
     public func validate(_ array: Array<Any>) -> RxValidatorResult {
         if array.isEmpty {
             return RxValidatorResult.arrayIsEmpty
@@ -29,15 +30,35 @@ class ArrayShouldNotBeEmpty {
     }
 }
 
+class ArrayCountShouldBe {
+    let expectCount: Int
+    
+    init(exact: Int) {
+        self.expectCount = exact
+    }
+    
+    public func validate(_ array: Array<Any>) -> RxValidatorResult {
+        if array.count == expectCount {
+            return .valid
+        }
+        return RxValidatorResult.notValid
+    }
+}
+
+
 extension Array {
     func validate(_ validator: ArrayShouldNotBeEmpty) -> RxValidatorResult {
+        return validator.validate(self)
+    }
+    
+    func validate(_ validator: ArrayCountShouldBe) -> RxValidatorResult {
         return validator.validate(self)
     }
 }
 
 class ArrayValidationTests: XCTestCase {
     
-    func testSimpleArrayEmptyCheck_EmptyArray() {
+    func testArrayEmptyCheck_Empty() {
         let emptyArray = [Any]()
         let result: RxValidatorResult = emptyArray
             .validate(ArrayShouldNotBeEmpty())
@@ -46,13 +67,29 @@ class ArrayValidationTests: XCTestCase {
         expect(result).to(equal(RxValidatorResult.arrayIsEmpty))
     }
     
-    func testSimpleArrayEmptyCheck_NotEmptyArray() {
+    func testArrayEmptyCheck_NotEmpty() {
         let notEmptyArray = [1]
         let result: RxValidatorResult = notEmptyArray
             .validate(ArrayShouldNotBeEmpty())
         
         expect(result).to(equal(RxValidatorResult.valid))
         expect(result).toNot(equal(RxValidatorResult.arrayIsEmpty))
+    }
+    
+    func testArrayCountCheck_Valid() {
+        let simpleArray = [1, 2, 3]
+        let result: RxValidatorResult = simpleArray
+            .validate(ArrayCountShouldBe(exact: 3))
+        
+        expect(result).to(equal(RxValidatorResult.valid))
+    }
+    
+    func testArrayCountCheck_notValid() {
+        let simpleArray = [1, 2, 3, 4]
+        let result: RxValidatorResult = simpleArray
+            .validate(ArrayCountShouldBe(exact: 3))
+        
+        expect(result).to(equal(RxValidatorResult.notValid))
     }
     
 }
