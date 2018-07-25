@@ -1,3 +1,6 @@
+codecov:
+  token: c04955f1-7c39-49e6-84b9-82626ad45640
+  
 ignore:
   - "Tests/"
 
