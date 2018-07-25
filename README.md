@@ -1,9 +1,10 @@
 
-[![Swift](https://img.shields.io/badge/Swift-4.1-orange.svg)](https://swift.org/blog/swift-4-1-released/)
+[![License](https://img.shields.io/cocoapods/l/RxValidator.svg?style=flat)](http://cocoapods.org/pods/RxValidator)
 [![Platform](https://img.shields.io/cocoapods/p/RxValidator.svg?style=flat)](http://cocoapods.org/pods/RxValidator)
+[![Swift](https://img.shields.io/badge/Swift-4.1-orange.svg)](https://swift.org/blog/swift-4-1-released/)
 [![Version](https://img.shields.io/cocoapods/v/RxValidator.svg?style=flat)](http://cocoapods.org/pods/RxValidator)
 [![Build Status](https://travis-ci.org/vbmania/RxValidator.svg?branch=develop)](https://travis-ci.org/vbmania/RxValidator)
-[![License](https://img.shields.io/cocoapods/l/RxValidator.svg?style=flat)](http://cocoapods.org/pods/RxValidator)
+[![coverage](https://img.shields.io/codecov/c/github/vbmania/RxValidator.svg?branch=develop)](https://codecov.io/gh/vbmania/RxValidator/)
 
 # RxValidator
 Easy to Use, Read, Extensible, Flexible Validation Checker.

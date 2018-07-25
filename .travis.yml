@@ -33,3 +33,6 @@ script:
       -destination "$DESTINATION" | xcpretty -c
 
   - pod lib lint --verbose --allow-warnings --fail-fast
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
