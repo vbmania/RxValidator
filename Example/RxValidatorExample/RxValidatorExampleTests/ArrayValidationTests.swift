@@ -12,12 +12,12 @@ import RxSwift
 import RxCocoa
 import RxValidator
 
-//[] All Items ValidationCheck
+//[] All Items ValidationCheck ... validateEach
 //  [] String Array All Items ValidationCheck
 //  [] Int Array All Items ValidationCheck
 //  [] Date Array All Items ValidationCheck
 
-//[] Array Count Check
+//[V] Array Count Check
 //[V] Array Empty Check
 
 protocol ArrayValidatorType {
