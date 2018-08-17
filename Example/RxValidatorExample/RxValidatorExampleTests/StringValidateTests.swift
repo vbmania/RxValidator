@@ -113,4 +113,13 @@ class StringValidateTests: XCTestCase {
     }
     
     
+    func testStringArray() {
+        let targetValue = ["1", "2", "3"]
+        
+        let result: RxValidatorResult = targetValue
+            .compactMap { return Validate.to($0).validate(StringShouldNotBeEmpty()).check() }
+            .reduce(RxValidatorResult.valid) { $0 != .valid ? $0 : $1 }
+        
+        expect(result).toEventually(equal(.valid))
+    }
 }
