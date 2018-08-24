@@ -357,6 +357,6 @@ class MyCustomIntValidationRule: IntValidatorType {
 ```
 
 ## I want to be...
-* More Built-in Validation Rules.
+* More Built-in Validation Rules. (Help me. Welcome to PR.)
 * Support More Type (Array, Float, Double, etc)
 * More Flexible Code via Generics.
