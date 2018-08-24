@@ -329,6 +329,7 @@ DateValidatorType.shouldBeforeOrSameThen(Date)
 DateValidatorType.shouldAfterThen(Date)
 DateValidatorType.shouldAfterOrSameThen(Date)
 DateValidatorType.shouldBeCloseDates(date: Date, termOfDays: Int)
+
 ```
 
 ## Make custom ValidationRule like this:
@@ -354,3 +355,8 @@ class MyCustomIntValidationRule: IntValidatorType {
 
 
 ```
+
+## I want to be...
+* More Built-in Validation Rules.
+* Support More Type (Array, Float, Double, etc)
+* More Flexible Code via Generics.
