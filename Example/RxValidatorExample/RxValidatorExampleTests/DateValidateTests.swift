@@ -20,7 +20,7 @@ class DateValidateTests: XCTestCase {
     func testDateValidation() {
         
         let targetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
-        let afterTargetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
+        let afterTargetDate = "2018-05-29T12:01+09:00".date(format: .iso8601Auto)!.absoluteDate
         let beforeTargetDate = "2018-05-29T11:59+09:00".date(format: .iso8601Auto)!.absoluteDate
         let sameTargetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
         
