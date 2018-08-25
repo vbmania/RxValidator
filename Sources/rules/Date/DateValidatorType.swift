@@ -35,7 +35,7 @@ public enum DateValidatorType {
             }
         case let .shouldBeforeOrSameThen(comparison):
             let result = calendar.compare(value, to: comparison, toGranularity: granularity)
-            if result == .orderedAscending {
+            if result == .orderedDescending {
                 throw RxValidatorResult.notBeforeDate
             }
         case let .shouldAfterThen(comparison):
