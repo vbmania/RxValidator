@@ -30,7 +30,7 @@ public enum DateValidatorType {
             }
         case let .shouldBeforeThen(comparison):
             let result = calendar.compare(value, to: comparison, toGranularity: granularity)
-            if result == .orderedDescending {
+            if result != .orderedAscending {
                 throw RxValidatorResult.notBeforeDate
             }
         case let .shouldBeforeOrSameThen(comparison):
@@ -40,12 +40,12 @@ public enum DateValidatorType {
             }
         case let .shouldAfterThen(comparison):
             let result = calendar.compare(value, to: comparison, toGranularity: granularity)
-            if result == .orderedAscending {
+            if result != .orderedDescending {
                 throw RxValidatorResult.notAfterDate
             }
         case let .shouldAfterOrSameThen(comparison):
             let result = calendar.compare(value, to: comparison, toGranularity: granularity)
-            if !(result != .orderedAscending) {
+            if result == .orderedAscending {
                 throw RxValidatorResult.notAfterDate
             }
         case let .shouldBeCloseDates(comparison, termOfDays):            
