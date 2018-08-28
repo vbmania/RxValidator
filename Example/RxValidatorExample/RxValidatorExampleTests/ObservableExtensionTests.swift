@@ -42,7 +42,7 @@ class ObservableExtensionTests: XCTestCase {
         
         observable
             .asObservable()
-            .validate(StringIsShouldNotEmpty())
+            .validate(StringShouldNotBeEmpty())
             .asObservable()
             .subscribe(onNext: { (text) in
                 XCTFail()
@@ -65,7 +65,7 @@ class ObservableExtensionTests: XCTestCase {
         
         observable
             .asObservable()
-            .validate(NumberIsShouldBeEven())
+            .validate(NumberShouldBeEven())
             .asObservable()
             .subscribe(onNext: { number in
                 result = number

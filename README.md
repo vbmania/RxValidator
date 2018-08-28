@@ -1,11 +1,15 @@
 
-[![Swift](https://img.shields.io/badge/Swift-4.1-orange.svg)](https://swift.org/blog/swift-4-1-released/)
-[![Platform](https://img.shields.io/cocoapods/p/RxValidator.svg?style=flat)](http://cocoapods.org/pods/RxValidator)
-[![Version](https://img.shields.io/cocoapods/v/RxValidator.svg?style=flat)](http://cocoapods.org/pods/RxValidator)
 [![License](https://img.shields.io/cocoapods/l/RxValidator.svg?style=flat)](http://cocoapods.org/pods/RxValidator)
+[![Platform](https://img.shields.io/cocoapods/p/RxValidator.svg?style=flat)](http://cocoapods.org/pods/RxValidator)
+[![Swift](https://img.shields.io/badge/Swift-4.1-orange.svg)](https://swift.org/blog/swift-4-1-released/)
+[![Version](https://img.shields.io/cocoapods/v/RxValidator.svg?style=flat)](http://cocoapods.org/pods/RxValidator)
+[![Build Status](https://travis-ci.org/vbmania/RxValidator.svg?branch=develop)](https://travis-ci.org/vbmania/RxValidator)
+[![codecov.io](https://codecov.io/gh/vbmania/RxValidator/branch/develop/graphs/badge.svg)](https://codecov.io/gh/vbmania/RxValidator/branch/develop)
 
 # RxValidator
-Easy to Use, Read, Extensible, Flexible Validation Checker
+Easy to Use, Read, Extensible, Flexible Validation Checker.
+
+It can use without Rx.
 
 ## Requirements
 
@@ -26,13 +30,14 @@ pod 'RxValidator'
 You just use like this:
 ```swift
 
+//without Rx
 Validate.to(TargetValue)
     .validate(condition)
         ...
     .validate(condition)
     .asObservable() or .check()
     
-
+//with Rx
 observable
     .validate(condition)
         ...
@@ -96,12 +101,12 @@ Validate.to(Date())
 ### Int
 ```swift {.line-numbers}
 Validate.to(2)
-    .validate(NumberIsShouldBeEven())
+    .validate(NumberShouldBeEven())
     .check()
     //.valid
     
 Validate.to(1)
-    .validate(NumberIsShouldBeEven())
+    .validate(NumberShouldBeEven())
     .check()
     //.notEvenNumber
 ```
@@ -153,7 +158,7 @@ Validate.to("vbmania@me.com")
 ### Int
 ```swift {.line-numbers}
 Validate.to(2)
-    .validate(NumberIsShouldBeEven())
+    .validate(NumberShouldBeEven())
     .asObservable()
     .subscribe(onNext: { value in
         print(value)
@@ -162,7 +167,7 @@ Validate.to(2)
     .disposed(by: disposeBag)
     
 Validate.to(1)
-    .validate(NumberIsShouldBeEven())
+    .validate(NumberShouldBeEven())
     .asObservable()
     .subscribe(onNext: { value in
         print(value)
@@ -315,7 +320,7 @@ StringIsNotOverflowThen(maxLength: Int)
 StringShouldBeMatch("regex string")
 
 //Int
-NumberIsShouldBeEven()
+NumberShouldBeEven()
 
 //Date
 DateValidatorType.shouldEqualTo(Date)
@@ -324,6 +329,7 @@ DateValidatorType.shouldBeforeOrSameThen(Date)
 DateValidatorType.shouldAfterThen(Date)
 DateValidatorType.shouldAfterOrSameThen(Date)
 DateValidatorType.shouldBeCloseDates(date: Date, termOfDays: Int)
+
 ```
 
 ## Make custom ValidationRule like this:
@@ -349,3 +355,8 @@ class MyCustomIntValidationRule: IntValidatorType {
 
 
 ```
+
+## I want to be...
+* More Built-in Validation Rules. (Help me. Welcome to PR.)
+* Support More Type (Array, Float, Double, etc)
+* More Flexible Code via Generics.

@@ -19,9 +19,4 @@ target 'RxValidatorExample' do
 
   end
 
-  target 'RxValidatorExampleUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end

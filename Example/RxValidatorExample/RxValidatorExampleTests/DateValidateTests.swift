@@ -20,7 +20,7 @@ class DateValidateTests: XCTestCase {
     func testDateValidation() {
         
         let targetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
-        let afterTargetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
+        let afterTargetDate = "2018-05-29T12:01+09:00".date(format: .iso8601Auto)!.absoluteDate
         let beforeTargetDate = "2018-05-29T11:59+09:00".date(format: .iso8601Auto)!.absoluteDate
         let sameTargetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
         
@@ -49,6 +49,53 @@ class DateValidateTests: XCTestCase {
         expect(resultDate).toEventually(equal(targetDate))
     }
     
+    func testDateValidationShouldBeforeThenWithSameTargetDate() {
+        // given
+        let targetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
+        let sameTargetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
+        var resultDate: Date?
+        var resultError: RxValidatorResult = .valid
+        let underTest = DateValidationTarget(targetDate)
+        
+        // when
+        underTest
+            .validate(.shouldBeforeThen(date: sameTargetDate))
+            .asObservable()
+            .subscribe(onNext: { (date) in
+                resultDate = date
+            }, onError: { (error) in
+                resultError = RxValidatorResult.determine(error: error)
+            }).disposed(by: disposeBag)
+        
+        // then
+        // it should not before date
+        expect(resultError).toEventually(equal(RxValidatorResult.notBeforeDate))
+        expect(resultDate).toEventually(beNil())
+    }
+    
+    func testDateValidationShouldAfterThenWithSameTargetDate() {
+        // given
+        let targetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
+        let sameTargetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
+        var resultDate: Date?
+        var resultError: RxValidatorResult = .valid
+        let underTest = DateValidationTarget(targetDate)
+        
+        // when
+        underTest
+            .validate(.shouldAfterThen(date: sameTargetDate))
+            .asObservable()
+            .subscribe(onNext: { (date) in
+                resultDate = date
+            }, onError: { (error) in
+                resultError = RxValidatorResult.determine(error: error)
+            }).disposed(by: disposeBag)
+        
+        // then
+        // it should not after date
+        expect(resultError).toEventually(equal(RxValidatorResult.notAfterDate))
+        expect(resultDate).toEventually(beNil())
+    }
     
     func testDateValidationWithAllday() {
         let targetDate = "2018-05-29T12:00:00+09:00".date(format: .iso8601Auto)!.absoluteDate
