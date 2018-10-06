@@ -18,11 +18,11 @@ class DateValidateTests: XCTestCase {
     
     
     func testDateValidation() {
-        
-        let targetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
-        let afterTargetDate = "2018-05-29T12:01+09:00".date(format: .iso8601Auto)!.absoluteDate
-        let beforeTargetDate = "2018-05-29T11:59+09:00".date(format: .iso8601Auto)!.absoluteDate
-        let sameTargetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
+
+        let targetDate = "2018-05-29T12:00+09:00".toISODate()!.date
+        let afterTargetDate = "2018-05-29T12:01+09:00".toISODate()!.date
+        let beforeTargetDate = "2018-05-29T11:59+09:00".toISODate()!.date
+        let sameTargetDate = "2018-05-29T12:00+09:00".toISODate()!.date
         
         var resultDate: Date?
         var resultError: RxValidatorResult = .valid 
@@ -51,8 +51,8 @@ class DateValidateTests: XCTestCase {
     
     func testDateValidationShouldBeforeThenWithSameTargetDate() {
         // given
-        let targetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
-        let sameTargetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
+        let targetDate = "2018-05-29T12:00+09:00".toISODate()!.date
+        let sameTargetDate = "2018-05-29T12:00+09:00".toISODate()!.date
         var resultDate: Date?
         var resultError: RxValidatorResult = .valid
         let underTest = DateValidationTarget(targetDate)
@@ -75,8 +75,8 @@ class DateValidateTests: XCTestCase {
     
     func testDateValidationShouldAfterThenWithSameTargetDate() {
         // given
-        let targetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
-        let sameTargetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
+        let targetDate = "2018-05-29T12:00+09:00".toISODate()!.date
+        let sameTargetDate = "2018-05-29T12:00+09:00".toISODate()!.date
         var resultDate: Date?
         var resultError: RxValidatorResult = .valid
         let underTest = DateValidationTarget(targetDate)
@@ -98,15 +98,15 @@ class DateValidateTests: XCTestCase {
     }
     
     func testDateValidationWithAllday() {
-        let targetDate = "2018-05-29T12:00:00+09:00".date(format: .iso8601Auto)!.absoluteDate
+        let targetDate = "2018-05-29T12:00:00+09:00".toISODate()!.date
         
-        let afterTargetDateInSameDay = "2018-05-29T12:00:01+09:00".date(format: .iso8601Auto)!.absoluteDate
-        let beforeTargetDateInSameDay = "2018-05-29T11:59:59+09:00".date(format: .iso8601Auto)!.absoluteDate
+        let afterTargetDateInSameDay = "2018-05-29T12:00:01+09:00".toISODate()!.date
+        let beforeTargetDateInSameDay = "2018-05-29T11:59:59+09:00".toISODate()!.date
         
-        let afterTargetDate = "2018-05-30T12:00:01+09:00".date(format: .iso8601Auto)!.absoluteDate
-        let beforeTargetDate = "2018-05-28T11:59:59+09:00".date(format: .iso8601Auto)!.absoluteDate
+        let afterTargetDate = "2018-05-30T12:00:01+09:00".toISODate()!.date
+        let beforeTargetDate = "2018-05-28T11:59:59+09:00".toISODate()!.date
         
-        let sameTargetDate = "2018-05-29T12:00:00+09:00".date(format: .iso8601Auto)!.absoluteDate
+        let sameTargetDate = "2018-05-29T12:00:00+09:00".toISODate()!.date
         
         
         
@@ -139,8 +139,8 @@ class DateValidateTests: XCTestCase {
     }
     
     func testDateTermValidationSuccess() {
-        let targetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
-        let validEndDate = "2018-06-28T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
+        let targetDate = "2018-05-29T12:00+09:00".toISODate()!.date
+        let validEndDate = "2018-06-28T12:00+09:00".toISODate()!.date
         
         var resultDate: Date?
         var raisedError: Bool = false
@@ -160,8 +160,8 @@ class DateValidateTests: XCTestCase {
     }
     
     func testDateTermValidationFailure() {
-        let targetDate = "2018-05-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
-        let notValidEndDate = "2018-06-29T12:00+09:00".date(format: .iso8601Auto)!.absoluteDate
+        let targetDate = "2018-05-29T12:00+09:00".toISODate()!.date
+        let notValidEndDate = "2018-06-29T12:00+09:00".toISODate()!.date
         
         var resultDate: Date?
         var raisedError: Bool = false
