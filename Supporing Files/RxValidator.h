@@ -5,7 +5,7 @@
 //  Created by Kawoou on 06/10/2018.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for RxValidator_iOS.
 FOUNDATION_EXPORT double RxValidatorVersionNumber;

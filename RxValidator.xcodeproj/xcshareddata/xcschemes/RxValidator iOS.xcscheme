@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9D1550CD2167CE4900C5C889"
-               BuildableName = "RxValidator_iOS.framework"
+               BuildableName = "RxValidator.framework"
                BlueprintName = "RxValidator iOS"
                ReferencedContainer = "container:RxValidator.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9D1550CD2167CE4900C5C889"
-            BuildableName = "RxValidator_iOS.framework"
+            BuildableName = "RxValidator.framework"
             BlueprintName = "RxValidator iOS"
             ReferencedContainer = "container:RxValidator.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9D1550CD2167CE4900C5C889"
-            BuildableName = "RxValidator_iOS.framework"
+            BuildableName = "RxValidator.framework"
             BlueprintName = "RxValidator iOS"
             ReferencedContainer = "container:RxValidator.xcodeproj">
          </BuildableReference>
