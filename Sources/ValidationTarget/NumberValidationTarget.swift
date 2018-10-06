@@ -1,5 +1,5 @@
 //
-//  IntValidationTarget.swift
+//  NumberValidationTarget.swift
 //  RxValidator
 //
 //  Created by 유금상 on 2018. 5. 30..
@@ -8,18 +8,18 @@
 import Foundation
 import RxSwift
 
-public final class IntValidationTarget: ValidationTarget {
-    public typealias TargetType = Int
-    public typealias ValidatorType = IntValidatorType
+public final class NumberValidationTarget<T: Numeric>: ValidationTarget {
+    public typealias TargetType = T
+    public typealias ValidatorType = NumberValidator<T>
     
-    public let value: Int
-    public var result: Observable<Int>?
+    public let value: T
+    public var result: Observable<T>?
     
-    required public init(_ value: Int) {
+    required public init(_ value: T) {
         self.value = value
     }
     
-    public func validate(_ validator: IntValidatorType) -> Self {
+    public func validate(_ validator: NumberValidator<T>) -> Self {
         guard self.result == nil else {
             return self
         }

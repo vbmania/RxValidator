@@ -13,8 +13,8 @@ public final class Validate {
         return StringValidationTarget(value)
     }
     
-    public static func to(_ value: Int) -> IntValidationTarget {
-        return IntValidationTarget(value)
+    public static func to<T: Numeric>(_ value: T) -> NumberValidationTarget<T> {
+        return NumberValidationTarget(value)
     }
     
     public static func to(_ value: Date, granularity: Calendar.Component) -> DateValidationTarget {

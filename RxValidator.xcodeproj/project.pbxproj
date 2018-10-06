@@ -7,75 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C5E775F869DF092EC93BEEF /* Pods_RxValidatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C056CEB2232AAC48DC2FAEAE /* Pods_RxValidatorTests.framework */; };
 		9D1550D22167CE4900C5C889 /* RxValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D1550D02167CE4900C5C889 /* RxValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D1550FE2167CEEC00C5C889 /* RxValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D1550D02167CE4900C5C889 /* RxValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D1550FF2167CEF300C5C889 /* RxValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D1550D02167CE4900C5C889 /* RxValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D1551002167CEF700C5C889 /* RxValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D1550D02167CE4900C5C889 /* RxValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D53FC562167E1EE00BE3F59 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* Validate.swift */; };
 		9D53FC572167E1EE00BE3F59 /* DateValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* DateValidationTarget.swift */; };
-		9D53FC582167E1EE00BE3F59 /* IntValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* IntValidationTarget.swift */; };
+		9D53FC582167E1EE00BE3F59 /* NumberValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* NumberValidationTarget.swift */; };
 		9D53FC592167E1EE00BE3F59 /* StringValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* StringValidationTarget.swift */; };
 		9D53FC5A2167E1EE00BE3F59 /* Observable+Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Observable+Date+Extension.swift */; };
-		9D53FC5B2167E1EE00BE3F59 /* Observable+Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Observable+Int+Extension.swift */; };
+		9D53FC5B2167E1EE00BE3F59 /* Observable+Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Observable+Number+Extension.swift */; };
 		9D53FC5C2167E1EE00BE3F59 /* Observable+String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Observable+String+Extension.swift */; };
-		9D53FC5D2167E1EE00BE3F59 /* IntValidatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* IntValidatorType.swift */; };
-		9D53FC5E2167E1EE00BE3F59 /* StringValidatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* StringValidatorType.swift */; };
+		9D53FC5E2167E1EE00BE3F59 /* StringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* StringValidator.swift */; };
 		9D53FC5F2167E1EE00BE3F59 /* ValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* ValidationTarget.swift */; };
 		9D53FC602167E1EE00BE3F59 /* RxValidatorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* RxValidatorResult.swift */; };
-		9D53FC612167E1EE00BE3F59 /* DateValidatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* DateValidatorType.swift */; };
-		9D53FC622167E1EE00BE3F59 /* NumberShouldBeEven.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* NumberShouldBeEven.swift */; };
-		9D53FC632167E1EE00BE3F59 /* StringIsAlwaysPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* StringIsAlwaysPass.swift */; };
+		9D53FC622167E1EE00BE3F59 /* IntShouldBeEven.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* IntShouldBeEven.swift */; };
 		9D53FC642167E1EE00BE3F59 /* StringIsNotOverflowThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* StringIsNotOverflowThen.swift */; };
 		9D53FC652167E1EE00BE3F59 /* StringShouldBeMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* StringShouldBeMatch.swift */; };
 		9D53FC662167E1EE00BE3F59 /* StringShouldNotBeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* StringShouldNotBeEmpty.swift */; };
 		9D53FC672167E1F900BE3F59 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* Validate.swift */; };
 		9D53FC682167E1F900BE3F59 /* DateValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* DateValidationTarget.swift */; };
-		9D53FC692167E1F900BE3F59 /* IntValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* IntValidationTarget.swift */; };
+		9D53FC692167E1F900BE3F59 /* NumberValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* NumberValidationTarget.swift */; };
 		9D53FC6A2167E1F900BE3F59 /* StringValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* StringValidationTarget.swift */; };
 		9D53FC6B2167E1F900BE3F59 /* Observable+Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Observable+Date+Extension.swift */; };
-		9D53FC6C2167E1F900BE3F59 /* Observable+Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Observable+Int+Extension.swift */; };
+		9D53FC6C2167E1F900BE3F59 /* Observable+Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Observable+Number+Extension.swift */; };
 		9D53FC6D2167E1F900BE3F59 /* Observable+String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Observable+String+Extension.swift */; };
-		9D53FC6E2167E1F900BE3F59 /* IntValidatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* IntValidatorType.swift */; };
-		9D53FC6F2167E1F900BE3F59 /* StringValidatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* StringValidatorType.swift */; };
+		9D53FC6F2167E1F900BE3F59 /* StringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* StringValidator.swift */; };
 		9D53FC702167E1F900BE3F59 /* ValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* ValidationTarget.swift */; };
 		9D53FC712167E1F900BE3F59 /* RxValidatorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* RxValidatorResult.swift */; };
-		9D53FC722167E1F900BE3F59 /* DateValidatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* DateValidatorType.swift */; };
-		9D53FC732167E1F900BE3F59 /* NumberShouldBeEven.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* NumberShouldBeEven.swift */; };
-		9D53FC742167E1F900BE3F59 /* StringIsAlwaysPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* StringIsAlwaysPass.swift */; };
+		9D53FC732167E1F900BE3F59 /* IntShouldBeEven.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* IntShouldBeEven.swift */; };
 		9D53FC752167E1F900BE3F59 /* StringIsNotOverflowThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* StringIsNotOverflowThen.swift */; };
 		9D53FC762167E1F900BE3F59 /* StringShouldBeMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* StringShouldBeMatch.swift */; };
 		9D53FC772167E1F900BE3F59 /* StringShouldNotBeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* StringShouldNotBeEmpty.swift */; };
 		9D53FC782167E1FF00BE3F59 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* Validate.swift */; };
 		9D53FC792167E1FF00BE3F59 /* DateValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* DateValidationTarget.swift */; };
-		9D53FC7A2167E1FF00BE3F59 /* IntValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* IntValidationTarget.swift */; };
+		9D53FC7A2167E1FF00BE3F59 /* NumberValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* NumberValidationTarget.swift */; };
 		9D53FC7B2167E1FF00BE3F59 /* StringValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* StringValidationTarget.swift */; };
 		9D53FC7C2167E1FF00BE3F59 /* Observable+Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Observable+Date+Extension.swift */; };
-		9D53FC7D2167E1FF00BE3F59 /* Observable+Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Observable+Int+Extension.swift */; };
+		9D53FC7D2167E1FF00BE3F59 /* Observable+Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Observable+Number+Extension.swift */; };
 		9D53FC7E2167E1FF00BE3F59 /* Observable+String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Observable+String+Extension.swift */; };
-		9D53FC7F2167E1FF00BE3F59 /* IntValidatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* IntValidatorType.swift */; };
-		9D53FC802167E1FF00BE3F59 /* StringValidatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* StringValidatorType.swift */; };
+		9D53FC802167E1FF00BE3F59 /* StringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* StringValidator.swift */; };
 		9D53FC812167E1FF00BE3F59 /* ValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* ValidationTarget.swift */; };
 		9D53FC822167E1FF00BE3F59 /* RxValidatorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* RxValidatorResult.swift */; };
-		9D53FC832167E1FF00BE3F59 /* DateValidatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* DateValidatorType.swift */; };
-		9D53FC842167E1FF00BE3F59 /* NumberShouldBeEven.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* NumberShouldBeEven.swift */; };
-		9D53FC852167E1FF00BE3F59 /* StringIsAlwaysPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* StringIsAlwaysPass.swift */; };
+		9D53FC842167E1FF00BE3F59 /* IntShouldBeEven.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* IntShouldBeEven.swift */; };
 		9D53FC862167E1FF00BE3F59 /* StringIsNotOverflowThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* StringIsNotOverflowThen.swift */; };
 		9D53FC872167E1FF00BE3F59 /* StringShouldBeMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* StringShouldBeMatch.swift */; };
 		9D53FC882167E1FF00BE3F59 /* StringShouldNotBeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* StringShouldNotBeEmpty.swift */; };
 		9D53FC892167E20400BE3F59 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* Validate.swift */; };
 		9D53FC8A2167E20400BE3F59 /* DateValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* DateValidationTarget.swift */; };
-		9D53FC8B2167E20400BE3F59 /* IntValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* IntValidationTarget.swift */; };
+		9D53FC8B2167E20400BE3F59 /* NumberValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* NumberValidationTarget.swift */; };
 		9D53FC8C2167E20400BE3F59 /* StringValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* StringValidationTarget.swift */; };
 		9D53FC8D2167E20400BE3F59 /* Observable+Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Observable+Date+Extension.swift */; };
-		9D53FC8E2167E20400BE3F59 /* Observable+Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Observable+Int+Extension.swift */; };
+		9D53FC8E2167E20400BE3F59 /* Observable+Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Observable+Number+Extension.swift */; };
 		9D53FC8F2167E20400BE3F59 /* Observable+String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Observable+String+Extension.swift */; };
-		9D53FC902167E20400BE3F59 /* IntValidatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* IntValidatorType.swift */; };
-		9D53FC912167E20400BE3F59 /* StringValidatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* StringValidatorType.swift */; };
+		9D53FC912167E20400BE3F59 /* StringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* StringValidator.swift */; };
 		9D53FC922167E20400BE3F59 /* ValidationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* ValidationTarget.swift */; };
 		9D53FC932167E20400BE3F59 /* RxValidatorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* RxValidatorResult.swift */; };
-		9D53FC942167E20400BE3F59 /* DateValidatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* DateValidatorType.swift */; };
-		9D53FC952167E20400BE3F59 /* NumberShouldBeEven.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* NumberShouldBeEven.swift */; };
-		9D53FC962167E20400BE3F59 /* StringIsAlwaysPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* StringIsAlwaysPass.swift */; };
+		9D53FC952167E20400BE3F59 /* IntShouldBeEven.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* IntShouldBeEven.swift */; };
 		9D53FC972167E20400BE3F59 /* StringIsNotOverflowThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* StringIsNotOverflowThen.swift */; };
 		9D53FC982167E20400BE3F59 /* StringShouldBeMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* StringShouldBeMatch.swift */; };
 		9D53FC992167E20400BE3F59 /* StringShouldNotBeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* StringShouldNotBeEmpty.swift */; };
@@ -83,9 +72,98 @@
 		9D53FCAA2167E2F200BE3F59 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D53FCA92167E2F200BE3F59 /* RxSwift.framework */; };
 		9D53FCAC2167E2F600BE3F59 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D53FCAB2167E2F600BE3F59 /* RxSwift.framework */; };
 		9D53FCAE2167E2FD00BE3F59 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D53FCAD2167E2FD00BE3F59 /* RxSwift.framework */; };
+		9D53FCB72168C5FE00BE3F59 /* DateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCB62168C5FE00BE3F59 /* DateValidator.swift */; };
+		9D53FCB92168C64E00BE3F59 /* DateShouldEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCB82168C64E00BE3F59 /* DateShouldEqualTo.swift */; };
+		9D53FCBB2168C71C00BE3F59 /* DateShouldBeforeThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCBA2168C71C00BE3F59 /* DateShouldBeforeThen.swift */; };
+		9D53FCBD2168C79600BE3F59 /* DateShouldBeforeOrSameThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCBC2168C79600BE3F59 /* DateShouldBeforeOrSameThen.swift */; };
+		9D53FCBF2168C7EC00BE3F59 /* DateShouldAfterThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCBE2168C7EC00BE3F59 /* DateShouldAfterThen.swift */; };
+		9D53FCC12168C84A00BE3F59 /* DateShouldAfterOrSameThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC02168C84A00BE3F59 /* DateShouldAfterOrSameThen.swift */; };
+		9D53FCC32168C8A300BE3F59 /* DateShouldBeCloseDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC22168C8A300BE3F59 /* DateShouldBeCloseDates.swift */; };
+		9D53FCC52168C9F200BE3F59 /* StringIsNotUnderflowThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC42168C9F200BE3F59 /* StringIsNotUnderflowThen.swift */; };
+		9D53FCC72168CA7B00BE3F59 /* StringShouldEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC62168CA7B00BE3F59 /* StringShouldEqualTo.swift */; };
+		9D53FCC92168CB9000BE3F59 /* NumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC82168CB9000BE3F59 /* NumberValidator.swift */; };
+		9D53FCCD2168CBD400BE3F59 /* NumberShouldEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCCC2168CBD400BE3F59 /* NumberShouldEqualTo.swift */; };
+		9D53FCCE2168CBD400BE3F59 /* NumberShouldEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCCC2168CBD400BE3F59 /* NumberShouldEqualTo.swift */; };
+		9D53FCCF2168CBD400BE3F59 /* NumberShouldEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCCC2168CBD400BE3F59 /* NumberShouldEqualTo.swift */; };
+		9D53FCD02168CBD400BE3F59 /* NumberShouldEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCCC2168CBD400BE3F59 /* NumberShouldEqualTo.swift */; };
+		9D53FCD22168CDEB00BE3F59 /* NumberShouldLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCD12168CDEB00BE3F59 /* NumberShouldLessThan.swift */; };
+		9D53FCD32168CDEB00BE3F59 /* NumberShouldLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCD12168CDEB00BE3F59 /* NumberShouldLessThan.swift */; };
+		9D53FCD42168CDEB00BE3F59 /* NumberShouldLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCD12168CDEB00BE3F59 /* NumberShouldLessThan.swift */; };
+		9D53FCD52168CDEB00BE3F59 /* NumberShouldLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCD12168CDEB00BE3F59 /* NumberShouldLessThan.swift */; };
+		9D53FCD72168CF4100BE3F59 /* NumberShouldGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCD62168CF4100BE3F59 /* NumberShouldGreaterThan.swift */; };
+		9D53FCD82168CF4100BE3F59 /* NumberShouldGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCD62168CF4100BE3F59 /* NumberShouldGreaterThan.swift */; };
+		9D53FCD92168CF4100BE3F59 /* NumberShouldGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCD62168CF4100BE3F59 /* NumberShouldGreaterThan.swift */; };
+		9D53FCDA2168CF4100BE3F59 /* NumberShouldGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCD62168CF4100BE3F59 /* NumberShouldGreaterThan.swift */; };
+		9D53FCDB2168CF6A00BE3F59 /* NumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC82168CB9000BE3F59 /* NumberValidator.swift */; };
+		9D53FCDC2168CF6A00BE3F59 /* DateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCB62168C5FE00BE3F59 /* DateValidator.swift */; };
+		9D53FCDD2168CF6A00BE3F59 /* DateShouldEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCB82168C64E00BE3F59 /* DateShouldEqualTo.swift */; };
+		9D53FCDE2168CF6A00BE3F59 /* DateShouldBeforeThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCBA2168C71C00BE3F59 /* DateShouldBeforeThen.swift */; };
+		9D53FCDF2168CF6A00BE3F59 /* DateShouldBeforeOrSameThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCBC2168C79600BE3F59 /* DateShouldBeforeOrSameThen.swift */; };
+		9D53FCE02168CF6A00BE3F59 /* DateShouldAfterThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCBE2168C7EC00BE3F59 /* DateShouldAfterThen.swift */; };
+		9D53FCE12168CF6A00BE3F59 /* DateShouldAfterOrSameThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC02168C84A00BE3F59 /* DateShouldAfterOrSameThen.swift */; };
+		9D53FCE22168CF6A00BE3F59 /* DateShouldBeCloseDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC22168C8A300BE3F59 /* DateShouldBeCloseDates.swift */; };
+		9D53FCE32168CF6A00BE3F59 /* StringIsNotUnderflowThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC42168C9F200BE3F59 /* StringIsNotUnderflowThen.swift */; };
+		9D53FCE42168CF6A00BE3F59 /* StringShouldEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC62168CA7B00BE3F59 /* StringShouldEqualTo.swift */; };
+		9D53FCE52168CF7300BE3F59 /* NumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC82168CB9000BE3F59 /* NumberValidator.swift */; };
+		9D53FCE62168CF7300BE3F59 /* DateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCB62168C5FE00BE3F59 /* DateValidator.swift */; };
+		9D53FCE72168CF7300BE3F59 /* DateShouldEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCB82168C64E00BE3F59 /* DateShouldEqualTo.swift */; };
+		9D53FCE82168CF7300BE3F59 /* DateShouldBeforeThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCBA2168C71C00BE3F59 /* DateShouldBeforeThen.swift */; };
+		9D53FCE92168CF7300BE3F59 /* DateShouldBeforeOrSameThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCBC2168C79600BE3F59 /* DateShouldBeforeOrSameThen.swift */; };
+		9D53FCEA2168CF7300BE3F59 /* DateShouldAfterThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCBE2168C7EC00BE3F59 /* DateShouldAfterThen.swift */; };
+		9D53FCEB2168CF7300BE3F59 /* DateShouldAfterOrSameThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC02168C84A00BE3F59 /* DateShouldAfterOrSameThen.swift */; };
+		9D53FCEC2168CF7300BE3F59 /* DateShouldBeCloseDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC22168C8A300BE3F59 /* DateShouldBeCloseDates.swift */; };
+		9D53FCED2168CF7300BE3F59 /* StringIsNotUnderflowThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC42168C9F200BE3F59 /* StringIsNotUnderflowThen.swift */; };
+		9D53FCEE2168CF7300BE3F59 /* StringShouldEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC62168CA7B00BE3F59 /* StringShouldEqualTo.swift */; };
+		9D53FCEF2168CF7A00BE3F59 /* NumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC82168CB9000BE3F59 /* NumberValidator.swift */; };
+		9D53FCF02168CF7A00BE3F59 /* DateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCB62168C5FE00BE3F59 /* DateValidator.swift */; };
+		9D53FCF12168CF7A00BE3F59 /* DateShouldEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCB82168C64E00BE3F59 /* DateShouldEqualTo.swift */; };
+		9D53FCF22168CF7A00BE3F59 /* DateShouldBeforeThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCBA2168C71C00BE3F59 /* DateShouldBeforeThen.swift */; };
+		9D53FCF32168CF7A00BE3F59 /* DateShouldBeforeOrSameThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCBC2168C79600BE3F59 /* DateShouldBeforeOrSameThen.swift */; };
+		9D53FCF42168CF7A00BE3F59 /* DateShouldAfterThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCBE2168C7EC00BE3F59 /* DateShouldAfterThen.swift */; };
+		9D53FCF52168CF7A00BE3F59 /* DateShouldAfterOrSameThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC02168C84A00BE3F59 /* DateShouldAfterOrSameThen.swift */; };
+		9D53FCF62168CF7A00BE3F59 /* DateShouldBeCloseDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC22168C8A300BE3F59 /* DateShouldBeCloseDates.swift */; };
+		9D53FCF72168CF7A00BE3F59 /* StringIsNotUnderflowThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC42168C9F200BE3F59 /* StringIsNotUnderflowThen.swift */; };
+		9D53FCF82168CF7A00BE3F59 /* StringShouldEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FCC62168CA7B00BE3F59 /* StringShouldEqualTo.swift */; };
+		9D53FD022168CFDB00BE3F59 /* RxValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1550CE2167CE4900C5C889 /* RxValidator.framework */; };
+		9D53FD112168D03200BE3F59 /* AlwaysFailingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FD092168D03200BE3F59 /* AlwaysFailingTests.swift */; };
+		9D53FD122168D03200BE3F59 /* InstantValidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FD0A2168D03200BE3F59 /* InstantValidateTests.swift */; };
+		9D53FD132168D03200BE3F59 /* DateValidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FD0B2168D03200BE3F59 /* DateValidateTests.swift */; };
+		9D53FD142168D03200BE3F59 /* RxValidatorResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FD0C2168D03200BE3F59 /* RxValidatorResultTests.swift */; };
+		9D53FD152168D03200BE3F59 /* StringValidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FD0D2168D03200BE3F59 /* StringValidateTests.swift */; };
+		9D53FD162168D03200BE3F59 /* ObservableExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FD0E2168D03200BE3F59 /* ObservableExtensionTests.swift */; };
+		9D53FD172168D03200BE3F59 /* NumberValidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FD0F2168D03200BE3F59 /* NumberValidateTests.swift */; };
+		9D53FD182168D03200BE3F59 /* StringValidateRegexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FD102168D03200BE3F59 /* StringValidateRegexTests.swift */; };
+		9D53FD4C2168D42500BE3F59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D53FD422168D42500BE3F59 /* Assets.xcassets */; };
+		9D53FD4D2168D42500BE3F59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D53FD432168D42500BE3F59 /* LaunchScreen.storyboard */; };
+		9D53FD4E2168D42500BE3F59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D53FD452168D42500BE3F59 /* Main.storyboard */; };
+		9D53FD502168D42500BE3F59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FD4A2168D42500BE3F59 /* ViewController.swift */; };
+		9D53FD512168D42500BE3F59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FD4B2168D42500BE3F59 /* AppDelegate.swift */; };
+		9D53FD552168D68700BE3F59 /* ValidationWithRxSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FD542168D68700BE3F59 /* ValidationWithRxSwiftTests.swift */; };
+		9D53FD572168E24400BE3F59 /* StringIsAlwaysPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FD562168E24400BE3F59 /* StringIsAlwaysPass.swift */; };
+		9D53FD582168E24400BE3F59 /* StringIsAlwaysPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FD562168E24400BE3F59 /* StringIsAlwaysPass.swift */; };
+		9D53FD592168E24400BE3F59 /* StringIsAlwaysPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FD562168E24400BE3F59 /* StringIsAlwaysPass.swift */; };
+		9D53FD5A2168E24400BE3F59 /* StringIsAlwaysPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53FD562168E24400BE3F59 /* StringIsAlwaysPass.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9D53FD032168CFDB00BE3F59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D1550CD2167CE4900C5C889;
+			remoteInfo = "RxValidator iOS";
+		};
+		9D53FD3E2168D3F500BE3F59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D53FD2B2168D3E500BE3F59;
+			remoteInfo = "RxValidatorTests Host";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		4C33D050AAC5280503861BA4 /* Pods-RxValidatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxValidatorTests.release.xcconfig"; path = "Target Support Files/Pods-RxValidatorTests/Pods-RxValidatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D1550CE2167CE4900C5C889 /* RxValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1550D02167CE4900C5C889 /* RxValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxValidator.h; sourceTree = "<group>"; };
 		9D1550D12167CE4900C5C889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,19 +174,49 @@
 		9D53FCA92167E2F200BE3F59 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/tvOS/RxSwift.framework; sourceTree = "<group>"; };
 		9D53FCAB2167E2F600BE3F59 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/watchOS/RxSwift.framework; sourceTree = "<group>"; };
 		9D53FCAD2167E2FD00BE3F59 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		9D53FCB62168C5FE00BE3F59 /* DateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValidator.swift; sourceTree = "<group>"; };
+		9D53FCB82168C64E00BE3F59 /* DateShouldEqualTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateShouldEqualTo.swift; sourceTree = "<group>"; };
+		9D53FCBA2168C71C00BE3F59 /* DateShouldBeforeThen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateShouldBeforeThen.swift; sourceTree = "<group>"; };
+		9D53FCBC2168C79600BE3F59 /* DateShouldBeforeOrSameThen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateShouldBeforeOrSameThen.swift; sourceTree = "<group>"; };
+		9D53FCBE2168C7EC00BE3F59 /* DateShouldAfterThen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateShouldAfterThen.swift; sourceTree = "<group>"; };
+		9D53FCC02168C84A00BE3F59 /* DateShouldAfterOrSameThen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateShouldAfterOrSameThen.swift; sourceTree = "<group>"; };
+		9D53FCC22168C8A300BE3F59 /* DateShouldBeCloseDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateShouldBeCloseDates.swift; sourceTree = "<group>"; };
+		9D53FCC42168C9F200BE3F59 /* StringIsNotUnderflowThen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringIsNotUnderflowThen.swift; sourceTree = "<group>"; };
+		9D53FCC62168CA7B00BE3F59 /* StringShouldEqualTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringShouldEqualTo.swift; sourceTree = "<group>"; };
+		9D53FCC82168CB9000BE3F59 /* NumberValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberValidator.swift; sourceTree = "<group>"; };
+		9D53FCCC2168CBD400BE3F59 /* NumberShouldEqualTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberShouldEqualTo.swift; sourceTree = "<group>"; };
+		9D53FCD12168CDEB00BE3F59 /* NumberShouldLessThan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberShouldLessThan.swift; sourceTree = "<group>"; };
+		9D53FCD62168CF4100BE3F59 /* NumberShouldGreaterThan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberShouldGreaterThan.swift; sourceTree = "<group>"; };
+		9D53FCFD2168CFDB00BE3F59 /* RxValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D53FD092168D03200BE3F59 /* AlwaysFailingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlwaysFailingTests.swift; sourceTree = "<group>"; };
+		9D53FD0A2168D03200BE3F59 /* InstantValidateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstantValidateTests.swift; sourceTree = "<group>"; };
+		9D53FD0B2168D03200BE3F59 /* DateValidateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValidateTests.swift; sourceTree = "<group>"; };
+		9D53FD0C2168D03200BE3F59 /* RxValidatorResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxValidatorResultTests.swift; sourceTree = "<group>"; };
+		9D53FD0D2168D03200BE3F59 /* StringValidateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringValidateTests.swift; sourceTree = "<group>"; };
+		9D53FD0E2168D03200BE3F59 /* ObservableExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableExtensionTests.swift; sourceTree = "<group>"; };
+		9D53FD0F2168D03200BE3F59 /* NumberValidateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberValidateTests.swift; sourceTree = "<group>"; };
+		9D53FD102168D03200BE3F59 /* StringValidateRegexTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringValidateRegexTests.swift; sourceTree = "<group>"; };
+		9D53FD2C2168D3E500BE3F59 /* RxValidatorTests Host.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxValidatorTests Host.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D53FD422168D42500BE3F59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D53FD442168D42500BE3F59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9D53FD462168D42500BE3F59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9D53FD482168D42500BE3F59 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D53FD4A2168D42500BE3F59 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9D53FD4B2168D42500BE3F59 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9D53FD542168D68700BE3F59 /* ValidationWithRxSwiftTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationWithRxSwiftTests.swift; sourceTree = "<group>"; };
+		9D53FD562168E24400BE3F59 /* StringIsAlwaysPass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringIsAlwaysPass.swift; sourceTree = "<group>"; };
+		BE9974B928363AAF2148B96F /* Pods-RxValidatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxValidatorTests.debug.xcconfig"; path = "Target Support Files/Pods-RxValidatorTests/Pods-RxValidatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C056CEB2232AAC48DC2FAEAE /* Pods_RxValidatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxValidatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* DateValidationTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValidationTarget.swift; sourceTree = "<group>"; };
-		OBJ_11 /* IntValidationTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntValidationTarget.swift; sourceTree = "<group>"; };
+		OBJ_11 /* NumberValidationTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberValidationTarget.swift; sourceTree = "<group>"; };
 		OBJ_12 /* StringValidationTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidationTarget.swift; sourceTree = "<group>"; };
 		OBJ_14 /* Observable+Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Date+Extension.swift"; sourceTree = "<group>"; };
-		OBJ_15 /* Observable+Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Int+Extension.swift"; sourceTree = "<group>"; };
+		OBJ_15 /* Observable+Number+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Number+Extension.swift"; sourceTree = "<group>"; };
 		OBJ_16 /* Observable+String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+String+Extension.swift"; sourceTree = "<group>"; };
-		OBJ_18 /* IntValidatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntValidatorType.swift; sourceTree = "<group>"; };
-		OBJ_19 /* StringValidatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidatorType.swift; sourceTree = "<group>"; };
+		OBJ_19 /* StringValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidator.swift; sourceTree = "<group>"; };
 		OBJ_20 /* ValidationTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationTarget.swift; sourceTree = "<group>"; };
 		OBJ_22 /* RxValidatorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxValidatorResult.swift; sourceTree = "<group>"; };
-		OBJ_25 /* DateValidatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValidatorType.swift; sourceTree = "<group>"; };
-		OBJ_27 /* NumberShouldBeEven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberShouldBeEven.swift; sourceTree = "<group>"; };
-		OBJ_29 /* StringIsAlwaysPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringIsAlwaysPass.swift; sourceTree = "<group>"; };
+		OBJ_27 /* IntShouldBeEven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntShouldBeEven.swift; sourceTree = "<group>"; };
 		OBJ_30 /* StringIsNotOverflowThen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringIsNotOverflowThen.swift; sourceTree = "<group>"; };
 		OBJ_31 /* StringShouldBeMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringShouldBeMatch.swift; sourceTree = "<group>"; };
 		OBJ_32 /* StringShouldNotBeEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringShouldNotBeEmpty.swift; sourceTree = "<group>"; };
@@ -148,16 +256,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9D53FCFA2168CFDB00BE3F59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D53FD022168CFDB00BE3F59 /* RxValidator.framework in Frameworks */,
+				1C5E775F869DF092EC93BEEF /* Pods_RxValidatorTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D53FD292168D3E500BE3F59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9D1550FD2167CEA900C5C889 /* Supporing Files */ = {
+		5C36D42EE02B8A527B61D116 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE9974B928363AAF2148B96F /* Pods-RxValidatorTests.debug.xcconfig */,
+				4C33D050AAC5280503861BA4 /* Pods-RxValidatorTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9D1550FD2167CEA900C5C889 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				9D1550D02167CE4900C5C889 /* RxValidator.h */,
 				9D1550D12167CE4900C5C889 /* Info.plist */,
 			);
-			path = "Supporing Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		9D53FC3D2167CFDD00BE3F59 /* Frameworks */ = {
@@ -167,15 +300,80 @@
 				9D53FCAB2167E2F600BE3F59 /* RxSwift.framework */,
 				9D53FCA92167E2F200BE3F59 /* RxSwift.framework */,
 				9D53FCA72167E2ED00BE3F59 /* RxSwift.framework */,
+				C056CEB2232AAC48DC2FAEAE /* Pods_RxValidatorTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D53FCCB2168CBCC00BE3F59 /* Number */ = {
+			isa = PBXGroup;
+			children = (
+				9D53FCCC2168CBD400BE3F59 /* NumberShouldEqualTo.swift */,
+				9D53FCD12168CDEB00BE3F59 /* NumberShouldLessThan.swift */,
+				9D53FCD62168CF4100BE3F59 /* NumberShouldGreaterThan.swift */,
+				OBJ_27 /* IntShouldBeEven.swift */,
+			);
+			path = Number;
+			sourceTree = "<group>";
+		};
+		9D53FD082168D03200BE3F59 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9D53FD092168D03200BE3F59 /* AlwaysFailingTests.swift */,
+				9D53FD0A2168D03200BE3F59 /* InstantValidateTests.swift */,
+				9D53FD0B2168D03200BE3F59 /* DateValidateTests.swift */,
+				9D53FD0C2168D03200BE3F59 /* RxValidatorResultTests.swift */,
+				9D53FD0D2168D03200BE3F59 /* StringValidateTests.swift */,
+				9D53FD0E2168D03200BE3F59 /* ObservableExtensionTests.swift */,
+				9D53FD0F2168D03200BE3F59 /* NumberValidateTests.swift */,
+				9D53FD102168D03200BE3F59 /* StringValidateRegexTests.swift */,
+				9D53FD542168D68700BE3F59 /* ValidationWithRxSwiftTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		9D53FD402168D42500BE3F59 /* Tests Host */ = {
+			isa = PBXGroup;
+			children = (
+				9D53FD412168D42500BE3F59 /* Resources */,
+				9D53FD472168D42500BE3F59 /* Supporting Files */,
+				9D53FD492168D42500BE3F59 /* Sources */,
+			);
+			path = "Tests Host";
+			sourceTree = "<group>";
+		};
+		9D53FD412168D42500BE3F59 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9D53FD422168D42500BE3F59 /* Assets.xcassets */,
+				9D53FD432168D42500BE3F59 /* LaunchScreen.storyboard */,
+				9D53FD452168D42500BE3F59 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9D53FD472168D42500BE3F59 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D53FD482168D42500BE3F59 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9D53FD492168D42500BE3F59 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9D53FD4A2168D42500BE3F59 /* ViewController.swift */,
+				9D53FD4B2168D42500BE3F59 /* AppDelegate.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		OBJ_13 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_14 /* Observable+Date+Extension.swift */,
-				OBJ_15 /* Observable+Int+Extension.swift */,
+				OBJ_15 /* Observable+Number+Extension.swift */,
 				OBJ_16 /* Observable+String+Extension.swift */,
 			);
 			path = extensions;
@@ -184,8 +382,6 @@
 		OBJ_17 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_18 /* IntValidatorType.swift */,
-				OBJ_19 /* StringValidatorType.swift */,
 				OBJ_20 /* ValidationTarget.swift */,
 			);
 			path = protocols;
@@ -202,8 +398,11 @@
 		OBJ_23 /* rules */ = {
 			isa = PBXGroup;
 			children = (
+				9D53FCC82168CB9000BE3F59 /* NumberValidator.swift */,
+				OBJ_19 /* StringValidator.swift */,
+				9D53FCB62168C5FE00BE3F59 /* DateValidator.swift */,
 				OBJ_24 /* Date */,
-				OBJ_26 /* Int */,
+				9D53FCCB2168CBCC00BE3F59 /* Number */,
 				OBJ_28 /* String */,
 			);
 			path = rules;
@@ -212,26 +411,25 @@
 		OBJ_24 /* Date */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_25 /* DateValidatorType.swift */,
+				9D53FCB82168C64E00BE3F59 /* DateShouldEqualTo.swift */,
+				9D53FCBA2168C71C00BE3F59 /* DateShouldBeforeThen.swift */,
+				9D53FCBC2168C79600BE3F59 /* DateShouldBeforeOrSameThen.swift */,
+				9D53FCBE2168C7EC00BE3F59 /* DateShouldAfterThen.swift */,
+				9D53FCC02168C84A00BE3F59 /* DateShouldAfterOrSameThen.swift */,
+				9D53FCC22168C8A300BE3F59 /* DateShouldBeCloseDates.swift */,
 			);
 			path = Date;
-			sourceTree = "<group>";
-		};
-		OBJ_26 /* Int */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_27 /* NumberShouldBeEven.swift */,
-			);
-			path = Int;
 			sourceTree = "<group>";
 		};
 		OBJ_28 /* String */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_29 /* StringIsAlwaysPass.swift */,
+				9D53FD562168E24400BE3F59 /* StringIsAlwaysPass.swift */,
+				9D53FCC42168C9F200BE3F59 /* StringIsNotUnderflowThen.swift */,
 				OBJ_30 /* StringIsNotOverflowThen.swift */,
 				OBJ_31 /* StringShouldBeMatch.swift */,
 				OBJ_32 /* StringShouldNotBeEmpty.swift */,
+				9D53FCC62168CA7B00BE3F59 /* StringShouldEqualTo.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -240,9 +438,12 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_7 /* Sources */,
-				9D1550FD2167CEA900C5C889 /* Supporing Files */,
+				9D53FD082168D03200BE3F59 /* Tests */,
+				9D53FD402168D42500BE3F59 /* Tests Host */,
+				9D1550FD2167CEA900C5C889 /* Supporting Files */,
 				OBJ_577 /* Products */,
 				9D53FC3D2167CFDD00BE3F59 /* Frameworks */,
+				5C36D42EE02B8A527B61D116 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -253,6 +454,8 @@
 				9D1550DB2167CE6C00C5C889 /* RxValidator.framework */,
 				9D1550E82167CE7800C5C889 /* RxValidator.framework */,
 				9D1550F52167CE9100C5C889 /* RxValidator.framework */,
+				9D53FCFD2168CFDB00BE3F59 /* RxValidatorTests.xctest */,
+				9D53FD2C2168D3E500BE3F59 /* RxValidatorTests Host.app */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -274,7 +477,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_10 /* DateValidationTarget.swift */,
-				OBJ_11 /* IntValidationTarget.swift */,
+				OBJ_11 /* NumberValidationTarget.swift */,
 				OBJ_12 /* StringValidationTarget.swift */,
 			);
 			path = ValidationTarget;
@@ -390,12 +593,51 @@
 			productReference = 9D1550F52167CE9100C5C889 /* RxValidator.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		9D53FCFC2168CFDB00BE3F59 /* RxValidatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D53FD072168CFDB00BE3F59 /* Build configuration list for PBXNativeTarget "RxValidatorTests" */;
+			buildPhases = (
+				A784BF38E0366EA493AA7C4A /* [CP] Check Pods Manifest.lock */,
+				9D53FCF92168CFDB00BE3F59 /* Sources */,
+				9D53FCFA2168CFDB00BE3F59 /* Frameworks */,
+				9D53FCFB2168CFDB00BE3F59 /* Resources */,
+				0A851D8C037F13B012460B33 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D53FD042168CFDB00BE3F59 /* PBXTargetDependency */,
+				9D53FD3F2168D3F500BE3F59 /* PBXTargetDependency */,
+			);
+			name = RxValidatorTests;
+			productName = RxValidatorTests;
+			productReference = 9D53FCFD2168CFDB00BE3F59 /* RxValidatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9D53FD2B2168D3E500BE3F59 /* RxValidatorTests Host */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D53FD3B2168D3E700BE3F59 /* Build configuration list for PBXNativeTarget "RxValidatorTests Host" */;
+			buildPhases = (
+				9D53FD282168D3E500BE3F59 /* Sources */,
+				9D53FD292168D3E500BE3F59 /* Frameworks */,
+				9D53FD2A2168D3E500BE3F59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RxValidatorTests Host";
+			productName = "RxValidatorTests Host";
+			productReference = 9D53FD2C2168D3E500BE3F59 /* RxValidatorTests Host.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 9999;
 				TargetAttributes = {
 					9D1550CD2167CE4900C5C889 = {
@@ -414,6 +656,17 @@
 						CreatedOnToolsVersion = 10.0;
 						ProvisioningStyle = Automatic;
 					};
+					9D53FCFC2168CFDB00BE3F59 = {
+						CreatedOnToolsVersion = 10.0;
+						DevelopmentTeam = 4U2J29Y5X8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9D53FD2B2168D3E500BE3F59;
+					};
+					9D53FD2B2168D3E500BE3F59 = {
+						CreatedOnToolsVersion = 10.0;
+						DevelopmentTeam = 4U2J29Y5X8;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "RxValidator" */;
@@ -422,6 +675,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = OBJ_5;
 			productRefGroup = OBJ_577 /* Products */;
@@ -432,6 +686,8 @@
 				9D1550DA2167CE6C00C5C889 /* RxValidator watchOS */,
 				9D1550E72167CE7800C5C889 /* RxValidator tvOS */,
 				9D1550F42167CE9100C5C889 /* RxValidator macOS */,
+				9D53FD2B2168D3E500BE3F59 /* RxValidatorTests Host */,
+				9D53FCFC2168CFDB00BE3F59 /* RxValidatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -465,28 +721,113 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9D53FCFB2168CFDB00BE3F59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D53FD2A2168D3E500BE3F59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D53FD4E2168D42500BE3F59 /* Main.storyboard in Resources */,
+				9D53FD4C2168D42500BE3F59 /* Assets.xcassets in Resources */,
+				9D53FD4D2168D42500BE3F59 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A851D8C037F13B012460B33 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxValidatorTests/Pods-RxValidatorTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxValidatorTests/Pods-RxValidatorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A784BF38E0366EA493AA7C4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxValidatorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9D1550CA2167CE4900C5C889 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D53FCB72168C5FE00BE3F59 /* DateValidator.swift in Sources */,
+				9D53FCD72168CF4100BE3F59 /* NumberShouldGreaterThan.swift in Sources */,
 				9D53FC562167E1EE00BE3F59 /* Validate.swift in Sources */,
+				9D53FCD22168CDEB00BE3F59 /* NumberShouldLessThan.swift in Sources */,
+				9D53FCC32168C8A300BE3F59 /* DateShouldBeCloseDates.swift in Sources */,
 				9D53FC572167E1EE00BE3F59 /* DateValidationTarget.swift in Sources */,
-				9D53FC582167E1EE00BE3F59 /* IntValidationTarget.swift in Sources */,
+				9D53FCCD2168CBD400BE3F59 /* NumberShouldEqualTo.swift in Sources */,
+				9D53FC582167E1EE00BE3F59 /* NumberValidationTarget.swift in Sources */,
+				9D53FCBF2168C7EC00BE3F59 /* DateShouldAfterThen.swift in Sources */,
 				9D53FC592167E1EE00BE3F59 /* StringValidationTarget.swift in Sources */,
 				9D53FC5A2167E1EE00BE3F59 /* Observable+Date+Extension.swift in Sources */,
-				9D53FC5B2167E1EE00BE3F59 /* Observable+Int+Extension.swift in Sources */,
+				9D53FCB92168C64E00BE3F59 /* DateShouldEqualTo.swift in Sources */,
+				9D53FC5B2167E1EE00BE3F59 /* Observable+Number+Extension.swift in Sources */,
+				9D53FCC52168C9F200BE3F59 /* StringIsNotUnderflowThen.swift in Sources */,
+				9D53FCC72168CA7B00BE3F59 /* StringShouldEqualTo.swift in Sources */,
+				9D53FCBB2168C71C00BE3F59 /* DateShouldBeforeThen.swift in Sources */,
 				9D53FC5C2167E1EE00BE3F59 /* Observable+String+Extension.swift in Sources */,
-				9D53FC5D2167E1EE00BE3F59 /* IntValidatorType.swift in Sources */,
-				9D53FC5E2167E1EE00BE3F59 /* StringValidatorType.swift in Sources */,
+				9D53FC5E2167E1EE00BE3F59 /* StringValidator.swift in Sources */,
 				9D53FC5F2167E1EE00BE3F59 /* ValidationTarget.swift in Sources */,
+				9D53FCBD2168C79600BE3F59 /* DateShouldBeforeOrSameThen.swift in Sources */,
 				9D53FC602167E1EE00BE3F59 /* RxValidatorResult.swift in Sources */,
-				9D53FC612167E1EE00BE3F59 /* DateValidatorType.swift in Sources */,
-				9D53FC622167E1EE00BE3F59 /* NumberShouldBeEven.swift in Sources */,
-				9D53FC632167E1EE00BE3F59 /* StringIsAlwaysPass.swift in Sources */,
+				9D53FCC92168CB9000BE3F59 /* NumberValidator.swift in Sources */,
+				9D53FD572168E24400BE3F59 /* StringIsAlwaysPass.swift in Sources */,
+				9D53FC622167E1EE00BE3F59 /* IntShouldBeEven.swift in Sources */,
 				9D53FC642167E1EE00BE3F59 /* StringIsNotOverflowThen.swift in Sources */,
+				9D53FCC12168C84A00BE3F59 /* DateShouldAfterOrSameThen.swift in Sources */,
 				9D53FC652167E1EE00BE3F59 /* StringShouldBeMatch.swift in Sources */,
 				9D53FC662167E1EE00BE3F59 /* StringShouldNotBeEmpty.swift in Sources */,
 			);
@@ -496,23 +837,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D53FCDB2168CF6A00BE3F59 /* NumberValidator.swift in Sources */,
+				9D53FCDC2168CF6A00BE3F59 /* DateValidator.swift in Sources */,
+				9D53FCDD2168CF6A00BE3F59 /* DateShouldEqualTo.swift in Sources */,
+				9D53FCDE2168CF6A00BE3F59 /* DateShouldBeforeThen.swift in Sources */,
+				9D53FCDF2168CF6A00BE3F59 /* DateShouldBeforeOrSameThen.swift in Sources */,
+				9D53FCE02168CF6A00BE3F59 /* DateShouldAfterThen.swift in Sources */,
+				9D53FCE12168CF6A00BE3F59 /* DateShouldAfterOrSameThen.swift in Sources */,
+				9D53FCE22168CF6A00BE3F59 /* DateShouldBeCloseDates.swift in Sources */,
+				9D53FCE32168CF6A00BE3F59 /* StringIsNotUnderflowThen.swift in Sources */,
+				9D53FCE42168CF6A00BE3F59 /* StringShouldEqualTo.swift in Sources */,
 				9D53FC672167E1F900BE3F59 /* Validate.swift in Sources */,
 				9D53FC682167E1F900BE3F59 /* DateValidationTarget.swift in Sources */,
-				9D53FC692167E1F900BE3F59 /* IntValidationTarget.swift in Sources */,
+				9D53FCD32168CDEB00BE3F59 /* NumberShouldLessThan.swift in Sources */,
+				9D53FC692167E1F900BE3F59 /* NumberValidationTarget.swift in Sources */,
 				9D53FC6A2167E1F900BE3F59 /* StringValidationTarget.swift in Sources */,
 				9D53FC6B2167E1F900BE3F59 /* Observable+Date+Extension.swift in Sources */,
-				9D53FC6C2167E1F900BE3F59 /* Observable+Int+Extension.swift in Sources */,
+				9D53FC6C2167E1F900BE3F59 /* Observable+Number+Extension.swift in Sources */,
 				9D53FC6D2167E1F900BE3F59 /* Observable+String+Extension.swift in Sources */,
-				9D53FC6E2167E1F900BE3F59 /* IntValidatorType.swift in Sources */,
-				9D53FC6F2167E1F900BE3F59 /* StringValidatorType.swift in Sources */,
+				9D53FC6F2167E1F900BE3F59 /* StringValidator.swift in Sources */,
 				9D53FC702167E1F900BE3F59 /* ValidationTarget.swift in Sources */,
+				9D53FCCE2168CBD400BE3F59 /* NumberShouldEqualTo.swift in Sources */,
 				9D53FC712167E1F900BE3F59 /* RxValidatorResult.swift in Sources */,
-				9D53FC722167E1F900BE3F59 /* DateValidatorType.swift in Sources */,
-				9D53FC732167E1F900BE3F59 /* NumberShouldBeEven.swift in Sources */,
-				9D53FC742167E1F900BE3F59 /* StringIsAlwaysPass.swift in Sources */,
+				9D53FD582168E24400BE3F59 /* StringIsAlwaysPass.swift in Sources */,
+				9D53FC732167E1F900BE3F59 /* IntShouldBeEven.swift in Sources */,
 				9D53FC752167E1F900BE3F59 /* StringIsNotOverflowThen.swift in Sources */,
 				9D53FC762167E1F900BE3F59 /* StringShouldBeMatch.swift in Sources */,
 				9D53FC772167E1F900BE3F59 /* StringShouldNotBeEmpty.swift in Sources */,
+				9D53FCD82168CF4100BE3F59 /* NumberShouldGreaterThan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,23 +872,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D53FCE52168CF7300BE3F59 /* NumberValidator.swift in Sources */,
+				9D53FCE62168CF7300BE3F59 /* DateValidator.swift in Sources */,
+				9D53FCE72168CF7300BE3F59 /* DateShouldEqualTo.swift in Sources */,
+				9D53FCE82168CF7300BE3F59 /* DateShouldBeforeThen.swift in Sources */,
+				9D53FCE92168CF7300BE3F59 /* DateShouldBeforeOrSameThen.swift in Sources */,
+				9D53FCEA2168CF7300BE3F59 /* DateShouldAfterThen.swift in Sources */,
+				9D53FCEB2168CF7300BE3F59 /* DateShouldAfterOrSameThen.swift in Sources */,
+				9D53FCEC2168CF7300BE3F59 /* DateShouldBeCloseDates.swift in Sources */,
+				9D53FCED2168CF7300BE3F59 /* StringIsNotUnderflowThen.swift in Sources */,
+				9D53FCEE2168CF7300BE3F59 /* StringShouldEqualTo.swift in Sources */,
 				9D53FC782167E1FF00BE3F59 /* Validate.swift in Sources */,
 				9D53FC792167E1FF00BE3F59 /* DateValidationTarget.swift in Sources */,
-				9D53FC7A2167E1FF00BE3F59 /* IntValidationTarget.swift in Sources */,
+				9D53FCD42168CDEB00BE3F59 /* NumberShouldLessThan.swift in Sources */,
+				9D53FC7A2167E1FF00BE3F59 /* NumberValidationTarget.swift in Sources */,
 				9D53FC7B2167E1FF00BE3F59 /* StringValidationTarget.swift in Sources */,
 				9D53FC7C2167E1FF00BE3F59 /* Observable+Date+Extension.swift in Sources */,
-				9D53FC7D2167E1FF00BE3F59 /* Observable+Int+Extension.swift in Sources */,
+				9D53FC7D2167E1FF00BE3F59 /* Observable+Number+Extension.swift in Sources */,
 				9D53FC7E2167E1FF00BE3F59 /* Observable+String+Extension.swift in Sources */,
-				9D53FC7F2167E1FF00BE3F59 /* IntValidatorType.swift in Sources */,
-				9D53FC802167E1FF00BE3F59 /* StringValidatorType.swift in Sources */,
+				9D53FC802167E1FF00BE3F59 /* StringValidator.swift in Sources */,
 				9D53FC812167E1FF00BE3F59 /* ValidationTarget.swift in Sources */,
+				9D53FCCF2168CBD400BE3F59 /* NumberShouldEqualTo.swift in Sources */,
 				9D53FC822167E1FF00BE3F59 /* RxValidatorResult.swift in Sources */,
-				9D53FC832167E1FF00BE3F59 /* DateValidatorType.swift in Sources */,
-				9D53FC842167E1FF00BE3F59 /* NumberShouldBeEven.swift in Sources */,
-				9D53FC852167E1FF00BE3F59 /* StringIsAlwaysPass.swift in Sources */,
+				9D53FD592168E24400BE3F59 /* StringIsAlwaysPass.swift in Sources */,
+				9D53FC842167E1FF00BE3F59 /* IntShouldBeEven.swift in Sources */,
 				9D53FC862167E1FF00BE3F59 /* StringIsNotOverflowThen.swift in Sources */,
 				9D53FC872167E1FF00BE3F59 /* StringShouldBeMatch.swift in Sources */,
 				9D53FC882167E1FF00BE3F59 /* StringShouldNotBeEmpty.swift in Sources */,
+				9D53FCD92168CF4100BE3F59 /* NumberShouldGreaterThan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,27 +907,95 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D53FCEF2168CF7A00BE3F59 /* NumberValidator.swift in Sources */,
+				9D53FCF02168CF7A00BE3F59 /* DateValidator.swift in Sources */,
+				9D53FCF12168CF7A00BE3F59 /* DateShouldEqualTo.swift in Sources */,
+				9D53FCF22168CF7A00BE3F59 /* DateShouldBeforeThen.swift in Sources */,
+				9D53FCF32168CF7A00BE3F59 /* DateShouldBeforeOrSameThen.swift in Sources */,
+				9D53FCF42168CF7A00BE3F59 /* DateShouldAfterThen.swift in Sources */,
+				9D53FCF52168CF7A00BE3F59 /* DateShouldAfterOrSameThen.swift in Sources */,
+				9D53FCF62168CF7A00BE3F59 /* DateShouldBeCloseDates.swift in Sources */,
+				9D53FCF72168CF7A00BE3F59 /* StringIsNotUnderflowThen.swift in Sources */,
+				9D53FCF82168CF7A00BE3F59 /* StringShouldEqualTo.swift in Sources */,
 				9D53FC892167E20400BE3F59 /* Validate.swift in Sources */,
 				9D53FC8A2167E20400BE3F59 /* DateValidationTarget.swift in Sources */,
-				9D53FC8B2167E20400BE3F59 /* IntValidationTarget.swift in Sources */,
+				9D53FCD52168CDEB00BE3F59 /* NumberShouldLessThan.swift in Sources */,
+				9D53FC8B2167E20400BE3F59 /* NumberValidationTarget.swift in Sources */,
 				9D53FC8C2167E20400BE3F59 /* StringValidationTarget.swift in Sources */,
 				9D53FC8D2167E20400BE3F59 /* Observable+Date+Extension.swift in Sources */,
-				9D53FC8E2167E20400BE3F59 /* Observable+Int+Extension.swift in Sources */,
+				9D53FC8E2167E20400BE3F59 /* Observable+Number+Extension.swift in Sources */,
 				9D53FC8F2167E20400BE3F59 /* Observable+String+Extension.swift in Sources */,
-				9D53FC902167E20400BE3F59 /* IntValidatorType.swift in Sources */,
-				9D53FC912167E20400BE3F59 /* StringValidatorType.swift in Sources */,
+				9D53FC912167E20400BE3F59 /* StringValidator.swift in Sources */,
 				9D53FC922167E20400BE3F59 /* ValidationTarget.swift in Sources */,
+				9D53FCD02168CBD400BE3F59 /* NumberShouldEqualTo.swift in Sources */,
 				9D53FC932167E20400BE3F59 /* RxValidatorResult.swift in Sources */,
-				9D53FC942167E20400BE3F59 /* DateValidatorType.swift in Sources */,
-				9D53FC952167E20400BE3F59 /* NumberShouldBeEven.swift in Sources */,
-				9D53FC962167E20400BE3F59 /* StringIsAlwaysPass.swift in Sources */,
+				9D53FD5A2168E24400BE3F59 /* StringIsAlwaysPass.swift in Sources */,
+				9D53FC952167E20400BE3F59 /* IntShouldBeEven.swift in Sources */,
 				9D53FC972167E20400BE3F59 /* StringIsNotOverflowThen.swift in Sources */,
 				9D53FC982167E20400BE3F59 /* StringShouldBeMatch.swift in Sources */,
 				9D53FC992167E20400BE3F59 /* StringShouldNotBeEmpty.swift in Sources */,
+				9D53FCDA2168CF4100BE3F59 /* NumberShouldGreaterThan.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D53FCF92168CFDB00BE3F59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D53FD552168D68700BE3F59 /* ValidationWithRxSwiftTests.swift in Sources */,
+				9D53FD182168D03200BE3F59 /* StringValidateRegexTests.swift in Sources */,
+				9D53FD152168D03200BE3F59 /* StringValidateTests.swift in Sources */,
+				9D53FD112168D03200BE3F59 /* AlwaysFailingTests.swift in Sources */,
+				9D53FD172168D03200BE3F59 /* NumberValidateTests.swift in Sources */,
+				9D53FD162168D03200BE3F59 /* ObservableExtensionTests.swift in Sources */,
+				9D53FD142168D03200BE3F59 /* RxValidatorResultTests.swift in Sources */,
+				9D53FD132168D03200BE3F59 /* DateValidateTests.swift in Sources */,
+				9D53FD122168D03200BE3F59 /* InstantValidateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D53FD282168D3E500BE3F59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D53FD512168D42500BE3F59 /* AppDelegate.swift in Sources */,
+				9D53FD502168D42500BE3F59 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D53FD042168CFDB00BE3F59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D1550CD2167CE4900C5C889 /* RxValidator iOS */;
+			targetProxy = 9D53FD032168CFDB00BE3F59 /* PBXContainerItemProxy */;
+		};
+		9D53FD3F2168D3F500BE3F59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D53FD2B2168D3E500BE3F59 /* RxValidatorTests Host */;
+			targetProxy = 9D53FD3E2168D3F500BE3F59 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9D53FD432168D42500BE3F59 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D53FD442168D42500BE3F59 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9D53FD452168D42500BE3F59 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D53FD462168D42500BE3F59 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9D1550D42167CE4900C5C889 /* Debug */ = {
@@ -620,7 +1051,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporing Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -692,7 +1123,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporing Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -765,7 +1196,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporing Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -838,7 +1269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporing Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -910,7 +1341,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporing Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -982,7 +1413,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporing Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1056,7 +1487,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporing Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -1128,7 +1559,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporing Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -1141,6 +1572,252 @@
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9D53FD052168CFDB00BE3F59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE9974B928363AAF2148B96F /* Pods-RxValidatorTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4U2J29Y5X8;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.vbmania.RxValidator.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxValidatorTests Host.app/RxValidatorTests Host";
+			};
+			name = Debug;
+		};
+		9D53FD062168CFDB00BE3F59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C33D050AAC5280503861BA4 /* Pods-RxValidatorTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 4U2J29Y5X8;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.vbmania.RxValidator.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxValidatorTests Host.app/RxValidatorTests Host";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D53FD3C2168D3E700BE3F59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4U2J29Y5X8;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests Host/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.vbmania.RxValidator.RxValidatorTests-Host";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9D53FD3D2168D3E700BE3F59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 4U2J29Y5X8;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests Host/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.vbmania.RxValidator.RxValidatorTests-Host";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -1225,6 +1902,24 @@
 			buildConfigurations = (
 				9D1550FB2167CE9200C5C889 /* Debug */,
 				9D1550FC2167CE9200C5C889 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D53FD072168CFDB00BE3F59 /* Build configuration list for PBXNativeTarget "RxValidatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D53FD052168CFDB00BE3F59 /* Debug */,
+				9D53FD062168CFDB00BE3F59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D53FD3B2168D3E700BE3F59 /* Build configuration list for PBXNativeTarget "RxValidatorTests Host" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D53FD3C2168D3E700BE3F59 /* Debug */,
+				9D53FD3D2168D3E700BE3F59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

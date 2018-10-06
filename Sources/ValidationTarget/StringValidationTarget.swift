@@ -11,7 +11,7 @@ import RxSwift
 public final class StringValidationTarget: ValidationTarget {
     
     public typealias TargetType = String
-    public typealias ValidatorType = StringValidatorType
+    public typealias ValidatorType = StringValidator
     
     public let value: TargetType
     public var result: Observable<TargetType>?
@@ -20,7 +20,7 @@ public final class StringValidationTarget: ValidationTarget {
         self.value = value
     }
     
-    public func validate(_ validator: StringValidatorType) -> Self {
+    public func validate(_ validator: StringValidator) -> Self {
         guard self.result == nil else {
             return self
         }

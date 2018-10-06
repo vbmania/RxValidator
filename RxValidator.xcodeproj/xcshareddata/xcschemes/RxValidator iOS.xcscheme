@@ -26,9 +26,39 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9D1550CD2167CE4900C5C889"
+            BuildableName = "RxValidator.framework"
+            BlueprintName = "RxValidator iOS"
+            ReferencedContainer = "container:RxValidator.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9D53FCFC2168CFDB00BE3F59"
+               BuildableName = "RxValidatorTests.xctest"
+               BlueprintName = "RxValidatorTests"
+               ReferencedContainer = "container:RxValidator.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9D1550CD2167CE4900C5C889"
+            BuildableName = "RxValidator.framework"
+            BlueprintName = "RxValidator iOS"
+            ReferencedContainer = "container:RxValidator.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

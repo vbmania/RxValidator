@@ -28,7 +28,7 @@ class ValidationWithRxSwiftTests: XCTestCase {
         
         textField.rx.text
             .filterNil()
-            .validate(StringIsAlwaysPass())
+            .validate(.isAlwaysPass)
             .subscribe(onNext: { (text) in
                 print(text)
                 result = text
@@ -72,7 +72,7 @@ class ValidationWithRxSwiftTests: XCTestCase {
         
         let text = PublishSubject<String>()
         text
-            .validate(StringIsAlwaysPass())
+            .validate(.isAlwaysPass)
             .subscribe(onNext: { (text) in
                 print(text)
                 result = text
@@ -92,7 +92,7 @@ class ValidationWithRxSwiftTests: XCTestCase {
 class TextFieldDelegate: NSObject, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return Validate.to(string)
-            .validate(StringShouldBeMatch("[a-z1-9]"))
+            .validate(.shouldBeMatch("[a-z1-9]"))
             .check() == .valid
     }    
 }

@@ -8,6 +8,7 @@
 
 import XCTest
 import Nimble
+
 import RxValidator
 
 class RxValidatorResultTests: XCTestCase {
