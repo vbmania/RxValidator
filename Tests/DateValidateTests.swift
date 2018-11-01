@@ -10,6 +10,7 @@ import XCTest
 import RxSwift
 import Nimble
 import SwiftDate
+
 import RxValidator
 
 class DateValidateTests: XCTestCase {
@@ -30,13 +31,13 @@ class DateValidateTests: XCTestCase {
         
         
         underTest
-            .validate(.shouldEqualTo(date: sameTargetDate))
-            .validate(.shouldAfterOrSameThen(date: sameTargetDate))
-            .validate(.shouldBeforeOrSameThen(date: sameTargetDate))
-            .validate(.shouldBeforeOrSameThen(date: afterTargetDate))
-            .validate(.shouldBeforeThen(date: afterTargetDate))
-            .validate(.shouldAfterOrSameThen(date: beforeTargetDate))
-            .validate(.shouldAfterThen(date: beforeTargetDate))
+            .validate(.shouldEqualTo(sameTargetDate))
+            .validate(.shouldAfterOrSameThen(sameTargetDate))
+            .validate(.shouldBeforeOrSameThen(sameTargetDate))
+            .validate(.shouldBeforeOrSameThen(afterTargetDate))
+            .validate(.shouldBeforeThen(afterTargetDate))
+            .validate(.shouldAfterOrSameThen(beforeTargetDate))
+            .validate(.shouldAfterThen(beforeTargetDate))
             .asObservable()
             .subscribe(onNext: { (date) in
                 resultDate = date
@@ -59,7 +60,7 @@ class DateValidateTests: XCTestCase {
         
         // when
         underTest
-            .validate(.shouldBeforeThen(date: sameTargetDate))
+            .validate(.shouldBeforeThen(sameTargetDate))
             .asObservable()
             .subscribe(onNext: { (date) in
                 resultDate = date
@@ -83,7 +84,7 @@ class DateValidateTests: XCTestCase {
         
         // when
         underTest
-            .validate(.shouldAfterThen(date: sameTargetDate))
+            .validate(.shouldAfterThen(sameTargetDate))
             .asObservable()
             .subscribe(onNext: { (date) in
                 resultDate = date
@@ -115,19 +116,19 @@ class DateValidateTests: XCTestCase {
         let underTest = DateValidationTarget(targetDate, granularity: Calendar.Component.day)
         
         underTest
-            .validate(.shouldEqualTo(date: sameTargetDate))
-            .validate(.shouldEqualTo(date: afterTargetDateInSameDay))
-            .validate(.shouldEqualTo(date: beforeTargetDateInSameDay))
+            .validate(.shouldEqualTo(sameTargetDate))
+            .validate(.shouldEqualTo(afterTargetDateInSameDay))
+            .validate(.shouldEqualTo(beforeTargetDateInSameDay))
             
-            .validate(.shouldBeforeThen(date: afterTargetDate))
-            .validate(.shouldBeforeOrSameThen(date: sameTargetDate))
-            .validate(.shouldBeforeOrSameThen(date: afterTargetDateInSameDay))
-            .validate(.shouldBeforeOrSameThen(date: beforeTargetDateInSameDay))
+            .validate(.shouldBeforeThen(afterTargetDate))
+            .validate(.shouldBeforeOrSameThen(sameTargetDate))
+            .validate(.shouldBeforeOrSameThen(afterTargetDateInSameDay))
+            .validate(.shouldBeforeOrSameThen(beforeTargetDateInSameDay))
             
-            .validate(.shouldAfterThen(date: beforeTargetDate))
-            .validate(.shouldAfterOrSameThen(date: sameTargetDate))
-            .validate(.shouldAfterOrSameThen(date: afterTargetDateInSameDay))
-            .validate(.shouldAfterOrSameThen(date: beforeTargetDateInSameDay))
+            .validate(.shouldAfterThen(beforeTargetDate))
+            .validate(.shouldAfterOrSameThen(sameTargetDate))
+            .validate(.shouldAfterOrSameThen(afterTargetDateInSameDay))
+            .validate(.shouldAfterOrSameThen(beforeTargetDateInSameDay))
             
             .asObservable()
             .subscribe(onNext: { (date) in
@@ -147,7 +148,7 @@ class DateValidateTests: XCTestCase {
         
         let underTest = DateValidationTarget(targetDate)
         underTest
-            .validate(.shouldBeCloseDates(date: validEndDate, termOfDays: 30))
+            .validate(.shouldBeCloseDates(validEndDate, termOfDays: 30))
             .asObservable().subscribe(onNext: { (date) in
                 resultDate = date
             }, onError: { (error) in
@@ -169,7 +170,7 @@ class DateValidateTests: XCTestCase {
         
         let underTest = DateValidationTarget(targetDate)
         underTest
-            .validate(.shouldBeCloseDates(date: notValidEndDate, termOfDays: 30))
+            .validate(.shouldBeCloseDates(notValidEndDate, termOfDays: 30))
             .asObservable().subscribe(onNext: { (date) in
                 resultDate = date
             }, onError: { (error) in

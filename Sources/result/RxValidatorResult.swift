@@ -14,11 +14,16 @@ public enum RxValidatorResult: Error,  Equatable {
     case notValidWithCode(code: Int)
     
     case undefinedError
-    
+
+    case notEqualString
+    case stringIsUnderflow
     case stringIsOverflow
     case stringIsEmpty
     case stringIsNotMatch
-    
+
+    case notEqualNumber
+    case notLessThenNumber
+    case notGreaterThanNumber
     case notEvenNumber
     
     case invalidateDateTerm
@@ -38,11 +43,21 @@ public enum RxValidatorResult: Error,  Equatable {
             return lvalue == rvalue
         case (.undefinedError, .undefinedError):
             return true
+        case (.notEqualString, .notEqualString):
+            return true
+        case (.stringIsUnderflow, .stringIsUnderflow):
+            return true
         case (.stringIsOverflow, .stringIsOverflow):
             return true
         case (.stringIsEmpty, .stringIsEmpty):
             return true
         case (.stringIsNotMatch, .stringIsNotMatch):
+            return true
+        case (.notEqualNumber, .notEqualNumber):
+            return true
+        case (.notLessThenNumber, .notLessThenNumber):
+            return true
+        case (.notGreaterThanNumber, .notGreaterThanNumber):
             return true
         case (.notEvenNumber, .notEvenNumber):
             return true

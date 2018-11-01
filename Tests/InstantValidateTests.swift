@@ -8,9 +8,9 @@
 
 import XCTest
 import Nimble
-import RxValidator
 import RxSwift
 
+import RxValidator
 
 class InstantValidateTests: XCTestCase {
     
@@ -65,7 +65,16 @@ class InstantValidateTests: XCTestCase {
         
         expect(dateResult).to(equal(RxValidatorResult.notValidWithMessage(message: dateMessage)))
     }
-    
+
+    func testDateInstantValidateWithMessageAndGranularity() {
+        let dateMessage = "It is today!!"
+        let dateResult: RxValidatorResult = Validate.to(Date(), granularity: .day)
+            .validate({ !$0.isToday }, message: dateMessage)
+            .check()
+
+        expect(dateResult).to(equal(RxValidatorResult.notValidWithMessage(message: dateMessage)))
+    }
+
     func testStringInstantValidateWithObservable() {
         
         let stringSubject = PublishSubject<String>()

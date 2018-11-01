@@ -10,7 +10,7 @@ import RxSwift
 
 public final class DateValidationTarget: ValidationTarget {
     public typealias TargetType = Date
-    public typealias ValidatorType = DateValidatorType
+    public typealias ValidatorType = DateValidator
     
     private let granularity: Calendar.Component
     
@@ -27,7 +27,7 @@ public final class DateValidationTarget: ValidationTarget {
         self.granularity = granularity
     }
     
-    public func validate(_ validator: DateValidatorType) -> Self {
+    public func validate(_ validator: DateValidator) -> Self {
         guard self.result == nil else {
             return self
         }

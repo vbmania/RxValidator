@@ -9,6 +9,7 @@
 import XCTest
 import RxSwift
 import Nimble
+
 import RxValidator
 
 class StringValidateRegexTests: XCTestCase {
@@ -20,7 +21,7 @@ class StringValidateRegexTests: XCTestCase {
         var resultValue: String?
         
         Validate.to(targetValue)
-            .validate(StringShouldBeMatch("[a-z]+@[a-z]+\\.[a-z]+"))
+            .validate(.shouldBeMatch("[a-z]+@[a-z]+\\.[a-z]+"))
             .asObservable()
             .subscribe(onNext: { value in
                 resultValue = value

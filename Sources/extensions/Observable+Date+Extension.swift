@@ -9,12 +9,16 @@ import Foundation
 import RxSwift
 
 extension Observable where Element == Date {
-    public func validate(_ validator: DateValidatorType) -> Observable<Element> {
+    public func validate(_ validator: DateValidator, message: String? = nil) -> Observable<Element> {
         return self.map {
             do {
-                try validator.validate($0, granularity: Calendar.Component.nanosecond)
+                try validator.validate($0, granularity: .nanosecond)
             } catch {
-                throw error            
+                if let msg = message {
+                    throw RxValidatorResult.notValidWithMessage(message: msg)
+                } else {
+                    throw error
+                }
             }
             return $0
         }
