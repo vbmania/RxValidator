@@ -9,6 +9,7 @@
 import XCTest
 import RxSwift
 import Nimble
+
 import RxValidator
 
 class StringValidateTests: XCTestCase {
@@ -22,7 +23,7 @@ class StringValidateTests: XCTestCase {
         var resultValue: String?
         
         Validate.to(targetValue)
-            .validate(StringShouldNotBeEmpty())
+            .validate(.shouldNotBeEmpty)
             .asObservable().subscribe(onNext: { value in
                 resultValue = value
             }).disposed(by: disposeBag)
@@ -38,7 +39,7 @@ class StringValidateTests: XCTestCase {
         let expectErrorMsg = "EMPTY"
         
         Validate.to(targetValue)
-            .validate(StringShouldNotBeEmpty())
+            .validate(.shouldNotBeEmpty)
             .asObservable().catchError({ (error) -> Observable<String> in
                 if let validationError = error as? RxValidatorResult, validationError == RxValidatorResult.stringIsEmpty {
                     return Observable.just(expectErrorMsg)
@@ -61,7 +62,7 @@ class StringValidateTests: XCTestCase {
         let expectErrorMsg = "EMPTY"
         
         Validate.to(targetValue)
-            .validate(StringShouldNotBeEmpty())
+            .validate(.shouldNotBeEmpty)
             .asObservable().catchError({ (error) -> Observable<String> in
                 if let validationError = error as? RxValidatorResult, validationError == RxValidatorResult.stringIsEmpty {
                     return Observable.just(expectErrorMsg)
@@ -75,16 +76,59 @@ class StringValidateTests: XCTestCase {
         expect(resultValue).toEventually(equal(expectErrorMsg))
         expect(resultValue).toEventuallyNot(equal(targetValue))
     }
-    
-    
+
+    func testEqualStringValidationFailure() {
+        let targetValue = "1234"
+        var result = false
+
+        Validate.to(targetValue)
+            .validate(.shouldEqualTo("4321"))
+            .asObservable()
+            .map { _ in false }
+            .catchError { error -> Observable<Bool> in
+                if let error = error as? RxValidatorResult, error == RxValidatorResult.notEqualString {
+                    return .just(true)
+                }
+                return .just(false)
+            }
+            .subscribe(onNext: { value in
+                result = value
+            })
+            .disposed(by: disposeBag)
+
+        expect(result).toEventually(equal(true))
+    }
+
+    func testUnderflowStringValidationFailure() {
+        let targetValue = "1234"
+        var result = false
+
+        Validate.to(targetValue)
+            .validate(.isNotUnderflowThen(min: 8))
+            .asObservable()
+            .map { _ in false }
+            .catchError { error -> Observable<Bool> in
+                if let error = error as? RxValidatorResult, error == RxValidatorResult.stringIsUnderflow {
+                    return .just(true)
+                }
+                return .just(false)
+            }
+            .subscribe(onNext: { value in
+                result = value
+            })
+            .disposed(by: disposeBag)
+
+        expect(result).toEventually(equal(true))
+    }
+
     func testMultipleStringValidation_Success() {
         
         let targetValue = "a"
         var resultValue: String?
         
         Validate.to(targetValue)
-            .validate(StringShouldNotBeEmpty())
-            .validate(StringIsNotOverflowThen(maxLength: 2))
+            .validate(.shouldNotBeEmpty)
+            .validate(.isNotOverflowThen(max: 2))
             .asObservable()
             .catchErrorJustReturn(errorValue)
             .subscribe(onNext: { value in
@@ -100,8 +144,8 @@ class StringValidateTests: XCTestCase {
         var resultValue: String?
         
         Validate.to(targetValue)
-            .validate(StringShouldNotBeEmpty())
-            .validate(StringIsNotOverflowThen(maxLength: 2))
+            .validate(.shouldNotBeEmpty)
+            .validate(.isNotOverflowThen(max: 2))
             .asObservable()
             .catchErrorJustReturn(errorValue)
             .subscribe(onNext: { value in
@@ -117,7 +161,7 @@ class StringValidateTests: XCTestCase {
         let targetValue = ["1", "2", "3"]
         
         let result: RxValidatorResult = targetValue
-            .compactMap { return Validate.to($0).validate(StringShouldNotBeEmpty()).check() }
+            .compactMap { return Validate.to($0).validate(.shouldNotBeEmpty).check() }
             .reduce(RxValidatorResult.valid) { $0 != .valid ? $0 : $1 }
         
         expect(result).toEventually(equal(.valid))

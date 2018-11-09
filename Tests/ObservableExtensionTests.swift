@@ -10,6 +10,7 @@ import XCTest
 import Nimble
 import RxSwift
 import RxCocoa
+
 import RxValidator
 
 class ObservableExtensionTests: XCTestCase {
@@ -23,7 +24,7 @@ class ObservableExtensionTests: XCTestCase {
         
         observable
             .asObservable()
-            .validate(StringIsAlwaysPass())
+            .validate(.isAlwaysPass)
             .asObservable()
             .subscribe(onNext: { text in
                 result = text
@@ -42,7 +43,7 @@ class ObservableExtensionTests: XCTestCase {
         
         observable
             .asObservable()
-            .validate(StringShouldNotBeEmpty())
+            .validate(.shouldNotBeEmpty)
             .asObservable()
             .subscribe(onNext: { (text) in
                 XCTFail()
@@ -55,8 +56,29 @@ class ObservableExtensionTests: XCTestCase {
         observable.onNext(expectedString)
         expect(result).toEventually(equal(RxValidatorResult.stringIsEmpty))
     }
-    
-    
+
+    func testObservableStringFailureWithMessage() {
+        let errorMessage = "Error Message"
+
+        var result:RxValidatorResult = .valid
+
+        let observable = PublishSubject<String>()
+
+        observable
+            .asObservable()
+            .validate(.shouldNotBeEmpty, message: errorMessage)
+            .asObservable()
+            .subscribe(onNext: { (text) in
+                XCTFail()
+            }, onError: { (error) in
+                result = RxValidatorResult.determine(error: error)
+            })
+            .disposed(by: disposeBag)
+
+        let expectedString = ""
+        observable.onNext(expectedString)
+        expect(result).toEventually(equal(RxValidatorResult.notValidWithMessage(message: errorMessage)))
+    }
     
     func testObservableIntSuccess() {
         var result:Int?
@@ -65,7 +87,7 @@ class ObservableExtensionTests: XCTestCase {
         
         observable
             .asObservable()
-            .validate(NumberShouldBeEven())
+            .validate(.shouldBeEven)
             .asObservable()
             .subscribe(onNext: { number in
                 result = number
@@ -76,6 +98,47 @@ class ObservableExtensionTests: XCTestCase {
         observable.onNext(expectedString)
         expect(result).toEventually(equal(expectedString))
     }
+
+    func testObservableIntFailure() {
+        var result: RxValidatorResult = .valid
+        let observable = PublishSubject<Int>()
+
+        observable
+            .asObservable()
+            .validate(.shouldBeEven)
+            .asObservable()
+            .subscribe(onNext: { (text) in
+                XCTFail()
+            }, onError: { (error) in
+                result = RxValidatorResult.determine(error: error)
+            })
+            .disposed(by: disposeBag)
+
+        let expectedString = 1
+        observable.onNext(expectedString)
+        expect(result).toEventually(equal(RxValidatorResult.notEvenNumber))
+    }
+    func testObservableIntFailureWithMessage() {
+        let errorMessage = "Error Message"
+
+        var result: RxValidatorResult = .valid
+        let observable = PublishSubject<Int>()
+
+        observable
+            .asObservable()
+            .validate(.shouldBeEven, message: errorMessage)
+            .asObservable()
+            .subscribe(onNext: { (text) in
+                XCTFail()
+            }, onError: { (error) in
+                result = RxValidatorResult.determine(error: error)
+            })
+            .disposed(by: disposeBag)
+
+        let expectedString = 1
+        observable.onNext(expectedString)
+        expect(result).toEventually(equal(RxValidatorResult.notValidWithMessage(message: errorMessage)))
+    }
     
     func testObservableDateSuccess() {
         var result:Date?
@@ -85,7 +148,7 @@ class ObservableExtensionTests: XCTestCase {
         
         observable
             .asObservable()
-            .validate(.shouldEqualTo(date: date))
+            .validate(.shouldEqualTo(date))
             .asObservable()
             .subscribe(onNext: { number in
                 result = number
@@ -94,5 +157,49 @@ class ObservableExtensionTests: XCTestCase {
         
         observable.onNext(date)
         expect(result).toEventually(equal(date))
+    }
+    func testObservableDateFailure() {
+        var result: RxValidatorResult = .valid
+        let date = Date()
+        let newDate = Date(timeIntervalSince1970: 1000)
+
+        let observable = PublishSubject<Date>()
+
+        observable
+            .asObservable()
+            .validate(.shouldEqualTo(newDate))
+            .asObservable()
+            .subscribe(onNext: { (text) in
+                XCTFail()
+            }, onError: { (error) in
+                result = RxValidatorResult.determine(error: error)
+            })
+            .disposed(by: disposeBag)
+
+        observable.onNext(date)
+        expect(result).toEventually(equal(RxValidatorResult.notEqualDate))
+    }
+    func testObservableDateFailureWithMessage() {
+        let errorMessage = "Error Message"
+
+        var result: RxValidatorResult = .valid
+        let date = Date()
+        let newDate = Date(timeIntervalSince1970: 1000)
+
+        let observable = PublishSubject<Date>()
+
+        observable
+            .asObservable()
+            .validate(.shouldEqualTo(newDate), message: errorMessage)
+            .asObservable()
+            .subscribe(onNext: { (text) in
+                XCTFail()
+            }, onError: { (error) in
+                result = RxValidatorResult.determine(error: error)
+            })
+            .disposed(by: disposeBag)
+
+        observable.onNext(date)
+        expect(result).toEventually(equal(RxValidatorResult.notValidWithMessage(message: errorMessage)))
     }
 }
