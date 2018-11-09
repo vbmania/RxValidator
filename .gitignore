@@ -70,3 +70,4 @@ Pods
 *.xcworkspace
 Podfile.lock
 Cartfile.resolved
+.DS_Store
